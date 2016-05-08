@@ -220,30 +220,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="添加多说评论"><a href="#添加多说评论" class="headerlink" title="添加多说评论"></a>添加多说评论</h2><h3 id="修改主题下的配置文件F-blog-themes-yilia-config-yml"><a href="#修改主题下的配置文件F-blog-themes-yilia-config-yml" class="headerlink" title="修改主题下的配置文件F:\blog\themes\yilia_config.yml"></a>修改主题下的配置文件F:\blog\themes\yilia_config.yml</h3><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">	duoshuo: enjoytheparty</span><br><span class="line">	``` </span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"><span class="comment">### shortname是enjoytheparty</span></span><br><span class="line">	是在注册多说http://duoshuo.com/create-site/ 是申请的多说域名那部分。</span><br><span class="line">	然后修改themes\模板名\layout\_partial\article.ejs模板</span><br><span class="line">	把</span><br><span class="line">	``` bash</span><br><span class="line">	&lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</span><br><span class="line">    &lt;section id=<span class="string">"comments"</span>&gt;</span><br><span class="line">    &lt;div id=<span class="string">"disqus_thread"</span>&gt;</span><br><span class="line">      &lt;noscript&gt;Please <span class="built_in">enable</span> JavaScript to view the &lt;a href=<span class="string">"//disqus.com/?ref_noscript"</span>&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;/section&gt;</span><br><span class="line">    &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-
-改为，若没有直接在后面添加
-``` bash
-&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.duoshuo_shortname){ %&gt;
-&lt;section id=&quot;comments&quot;&gt;
-&lt;!-- 多说评论框 start --&gt;
-&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;&quot; data-title=&quot;&lt;%= post.title %&gt;&quot; data-url=&quot;&lt;%= page.permalink %&gt;&quot;&gt;&lt;/div&gt;
-&lt;!-- 多说评论框 end --&gt;
-&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-var duoshuoQuery = {short_name:&apos;&lt;%= config.duoshuo_shortname %&gt;&apos;};
-  (function() {
-    var ds = document.createElement(&apos;script&apos;);
-    ds.type = &apos;text/javascript&apos;;ds.async = true;
-    ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;;
-    ds.charset = &apos;UTF-8&apos;;
-    (document.getElementsByTagName(&apos;head&apos;)[0] 
-     || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);
-  })();
-  &lt;/script&gt;
-&lt;!-- 多说公共JS代码 end --&gt;
-</code></pre><p>  <br>  &lt;% } %&gt;<br>  ``` </p>
-
+        <h2 id="添加多说评论"><a href="#添加多说评论" class="headerlink" title="添加多说评论"></a>添加多说评论</h2><h3 id="修改主题下的配置文件F-blog-themes-yilia-config-yml"><a href="#修改主题下的配置文件F-blog-themes-yilia-config-yml" class="headerlink" title="修改主题下的配置文件F:\blog\themes\yilia_config.yml"></a>修改主题下的配置文件F:\blog\themes\yilia_config.yml</h3>
       
     </div>
     
@@ -256,6 +233,10 @@ var duoshuoQuery = {short_name:&apos;&lt;%= config.duoshuo_shortname %&gt;&apos;
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/08/多说的shortname是什么/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

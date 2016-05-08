@@ -79,7 +79,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -232,7 +232,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="首先配置yum源"><a href="#首先配置yum源" class="headerlink" title="首先配置yum源"></a>首先配置yum源</h1><h2 id="在-etc-yum-repos-d-下新建MariaDB-repo-加入以下内容。"><a href="#在-etc-yum-repos-d-下新建MariaDB-repo-加入以下内容。" class="headerlink" title="在/etc/yum.repos.d/下新建MariaDB.repo,加入以下内容。"></a>在/etc/yum.repos.d/下新建MariaDB.repo,加入以下内容。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[mariadb]</span><br><span class="line">name = MariaDB</span><br><span class="line">baseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/</span><br><span class="line">gpgkey=httPS://yum.mariadb.org/RPM-GPG-KEY-MariaDB</span><br><span class="line">gpgcheck=1</span><br></pre></td></tr></table></figure>
+        <h1 id="首先配置yum源"><a href="#首先配置yum源" class="headerlink" title="首先配置yum源"></a>首先配置yum源</h1><h3 id="在-etc-yum-repos-d-下新建MariaDB-repo"><a href="#在-etc-yum-repos-d-下新建MariaDB-repo" class="headerlink" title="在/etc/yum.repos.d/下新建MariaDB.repo"></a>在/etc/yum.repos.d/下新建MariaDB.repo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/yum.repos.d/MariaBD.repo</span><br></pre></td></tr></table></figure>
+<h3 id="加入以下内容。"><a href="#加入以下内容。" class="headerlink" title="加入以下内容。"></a>加入以下内容。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[mariadb]</span><br><span class="line">name = MariaDB</span><br><span class="line">baseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/</span><br><span class="line">gpgkey=httPS://yum.mariadb.org/RPM-GPG-KEY-MariaDB</span><br><span class="line">gpgcheck=1</span><br></pre></td></tr></table></figure>
       
     </div>
     

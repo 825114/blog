@@ -6,16 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>在Centos7中安装Mariadb | 迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先配置yum源在/etc/yum.repos.d/下新建MariaDB.repo,加入以下内容。12345[mariadb]name = MariaDBbaseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/gpgkey=httPS://yum.mariadb.org/RPM-GPG-KEY-MariaDBgpgcheck=1">
+  <meta name="description" content="首先配置yum源在/etc/yum.repos.d/下新建MariaDB.repo1vi /etc/yum.repos.d/MariaBD.repo
+加入以下内容。12345[mariadb]name = MariaDBbaseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/gpgkey=httPS://yum.mariadb.org/RPM-G">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在Centos7中安装Mariadb">
 <meta property="og:url" content="http://enjoythe.party/2016/05/08/在Centos7中安装Mariadb/index.html">
 <meta property="og:site_name" content="迷路的虾米">
-<meta property="og:description" content="首先配置yum源在/etc/yum.repos.d/下新建MariaDB.repo,加入以下内容。12345[mariadb]name = MariaDBbaseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/gpgkey=httPS://yum.mariadb.org/RPM-GPG-KEY-MariaDBgpgcheck=1">
-<meta property="og:updated_time" content="2016-05-08T14:30:30.493Z">
+<meta property="og:description" content="首先配置yum源在/etc/yum.repos.d/下新建MariaDB.repo1vi /etc/yum.repos.d/MariaBD.repo
+加入以下内容。12345[mariadb]name = MariaDBbaseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/gpgkey=httPS://yum.mariadb.org/RPM-G">
+<meta property="og:updated_time" content="2016-05-08T15:42:37.832Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Centos7中安装Mariadb">
-<meta name="twitter:description" content="首先配置yum源在/etc/yum.repos.d/下新建MariaDB.repo,加入以下内容。12345[mariadb]name = MariaDBbaseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/gpgkey=httPS://yum.mariadb.org/RPM-GPG-KEY-MariaDBgpgcheck=1">
+<meta name="twitter:description" content="首先配置yum源在/etc/yum.repos.d/下新建MariaDB.repo1vi /etc/yum.repos.d/MariaBD.repo
+加入以下内容。12345[mariadb]name = MariaDBbaseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/gpgkey=httPS://yum.mariadb.org/RPM-G">
   
     <link rel="alternative" href="/atom.xml" title="迷路的虾米" type="application/atom+xml">
   
@@ -80,7 +83,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -246,9 +249,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="首先配置yum源"><a href="#首先配置yum源" class="headerlink" title="首先配置yum源"></a>首先配置yum源</h1><h2 id="在-etc-yum-repos-d-下新建MariaDB-repo-加入以下内容。"><a href="#在-etc-yum-repos-d-下新建MariaDB-repo-加入以下内容。" class="headerlink" title="在/etc/yum.repos.d/下新建MariaDB.repo,加入以下内容。"></a>在/etc/yum.repos.d/下新建MariaDB.repo,加入以下内容。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[mariadb]</span><br><span class="line">name = MariaDB</span><br><span class="line">baseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/</span><br><span class="line">gpgkey=httPS://yum.mariadb.org/RPM-GPG-KEY-MariaDB</span><br><span class="line">gpgcheck=1</span><br></pre></td></tr></table></figure>
+        <h1 id="首先配置yum源"><a href="#首先配置yum源" class="headerlink" title="首先配置yum源"></a>首先配置yum源</h1><h3 id="在-etc-yum-repos-d-下新建MariaDB-repo"><a href="#在-etc-yum-repos-d-下新建MariaDB-repo" class="headerlink" title="在/etc/yum.repos.d/下新建MariaDB.repo"></a>在/etc/yum.repos.d/下新建MariaDB.repo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/yum.repos.d/MariaBD.repo</span><br></pre></td></tr></table></figure>
+<h3 id="加入以下内容。"><a href="#加入以下内容。" class="headerlink" title="加入以下内容。"></a>加入以下内容。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[mariadb]</span><br><span class="line">name = MariaDB</span><br><span class="line">baseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/</span><br><span class="line">gpgkey=httPS://yum.mariadb.org/RPM-GPG-KEY-MariaDB</span><br><span class="line">gpgcheck=1</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-
+<h2 id="如果需要其他版本，可以到http-yum-mariadb-org-中找到适合自己的系统的版本"><a href="#如果需要其他版本，可以到http-yum-mariadb-org-中找到适合自己的系统的版本" class="headerlink" title="如果需要其他版本，可以到http://yum.mariadb.org/中找到适合自己的系统的版本"></a>如果需要其他版本，可以到<a href="http://yum.mariadb.org/中找到适合自己的系统的版本" target="_blank" rel="external">http://yum.mariadb.org/中找到适合自己的系统的版本</a></h2><h3 id="安装客户端和服务端"><a href="#安装客户端和服务端" class="headerlink" title="安装客户端和服务端"></a>安装客户端和服务端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install MariaBD-client MariaBD-server</span><br></pre></td></tr></table></figure>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql start</span><br></pre></td></tr></table></figure>
+<h3 id="设置root密码"><a href="#设置root密码" class="headerlink" title="设置root密码"></a>设置root密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -u root -p password <span class="string">'mima'</span></span><br></pre></td></tr></table></figure>
       
     </div>
     

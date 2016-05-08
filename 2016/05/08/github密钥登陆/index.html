@@ -6,16 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>github密钥登陆 | 迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="IT男的宅腐基地">
+  <meta name="description" content="#如何设置github的SSH密钥
+###首先确保安装好ssh,使用以下命令生成keygen1$ ssh-keygen -t rsa -C “你的邮箱”">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github密钥登陆">
 <meta property="og:url" content="http://enjoythe.party/2016/05/08/github密钥登陆/index.html">
 <meta property="og:site_name" content="迷路的虾米">
-<meta property="og:description" content="IT男的宅腐基地">
-<meta property="og:updated_time" content="2016-05-08T04:12:43.922Z">
+<meta property="og:description" content="#如何设置github的SSH密钥
+###首先确保安装好ssh,使用以下命令生成keygen1$ ssh-keygen -t rsa -C “你的邮箱”">
+<meta property="og:updated_time" content="2016-05-08T07:20:39.619Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github密钥登陆">
-<meta name="twitter:description" content="IT男的宅腐基地">
+<meta name="twitter:description" content="#如何设置github的SSH密钥
+###首先确保安装好ssh,使用以下命令生成keygen1$ ssh-keygen -t rsa -C “你的邮箱”">
   
     <link rel="alternative" href="/atom.xml" title="迷路的虾米" type="application/atom+xml">
   
@@ -80,7 +83,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -119,7 +122,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a>
+						<a href="/tags/github-ssh/" style="font-size: 10px;">-github -ssh</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a>
 					</div>
 				</section>
 				
@@ -230,7 +233,15 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github-ssh/">-github -ssh</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/github/">github</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -238,7 +249,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#如何设置github的SSH密钥</p>
+<p>###首先确保安装好ssh,使用以下命令生成keygen<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C “你的邮箱”</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>###直接按回车，不用输入任何东西</p>
+<p>###在 ~/.ssh/目录下会生成id_rsa和id_rsa.pub<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">cat -n id_rsa.pub</span><br></pre></td></tr></table></figure></p>
+<p>###复制id_rsa.pub文件里的内容</p>
+<p>###点击你在github上右上角，有个下箭头，里面有settings,点进去</p>
+<p>###左侧有SSH and GPG keys，点进去</p>
+<p>###点击New SSH key 新建一个SSH Key</p>
+<p>###把你复制的is_rsa.pub文件里的内容粘贴上，写上title（标题），点ADD SSH key保存就可以了</p>
+
       
     </div>
     

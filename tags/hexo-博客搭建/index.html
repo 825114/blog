@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>迷路的虾米</title>
+  <title>Tag: hexo,博客搭建 | 迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="IT男的宅腐基地">
 <meta property="og:type" content="website">
 <meta property="og:title" content="迷路的虾米">
-<meta property="og:url" content="http://enjoythe.party/index.html">
+<meta property="og:url" content="http://enjoythe.party/tags/hexo-博客搭建/index.html">
 <meta property="og:site_name" content="迷路的虾米">
 <meta property="og:description" content="IT男的宅腐基地">
 <meta name="twitter:card" content="summary">
@@ -194,160 +194,52 @@
 
       <div class="body-wrap">
   
-    <article id="post-多说的shortname是什么" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/05/08/多说的shortname是什么/" class="article-date">
-  	<time datetime="2016-05-08T02:07:59.000Z" itemprop="datePublished">2016-05-08</time>
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/05/06/github使用hexo搭建静态博客总结/" class="archive-article-date">
+  	<time datetime="2016-05-06T09:20:03.111Z" itemprop="datePublished">5月 6</time>
 </a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/08/多说的shortname是什么/">多说的shortname是什么</a>
+      <a class="archive-article-title" href="/2016/05/06/github使用hexo搭建静态博客总结/">github使用hexo搭建静态博客总结</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##添加多说评论</p>
-<p>###修改主题下的配置文件F:\blog\themes\yilia_config.yml</p>
-<pre><code>``` bash
-duoshuo: enjoytheparty
-``` 
-</code></pre><p>###shortname是enjoytheparty<br>    是在注册多说<a href="http://duoshuo.com/create-site/" target="_blank" rel="external">http://duoshuo.com/create-site/</a> 是申请的多说域名那部分。<br>    然后修改themes\模板名\layout_partial\article.ejs模板<br>    把</p>
-<pre><code>``` bash
-&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname){ %&gt;
-&lt;section id=&quot;comments&quot;&gt;
-&lt;div id=&quot;disqus_thread&quot;&gt;
-  &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;//disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;/div&gt;
-&lt;/section&gt;
-&lt;% } %&gt;
-``` 
-改为，若没有直接在后面添加
-``` bash
-&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.duoshuo_shortname){ %&gt;
-&lt;section id=&quot;comments&quot;&gt;
-&lt;!-- 多说评论框 start --&gt;
-&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;&quot; data-title=&quot;&lt;%= post.title %&gt;&quot; data-url=&quot;&lt;%= page.permalink %&gt;&quot;&gt;&lt;/div&gt;
-&lt;!-- 多说评论框 end --&gt;
-&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-var duoshuoQuery = {short_name:&apos;&lt;%= config.duoshuo_shortname %&gt;&apos;};
-  (function() {
-    var ds = document.createElement(&apos;script&apos;);
-    ds.type = &apos;text/javascript&apos;;ds.async = true;
-    ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;;
-    ds.charset = &apos;UTF-8&apos;;
-    (document.getElementsByTagName(&apos;head&apos;)[0] 
-     || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);
-  })();
-  &lt;/script&gt;
-&lt;!-- 多说公共JS代码 end --&gt;
-</code></pre><p>  <br>  &lt;% } %&gt;<br>  ``` </p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-多说-博客搭建/">hexo, 多说,博客搭建</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-github使用hexo搭建静态博客总结" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/06/github使用hexo搭建静态博客总结/" class="article-date">
-  	<time datetime="2016-05-06T09:20:03.111Z" itemprop="datePublished">2016-05-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/06/github使用hexo搭建静态博客总结/">github使用hexo搭建静态博客总结</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##github使用hexo搭建静态博客总结</p>
-<p>###1.准备<br>    1）注册github,新建仓库，名称为xxxx.github.io。可以先配置好ssh免密钥登陆<br>    2）安装node,<a href="https://nodejs.org/">https://nodejs.org/</a> 下载安装即可。<br>    3）安装git for windows ,<a href="https://github.com/git-for-windows/git/releases/download/v2.8.2.windows.1/Git-2.8.2-64-bit.exe">https://github.com/git-for-windows/git/releases/download/v2.8.2.windows.1/Git-2.8.2-64-bit.exe</a><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-博客搭建/">hexo,博客搭建</a></li></ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/06/github使用hexo搭建静态博客总结/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
-  
 </article>
-
-
-
-
-
-
-
-
-
   
   
+    </div></section>
+  
+
+    
+
 
 </div>
       <footer id="footer">
@@ -372,10 +264,10 @@ var duoshuoQuery = {short_name:&apos;&lt;%= config.duoshuo_shortname %&gt;&apos;
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false
 	}

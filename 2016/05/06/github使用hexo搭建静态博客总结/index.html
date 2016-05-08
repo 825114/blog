@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="迷路的虾米">
 <meta property="og:description" content="##github使用hexo搭建静态博客总结
 ###1.准备    1）注册github,新建仓库，名称为xxxx.github.io。可以先配置好ssh免密钥登陆    2）安装node,https://nodejs.org/ 下载安装即可。    3）安装git for windows ,https://github.com/git-for-windows/git/releases/downl">
-<meta property="og:updated_time" content="2016-05-08T02:20:17.186Z">
+<meta property="og:updated_time" content="2016-05-08T03:14:52.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github使用hexo搭建静态博客总结">
 <meta name="twitter:description" content="##github使用hexo搭建静态博客总结
@@ -45,7 +45,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">锅碗瓢盆，油盐酱醋茶。</p>
+		<p class="header-subtitle">锅碗瓢盆，柴米油盐酱醋茶。</p>
 		
 
 		
@@ -116,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+						<a href="/tags/hexo-多说-博客搭建/" style="font-size: 10px;">hexo, 多说,博客搭建</a> <a href="/tags/hexo-博客搭建/" style="font-size: 10px;">hexo,博客搭建</a>
 					</div>
 				</section>
 				
@@ -171,7 +171,7 @@
 			  <h1 class="header-author">TK</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">锅碗瓢盆，油盐酱醋茶。</p>
+			<p class="header-subtitle">锅碗瓢盆，柴米油盐酱醋茶。</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -222,7 +222,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-博客搭建/">hexo,博客搭建</a></li></ul>
 	</div>
 
         
@@ -235,16 +235,60 @@
       
         <p>##github使用hexo搭建静态博客总结</p>
 <p>###1.准备<br>    1）注册github,新建仓库，名称为xxxx.github.io。可以先配置好ssh免密钥登陆<br>    2）安装node,<a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a> 下载安装即可。<br>    3）安装git for windows ,<a href="https://github.com/git-for-windows/git/releases/download/v2.8.2.windows.1/Git-2.8.2-64-bit.exe" target="_blank" rel="external">https://github.com/git-for-windows/git/releases/download/v2.8.2.windows.1/Git-2.8.2-64-bit.exe</a><br><a id="more"></a></p>
-<p>###2.安装hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<p>###2.安装hexo<br>    1)新建文件夹如F:\blog\</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install-g hexo</span><br></pre></td></tr></table></figure>
 
+2）初始化hexo
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+
+hexo的安装至此完成。
+</code></pre><p>###3.配置hexo<br>    1)配置文件F:\blog_config.yml<br>    vi打开，也可以用记事本之类的打开<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi _config.yml</span><br></pre></td></tr></table></figure></p>
+<pre><code>修改_config.yml
+title: 迷路的虾米 //博客标题
+subtitle: 锅碗瓢盆，柴米油盐酱醋茶。//子标题
+description: IT男的宅腐基地    //描述
+author: TK    //作者，显示在左侧的
+language: zh-cn //语言
+timezone: Asia/Shanghai //时区
+url: http://enjoythe.party //url
+theme: yilia //主题设置，主题存在F:\blog\themes目录下
+github配置，这里用ssh连接的，所以要先配置好SSH
+deploy:
+type: git
+repository: git@github.com:username/username.github.io.git
+branch: master
+2)主题配置文件F:\blog\themes\yilia\_config.yml
+</code></pre><p>###4.hexo使用<br>    1)hexo基本命令<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean //清除缓存</span><br></pre></td></tr></table></figure></p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g = hexo generate //生成</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d = hexo deploy //部署到github</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s = hexo server //在本地启动服务预览</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -p 5000 //更改端口</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -i 192.168.1.1 //自定义 IP</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n <span class="string">"我的博客"</span> = hexo new <span class="string">"我的博客"</span> //新建文章</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></span><br></pre></td></tr></table></figure>
+</code></pre><p>###5.tips<br>    1)设置文章摘要,文章不自动展开,要点more才展开?<br>    文件需要截断处加上<!-- more -->即可<br>    2)修改主题<br>    搜主题如concise主题，直接在F:\blog\下git clone</p>
+<pre><code>``` bash
+git clone https://github.com/huangjunhui/concise.git themes/concise
+``` 
+修改配置文件F:\blog\_config.yml下的theme: concise
+重新生成，部署
+2)域名解析
+CNAME解析
+在F:\blog\source下新建CNAME文件，里面写你申请的域名，不带http://
+然后域名管理后台那添加两条CNAME解析
+记录类型     主机记录     解析线路     
+``` bash
+CNAME    www    默认    825114.github.io     
+CNAME    @    默认    825114.github.io
+``` 
+</code></pre>
       
     </div>
     

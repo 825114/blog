@@ -6,16 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>多说的shortname是什么 | 迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="添加多说评论修改主题下的配置文件F:\blog\themes\yilia_config.yml">
+  <meta name="description" content="#添加多说评论
+修改主题下的配置文件F:\blog\themes\yilia_config.yml">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多说的shortname是什么">
 <meta property="og:url" content="http://enjoythe.party/2016/05/08/多说的shortname是什么/index.html">
 <meta property="og:site_name" content="迷路的虾米">
-<meta property="og:description" content="添加多说评论修改主题下的配置文件F:\blog\themes\yilia_config.yml">
-<meta property="og:updated_time" content="2016-05-08T03:52:22.062Z">
+<meta property="og:description" content="#添加多说评论
+修改主题下的配置文件F:\blog\themes\yilia_config.yml">
+<meta property="og:updated_time" content="2016-05-08T04:01:24.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多说的shortname是什么">
-<meta name="twitter:description" content="添加多说评论修改主题下的配置文件F:\blog\themes\yilia_config.yml">
+<meta name="twitter:description" content="#添加多说评论
+修改主题下的配置文件F:\blog\themes\yilia_config.yml">
   
     <link rel="alternative" href="/atom.xml" title="迷路的虾米" type="application/atom+xml">
   
@@ -234,10 +237,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="添加多说评论"><a href="#添加多说评论" class="headerlink" title="添加多说评论"></a>添加多说评论</h2><h3 id="修改主题下的配置文件F-blog-themes-yilia-config-yml"><a href="#修改主题下的配置文件F-blog-themes-yilia-config-yml" class="headerlink" title="修改主题下的配置文件F:\blog\themes\yilia_config.yml"></a>修改主题下的配置文件F:\blog\themes\yilia_config.yml</h3><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	duoshuo: enjoytheparty</span><br><span class="line">``` </span><br><span class="line"><span class="comment">### shortname是enjoytheparty</span></span><br><span class="line">	是在注册多说http://duoshuo.com/create-site/ 是申请的多说域名那部分。</span><br><span class="line">	然后修改themes\模板名\layout\_partial\article.ejs模板</span><br><span class="line">	把</span><br><span class="line">``` bash</span><br><span class="line">	&lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</span><br><span class="line">    &lt;section id=<span class="string">"comments"</span>&gt;</span><br><span class="line">    &lt;div id=<span class="string">"disqus_thread"</span>&gt;</span><br><span class="line">      &lt;noscript&gt;Please <span class="built_in">enable</span> JavaScript to view the &lt;a href=<span class="string">"//disqus.com/?ref_noscript"</span>&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;/section&gt;</span><br><span class="line">    &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-<pre><code>改为，若没有直接在后面添加
-</code></pre><pre><code class="bash">  &lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.duoshuo_shortname){ %&gt;
+        <p>#添加多说评论</p>
+<h3 id="修改主题下的配置文件F-blog-themes-yilia-config-yml"><a href="#修改主题下的配置文件F-blog-themes-yilia-config-yml" class="headerlink" title="修改主题下的配置文件F:\blog\themes\yilia_config.yml"></a>修改主题下的配置文件F:\blog\themes\yilia_config.yml</h3><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    duoshuo: enjoytheparty</span><br><span class="line">``` </span><br><span class="line"><span class="comment">### shortname是enjoytheparty</span></span><br><span class="line"><span class="comment">######	是在注册多说http://duoshuo.com/create-site/ 是申请的多说域名那部分。</span></span><br><span class="line"><span class="comment">######	然后修改themes\模板名\layout\_partial\article.ejs模板</span></span><br><span class="line"><span class="comment">######	把</span></span><br><span class="line">``` bash</span><br><span class="line">	&lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</span><br><span class="line">    &lt;section id=<span class="string">"comments"</span>&gt;</span><br><span class="line">    &lt;div id=<span class="string">"disqus_thread"</span>&gt;</span><br><span class="line">      &lt;noscript&gt;Please <span class="built_in">enable</span> JavaScript to view the &lt;a href=<span class="string">"//disqus.com/?ref_noscript"</span>&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;/section&gt;</span><br><span class="line">    &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<p>#####改为，若没有直接在后面添加</p>
+<pre><code class="bash">  &lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.duoshuo_shortname){ %&gt;
   &lt;section id=<span class="string">"comments"</span>&gt;
   &lt;!-- 多说评论框 start --&gt;
   &lt;div class=<span class="string">"ds-thread"</span> data-thread-key=<span class="string">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span> data-title=<span class="string">"&lt;%= post.title %&gt;"</span> data-url=<span class="string">"&lt;%= page.permalink %&gt;"</span>&gt;&lt;/div&gt;
@@ -265,16 +269,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2016/05/06/github使用hexo搭建静态博客总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">github使用hexo搭建静态博客总结</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
   
 </article>
 

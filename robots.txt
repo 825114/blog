@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /archies/
+
+Disallow: /fonts/
+Disallow: /vendors/
+
+Sitemap: http://www.enjoythe.party/sitemap.xml
+Sitemap: http://www.enjoythe.party/baidusitemap.xml

@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/arduino/" style="font-size: 20px;">arduino</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a>
+						<a href="/tags/arduino/" style="font-size: 15px;">arduino</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/question/" style="font-size: 10px;">question</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a>
 					</div>
 				</section>
 				
@@ -205,6 +205,72 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-uniq取单一，sed替换，-r-n问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/12/uniq取单一，sed替换，-r-n问题/" class="article-date">
+  	<time datetime="2016-05-12T03:02:32.000Z" itemprop="datePublished">2016-05-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/12/uniq取单一，sed替换，-r-n问题/">uniq取单一，sed替换，
+问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-cp复制00123-jpg到00153-jpg"><a href="#1-cp复制00123-jpg到00153-jpg" class="headerlink" title="1.cp复制00123.jpg到00153.jpg"></a>1.cp复制00123.jpg到00153.jpg</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#有时候需要新建多个连续的文件</span></span><br><span class="line">touch &#123;000123..000153&#125;.jpg</span><br><span class="line">...</span><br><span class="line">-rw-r--r--  1 root root        0 May 12 10:26 00124.jpg</span><br><span class="line">-rw-r--r--  1 root root        0 May 12 10:26 00125.jpg</span><br><span class="line">-rw-r--r--  1 root root        0 May 12 10:26 00126.jpg</span><br><span class="line">-rw-r--r--  1 root root        0 May 12 10:26 00127.jpg</span><br><span class="line">-rw-r--r--  1 root root        0 May 12 10:26 00128.jpg</span><br><span class="line">-rw-r--r--  1 root root        0 May 12 10:26 00129.jpg</span><br><span class="line">...</span><br><span class="line"><span class="comment">#同时新建几个不同名字的文件</span></span><br><span class="line">touch &#123;a,b,c&#125;</span><br><span class="line">-rw-r--r--  1 root root        0 May 12 11:23 a</span><br><span class="line">-rw-r--r--  1 root root        0 May 12 11:23 b</span><br><span class="line">-rw-r--r--  1 root root        0 May 12 11:23 c</span><br><span class="line"><span class="comment">#复制多个连续的数字命名的文件</span></span><br><span class="line">cp &#123;000123..000153&#125;.jpg ./src</span><br></pre></td></tr></table></figure>
+<h1 id="2-目录树tree"><a href="#2-目录树tree" class="headerlink" title="2.目录树tree"></a>2.目录树tree</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#新建多级目录 mkdir -p dir1/dir2</span></span><br><span class="line">mkdir -p &#123;a/b/c,d/e,f/g/h,n/,m/&#125;</span><br><span class="line">drwxr-xr-x 3 root root 4096 May 12 11:26 a</span><br><span class="line">drwxr-xr-x 3 root root 4096 May 12 11:26 d</span><br><span class="line">drwxr-xr-x 3 root root 4096 May 12 11:26 f</span><br><span class="line">drwxr-xr-x 2 root root 4096 May 12 11:26 m</span><br><span class="line">drwxr-xr-x 2 root root 4096 May 12 11:26 n</span><br><span class="line"><span class="comment">#tree命令显示目录结构</span></span><br><span class="line">.</span><br><span class="line">├── a</span><br><span class="line">│   └── b</span><br><span class="line">│       └── c</span><br><span class="line">├── d</span><br><span class="line">│   └── e</span><br><span class="line">├── f</span><br><span class="line">│   └── g</span><br><span class="line">│       └── h</span><br><span class="line">├── m</span><br><span class="line">└── n</span><br><span class="line"><span class="comment">#显示一级目录</span></span><br><span class="line">tree -DL 1</span><br><span class="line">.</span><br><span class="line">├── [May 12 11:26]  a</span><br><span class="line">├── [May 12 11:26]  d</span><br><span class="line">├── [May 12 11:26]  f</span><br><span class="line">├── [May 12 11:26]  m</span><br><span class="line">└── [May 12 11:26]  n</span><br></pre></td></tr></table></figure>
+<h1 id="3-r回车-n换行"><a href="#3-r回车-n换行" class="headerlink" title="3.\r回车\n换行"></a>3.\r回车\n换行</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ288q5pe5jZ web]<span class="comment"># printf 'abc\rdef'</span></span><br><span class="line">def[root@iZ288q5pe5jZ web]<span class="comment"># printf 'abc\rdef\n'</span></span><br><span class="line">def</span><br><span class="line">[root@iZ288q5pe5jZ web]<span class="comment"># printf 'abc\ndef\n'</span></span><br><span class="line">abc</span><br><span class="line">def</span><br><span class="line">[root@iZ288q5pe5jZ web]<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<h1 id="4-sed替换字符"><a href="#4-sed替换字符" class="headerlink" title="4.sed替换字符"></a>4.sed替换字符</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ288q5pe5jZ web]<span class="comment"># echo "http://enjoythe.party"&gt;x</span></span><br><span class="line">[root@iZ288q5pe5jZ web]<span class="comment"># cat x</span></span><br><span class="line">http://enjoythe.party</span><br><span class="line"><span class="comment">#sed 's/要被替换的字符串/替换用的字符串/g' 文件名</span></span><br><span class="line">[root@iZ288q5pe5jZ web]<span class="comment"># sed 's/t/###/g' x</span></span><br><span class="line">h<span class="comment">######p://enjoy###he.par###y</span></span><br></pre></td></tr></table></figure>
+<h1 id="5-uniq取单一-删除重复"><a href="#5-uniq取单一-删除重复" class="headerlink" title="5.uniq取单一,删除重复"></a>5.uniq取单一,删除重复</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#a.txt里有重复的</span></span><br><span class="line">[root@iZ288q5pe5jZ src]<span class="comment"># cat a.txt</span></span><br><span class="line">apple</span><br><span class="line">apple</span><br><span class="line">peach</span><br><span class="line">orange</span><br><span class="line">orange</span><br><span class="line">berry</span><br><span class="line">mongo</span><br><span class="line"><span class="comment">#统计重复次数</span></span><br><span class="line">[root@iZ288q5pe5jZ src]<span class="comment"># uniq -c a.txt</span></span><br><span class="line">   2 apple</span><br><span class="line">   1 peach</span><br><span class="line">   2 orange</span><br><span class="line">   1 berry</span><br><span class="line">   1 mongo</span><br><span class="line"><span class="comment">#取单一删除重复</span></span><br><span class="line">[root@iZ288q5pe5jZ src]<span class="comment"># uniq a.txt</span></span><br><span class="line">apple</span><br><span class="line">peach</span><br><span class="line">orange</span><br><span class="line">berry</span><br><span class="line">mongo</span><br></pre></td></tr></table></figure>
+<h1 id="6-cut分割字符串"><a href="#6-cut分割字符串" class="headerlink" title="6.cut分割字符串"></a>6.cut分割字符串</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#cut 文件名 -d '以这个字符分割' -f n（取第几个，n=1第一个）</span></span><br><span class="line">[root@iZ288q5pe5jZ src]<span class="comment"># cut /etc/passwd -d ':' -f 1</span></span><br><span class="line">root</span><br><span class="line">bin</span><br><span class="line">daemon</span><br><span class="line">adm</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/question/">question</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/linux/">linux</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Centos7-2-minimal的yum安装更改yum源" class="article article-type-post" itemscope itemprop="blogPost">
   

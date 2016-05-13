@@ -4,22 +4,19 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>centos上安装配置vsftpd | 迷路的虾米</title>
+  <title>centos上安装配置vsftpd匿名用户登录 | 迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装vsftpd1yum install -y vsftpd
-切换到vsftpd目录1234567891011cd /etc/vsftpd/lltotal 20#配置不能登陆ftp的用户，一行一个账号-rw------- 1 root root  125 Mar 31 23:12 ftpusers #与vsftpd.conf中的userlist_enable=&amp;#123;YES|NO&amp;#125;和">
+  <meta name="description" content="安装vsftpd1yum install -y vsftpd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos上安装配置vsftpd">
+<meta property="og:title" content="centos上安装配置vsftpd匿名用户登录">
 <meta property="og:url" content="http://enjoythe.party/2016/05/13/centos上安装配置vsftpd/index.html">
 <meta property="og:site_name" content="迷路的虾米">
-<meta property="og:description" content="安装vsftpd1yum install -y vsftpd
-切换到vsftpd目录1234567891011cd /etc/vsftpd/lltotal 20#配置不能登陆ftp的用户，一行一个账号-rw------- 1 root root  125 Mar 31 23:12 ftpusers #与vsftpd.conf中的userlist_enable=&amp;#123;YES|NO&amp;#125;和">
+<meta property="og:description" content="安装vsftpd1yum install -y vsftpd">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\ftp\1.jpg">
-<meta property="og:updated_time" content="2016-05-13T08:49:33.223Z">
+<meta property="og:updated_time" content="2016-05-13T08:51:08.943Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos上安装配置vsftpd">
-<meta name="twitter:description" content="安装vsftpd1yum install -y vsftpd
-切换到vsftpd目录1234567891011cd /etc/vsftpd/lltotal 20#配置不能登陆ftp的用户，一行一个账号-rw------- 1 root root  125 Mar 31 23:12 ftpusers #与vsftpd.conf中的userlist_enable=&amp;#123;YES|NO&amp;#125;和">
+<meta name="twitter:title" content="centos上安装配置vsftpd匿名用户登录">
+<meta name="twitter:description" content="安装vsftpd1yum install -y vsftpd">
 <meta name="twitter:image" content="http://enjoythe.party/\image\linux\ftp\1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="迷路的虾米" type="application/atom+xml">
@@ -227,7 +224,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      centos上安装配置vsftpd
+      centos上安装配置vsftpd匿名用户登录
     </h1>
   
 
@@ -252,6 +249,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="安装vsftpd"><a href="#安装vsftpd" class="headerlink" title="安装vsftpd"></a>安装vsftpd</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h1 id="切换到vsftpd目录"><a href="#切换到vsftpd目录" class="headerlink" title="切换到vsftpd目录"></a>切换到vsftpd目录</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/vsftpd/</span><br><span class="line">ll</span><br><span class="line">total 20</span><br><span class="line"><span class="comment">#配置不能登陆ftp的用户，一行一个账号</span></span><br><span class="line">-rw------- 1 root root  125 Mar 31 23:12 ftpusers </span><br><span class="line"><span class="comment">#与vsftpd.conf中的userlist_enable=&#123;YES|NO&#125;和userlist_deny=&#123;YES|NO&#125;有关,</span></span><br><span class="line"><span class="comment">#通过配置那两个参数yes or no 确认user_list里的用户能否登录</span></span><br><span class="line">-rw------- 1 root root  361 Mar 31 23:12 user_list </span><br><span class="line"><span class="comment">#这是vsftpd的详细配置文件</span></span><br><span class="line">-rw------- 1 root root 5030 Mar 31 23:12 vsftpd.conf</span><br><span class="line">-rwxr--r-- 1 root root  338 Mar 31 23:12 vsftpd_conf_migrate.sh</span><br></pre></td></tr></table></figure>
 <h1 id="vsftpd的启动"><a href="#vsftpd的启动" class="headerlink" title="vsftpd的启动"></a>vsftpd的启动</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1或2都可以</span></span><br><span class="line">1)service vsftpd start</span><br><span class="line">2)systemctl start vsftpd</span><br></pre></td></tr></table></figure>
 <h1 id="vsftpd的停止"><a href="#vsftpd的停止" class="headerlink" title="vsftpd的停止"></a>vsftpd的停止</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1或2都可以</span></span><br><span class="line">1)service vsftpd stop</span><br><span class="line">2)systemctl stop vsftpd</span><br></pre></td></tr></table></figure>
@@ -311,7 +309,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="centos上安装配置vsftpd" data-title="centos上安装配置vsftpd" data-url="http://enjoythe.party/2016/05/13/centos上安装配置vsftpd/"></div>
+	<div class="ds-thread" data-thread-key="centos上安装配置vsftpd" data-title="centos上安装配置vsftpd匿名用户登录" data-url="http://enjoythe.party/2016/05/13/centos上安装配置vsftpd/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

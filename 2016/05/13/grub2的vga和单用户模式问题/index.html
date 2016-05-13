@@ -4,18 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>github密钥登陆 | 迷路的虾米</title>
+  <title>grub2的vga和单用户模式问题 | 迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何设置github的SSH密钥首先确保安装好ssh,使用以下命令生成keygen1$ ssh-keygen -t rsa -C “你的邮箱”">
+  <meta name="description" content="想尝试一下忘记root密码进入单用户模式下修改root密码reboot,之后在grub界面按eGRUB2配置文件”grub.cfg”详解(GRUB2实战手册)
+grub界面图
+在此界面按上下键选自上下，按e键编辑编辑界面
+在linux16:**..那行最后面加上single可以进如单用户模式linux16支持vga调整界面分辨率 vga=ask之后会有提示我用的hyper-v装的centos7-m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github密钥登陆">
-<meta property="og:url" content="http://enjoythe.party/2016/05/08/github密钥登陆/index.html">
+<meta property="og:title" content="grub2的vga和单用户模式问题">
+<meta property="og:url" content="http://enjoythe.party/2016/05/13/grub2的vga和单用户模式问题/index.html">
 <meta property="og:site_name" content="迷路的虾米">
-<meta property="og:description" content="如何设置github的SSH密钥首先确保安装好ssh,使用以下命令生成keygen1$ ssh-keygen -t rsa -C “你的邮箱”">
-<meta property="og:updated_time" content="2016-05-08T14:32:09.359Z">
+<meta property="og:description" content="想尝试一下忘记root密码进入单用户模式下修改root密码reboot,之后在grub界面按eGRUB2配置文件”grub.cfg”详解(GRUB2实战手册)
+grub界面图
+在此界面按上下键选自上下，按e键编辑编辑界面
+在linux16:**..那行最后面加上single可以进如单用户模式linux16支持vga调整界面分辨率 vga=ask之后会有提示我用的hyper-v装的centos7-m">
+<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\1.jpg">
+<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\2.jpg">
+<meta property="og:updated_time" content="2016-05-13T13:47:22.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="github密钥登陆">
-<meta name="twitter:description" content="如何设置github的SSH密钥首先确保安装好ssh,使用以下命令生成keygen1$ ssh-keygen -t rsa -C “你的邮箱”">
+<meta name="twitter:title" content="grub2的vga和单用户模式问题">
+<meta name="twitter:description" content="想尝试一下忘记root密码进入单用户模式下修改root密码reboot,之后在grub界面按eGRUB2配置文件”grub.cfg”详解(GRUB2实战手册)
+grub界面图
+在此界面按上下键选自上下，按e键编辑编辑界面
+在linux16:**..那行最后面加上single可以进如单用户模式linux16支持vga调整界面分辨率 vga=ask之后会有提示我用的hyper-v装的centos7-m">
+<meta name="twitter:image" content="http://enjoythe.party/\image\linux\grub\1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="迷路的虾米" type="application/atom+xml">
   
@@ -205,11 +217,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-github密钥登陆" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="centos-grub2的vga和单用户模式问题" class="article article-type-centos" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/08/github密钥登陆/" class="article-date">
-  	<time datetime="2016-05-08T04:12:43.000Z" itemprop="datePublished">2016-05-08</time>
+      <a href="/2016/05/13/grub2的vga和单用户模式问题/" class="article-date">
+  	<time datetime="2016-05-13T13:33:23.000Z" itemprop="datePublished">2016-05-13</time>
 </a>
     </div>
   
@@ -222,7 +234,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      github密钥登陆
+      grub2的vga和单用户模式问题
     </h1>
   
 
@@ -231,12 +243,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh/">ssh</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/question/">question</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/github/">github</a>
+	<a class="article-category-link" href="/categories/linux/">linux</a>
 	</div>
 
 
@@ -246,10 +258,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="如何设置github的SSH密钥"><a href="#如何设置github的SSH密钥" class="headerlink" title="如何设置github的SSH密钥"></a>如何设置github的SSH密钥</h1><h3 id="首先确保安装好ssh-使用以下命令生成keygen"><a href="#首先确保安装好ssh-使用以下命令生成keygen" class="headerlink" title="首先确保安装好ssh,使用以下命令生成keygen"></a>首先确保安装好ssh,使用以下命令生成keygen</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C “你的邮箱”</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="直接按回车，不用输入任何东西"><a href="#直接按回车，不用输入任何东西" class="headerlink" title="直接按回车，不用输入任何东西"></a>直接按回车，不用输入任何东西</h3><h3 id="在-ssh-目录下会生成id-rsa和id-rsa-pub"><a href="#在-ssh-目录下会生成id-rsa和id-rsa-pub" class="headerlink" title="在 ~/.ssh/目录下会生成id_rsa和id_rsa.pub"></a>在 ~/.ssh/目录下会生成id_rsa和id_rsa.pub</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">cat -n id_rsa.pub</span><br></pre></td></tr></table></figure>
-<h3 id="复制id-rsa-pub文件里的内容"><a href="#复制id-rsa-pub文件里的内容" class="headerlink" title="复制id_rsa.pub文件里的内容"></a>复制id_rsa.pub文件里的内容</h3><h3 id="点击你在github上右上角，有个下箭头，里面有settings-点进去"><a href="#点击你在github上右上角，有个下箭头，里面有settings-点进去" class="headerlink" title="点击你在github上右上角，有个下箭头，里面有settings,点进去"></a>点击你在github上右上角，有个下箭头，里面有settings,点进去</h3><h3 id="左侧有SSH-and-GPG-keys，点进去"><a href="#左侧有SSH-and-GPG-keys，点进去" class="headerlink" title="左侧有SSH and GPG keys，点进去"></a>左侧有SSH and GPG keys，点进去</h3><h3 id="点击New-SSH-key-新建一个SSH-Key"><a href="#点击New-SSH-key-新建一个SSH-Key" class="headerlink" title="点击New SSH key 新建一个SSH Key"></a>点击New SSH key 新建一个SSH Key</h3><h3 id="把你复制的is-rsa-pub文件里的内容粘贴上，写上title（标题），点ADD-SSH-key保存就可以了"><a href="#把你复制的is-rsa-pub文件里的内容粘贴上，写上title（标题），点ADD-SSH-key保存就可以了" class="headerlink" title="把你复制的is_rsa.pub文件里的内容粘贴上，写上title（标题），点ADD SSH key保存就可以了"></a>把你复制的is_rsa.pub文件里的内容粘贴上，写上title（标题），点ADD SSH key保存就可以了</h3>
+        <h1 id="想尝试一下忘记root密码进入单用户模式下修改root密码"><a href="#想尝试一下忘记root密码进入单用户模式下修改root密码" class="headerlink" title="想尝试一下忘记root密码进入单用户模式下修改root密码"></a>想尝试一下忘记root密码进入单用户模式下修改root密码</h1><h1 id="reboot-之后在grub界面按e"><a href="#reboot-之后在grub界面按e" class="headerlink" title="reboot,之后在grub界面按e"></a>reboot,之后在grub界面按e</h1><p><a href="http://www.jinbuguo.com/linux/grub.cfg.html" target="_blank" rel="external">GRUB2配置文件”grub.cfg”详解(GRUB2实战手册)</a></p>
+<h2 id="grub界面图"><a href="#grub界面图" class="headerlink" title="grub界面图"></a>grub界面图</h2><p><img src="\image\linux\grub\1.jpg" alt="grub界面图"></p>
+<h2 id="在此界面按上下键选自上下，按e键编辑"><a href="#在此界面按上下键选自上下，按e键编辑" class="headerlink" title="在此界面按上下键选自上下，按e键编辑"></a>在此界面按上下键选自上下，按e键编辑</h2><h2 id="编辑界面"><a href="#编辑界面" class="headerlink" title="编辑界面"></a>编辑界面</h2><p><img src="\image\linux\grub\2.jpg" alt="grub界面图"></p>
+<h2 id="在linux16-那行最后面加上single可以进如单用户模式"><a href="#在linux16-那行最后面加上single可以进如单用户模式" class="headerlink" title="在linux16:**..那行最后面加上single可以进如单用户模式"></a>在linux16:<em>**</em>..那行最后面加上single可以进如单用户模式</h2><h2 id="linux16支持vga调整界面分辨率-vga-ask之后会有提示"><a href="#linux16支持vga调整界面分辨率-vga-ask之后会有提示" class="headerlink" title="linux16支持vga调整界面分辨率 vga=ask之后会有提示"></a>linux16支持vga调整界面分辨率 vga=ask之后会有提示</h2><h1 id="我用的hyper-v装的centos7-minimal……"><a href="#我用的hyper-v装的centos7-minimal……" class="headerlink" title="我用的hyper-v装的centos7-minimal……"></a>我用的hyper-v装的centos7-minimal……</h1>
       
     </div>
     
@@ -258,18 +270,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/08/github使用hexo搭建静态博客总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          github使用hexo搭建静态博客总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/08/多说的shortname是什么/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">多说的shortname是什么</div>
+    <a href="/2016/05/13/学习笔记-DDOS脚本攻击/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">学习笔记-DDOS脚本攻击</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -304,7 +307,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="github密钥登陆" data-title="github密钥登陆" data-url="http://enjoythe.party/2016/05/08/github密钥登陆/"></div>
+	<div class="ds-thread" data-thread-key="grub2的vga和单用户模式问题" data-title="grub2的vga和单用户模式问题" data-url="http://enjoythe.party/2016/05/13/grub2的vga和单用户模式问题/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

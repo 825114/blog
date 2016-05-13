@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://enjoythe.party/2016/05/13/学习笔记-DDOS脚本攻击/index.html">
 <meta property="og:site_name" content="迷路的虾米">
 <meta property="og:description" content="网络课程笔记apachebench ddos测试查看连接的ip1234567891011netstat -ntu |awk &apos;&amp;#123;print $5&amp;#125;&apos; |cut -d : -f 1|sort |uniq -c|sort -n#netstat-a (all)显示所有选项，默认不显示LISTEN相关-t (tcp)仅显示tcp相关选项-u (udp)仅显示udp相关选项-n 拒绝显示">
-<meta property="og:updated_time" content="2016-05-13T13:30:30.331Z">
+<meta property="og:updated_time" content="2016-05-13T13:32:17.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记-DDOS脚本攻击">
 <meta name="twitter:description" content="网络课程笔记apachebench ddos测试查看连接的ip1234567891011netstat -ntu |awk &apos;&amp;#123;print $5&amp;#125;&apos; |cut -d : -f 1|sort |uniq -c|sort -n#netstat-a (all)显示所有选项，默认不显示LISTEN相关-t (tcp)仅显示tcp相关选项-u (udp)仅显示udp相关选项-n 拒绝显示">
@@ -119,7 +119,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/arduino/" style="font-size: 15px;">arduino</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/question/" style="font-size: 15px;">question</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a>
+						<a href="/tags/arduino/" style="font-size: 13.33px;">arduino</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a>
 					</div>
 				</section>
 				
@@ -248,7 +248,7 @@
       
         <h1 id="网络课程笔记"><a href="#网络课程笔记" class="headerlink" title="网络课程笔记"></a>网络课程笔记</h1><h1 id="apachebench-ddos测试"><a href="#apachebench-ddos测试" class="headerlink" title="apachebench ddos测试"></a>apachebench ddos测试</h1><h3 id="查看连接的ip"><a href="#查看连接的ip" class="headerlink" title="查看连接的ip"></a>查看连接的ip</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntu |awk <span class="string">'&#123;print $5&#125;'</span> |cut <span class="_">-d</span> : <span class="_">-f</span> 1|sort |uniq -c|sort -n</span><br><span class="line"><span class="comment">#netstat</span></span><br><span class="line"><span class="_">-a</span> (all)显示所有选项，默认不显示LISTEN相关</span><br><span class="line">-t (tcp)仅显示tcp相关选项</span><br><span class="line">-u (udp)仅显示udp相关选项</span><br><span class="line">-n 拒绝显示别名，能显示数字的全部转化成数字。</span><br><span class="line"><span class="_">-l</span> 仅列出有在 Listen (监听) 的服務状态</span><br><span class="line"><span class="comment">#awk 打印第5列</span></span><br><span class="line"><span class="comment">#cut 以：分割去第一部分</span></span><br><span class="line"><span class="comment">#sort -n 排序，以数字排序</span></span><br><span class="line"><span class="comment">#uniq 看重复次数</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p><a href="http://apache.fayea.com//httpd/httpd-2.4.20.tar.gz" target="_blank" rel="external">apach2.5源码包下载地址</a><br><a href="http://blog.chinaunix.net/uid-26729093-id-4315346.html" target="_blank" rel="external">configure: error: APR not found 解决办法</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://apache.fayea.com//httpd/httpd-2.4.20.tar.gz" target="_blank" rel="external">apach2.4源码包下载地址</a><br><a href="http://blog.chinaunix.net/uid-26729093-id-4315346.html" target="_blank" rel="external">configure: error: APR not found 解决办法</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd</span><br></pre></td></tr></table></figure></p>
 <h2 id="查看ab"><a href="#查看ab" class="headerlink" title="查看ab.."></a>查看ab..</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -qf `<span class="built_in">which</span> ab`</span><br><span class="line"><span class="comment">#ab是apache的压力测试工具</span></span><br></pre></td></tr></table></figure>
 <h1 id="ab测试"><a href="#ab测试" class="headerlink" title="ab测试"></a>ab测试</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ab -n 1000 -c 10 http://主机地址/页面</span><br><span class="line"><span class="comment">#-n 链接总和数</span></span><br><span class="line"><span class="comment">#-c 开启客户端时</span></span><br><span class="line"><span class="comment">#总并发量10003</span></span><br></pre></td></tr></table></figure>
 <p><a href="http://www.inetbase.com/scripts/ddos/install.sh" target="_blank" rel="external">防范ddos工具</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#下载</span></span><br><span class="line">wget http://www.inetbase.com/scripts/ddos/install.sh</span><br><span class="line"><span class="comment">#加上可执行权限</span></span><br><span class="line">chmod u+x install.sh</span><br><span class="line"><span class="comment">#执行</span></span><br><span class="line">./install.sh</span><br><span class="line"><span class="comment">#安装目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/ddos</span><br><span class="line"><span class="comment">#ignore.ip.list白名单</span></span><br><span class="line"><span class="comment">#/etc/cron.d/ddos.cron 计划任务</span></span><br><span class="line">FREQ=1 间隔1分钟执行一次</span><br><span class="line">NO_OF-CONNETIONS=150最大连接数超过封ip</span><br></pre></td></tr></table></figure></p>
@@ -260,6 +260,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/05/13/grub2的vga和单用户模式问题/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          grub2的vga和单用户模式问题
+        
+      </div>
+    </a>
   
   
     <a href="/2016/05/13/centos上安装配置vsftpd/" id="article-nav-older" class="article-nav-link-wrap">

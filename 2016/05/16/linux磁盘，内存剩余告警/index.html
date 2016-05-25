@@ -15,8 +15,8 @@
 <meta property="og:image" content="http://enjoythe.party/image/linux/mointer/1.png">
 <meta property="og:image" content="http://enjoythe.party/image/linux/mointer/2.png">
 <meta property="og:image" content="http://enjoythe.party/image/linux/mointer/4.png">
-<meta property="og:image" content="http://enjoythe.party/image/linux/mointer/4.png">
-<meta property="og:updated_time" content="2016-05-25T13:14:16.856Z">
+<meta property="og:image" content="http://enjoythe.party/image/linux/mointer/3.png">
+<meta property="og:updated_time" content="2016-05-25T13:15:41.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记-监控磁盘，内存剩余，mail发送警告">
 <meta name="twitter:description" content="一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向admin@bulid.top发送邮件先把根分区的弄出来">
@@ -258,7 +258,7 @@
 <h2 id="查看内存使用百分比"><a href="#查看内存使用百分比" class="headerlink" title="查看内存使用百分比"></a>查看内存使用百分比</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">memall=`free -m|grep Mem|awk <span class="string">'&#123;print $2&#125;'</span>`</span><br><span class="line">memused=`free -m|grep Mem|awk <span class="string">'&#123;print $3&#125;'</span>` </span><br><span class="line">awk <span class="string">'BEGIN&#123;printf "%0.2f%\n",('</span><span class="variable">$memused</span><span class="string">'/'</span><span class="variable">$memall</span><span class="string">')*100&#125;'</span></span><br></pre></td></tr></table></figure>
 <p><img src="/image/linux/mointer/4.png" alt="FREE"></p>
 <h2 id="发警告邮件"><a href="#发警告邮件" class="headerlink" title="发警告邮件"></a>发警告邮件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"memory is used over 80%,please check it"</span>|mail <span class="_">-s</span> <span class="string">"server warning memory"</span> 102xxxxx@qq.com</span><br></pre></td></tr></table></figure>
-<p><img src="/image/linux/mointer/4.png" alt="FREE"></p>
+<p><img src="/image/linux/mointer/3.png" alt="FREE"></p>
 <h2 id="最后组合起来就可以了"><a href="#最后组合起来就可以了" class="headerlink" title="最后组合起来就可以了"></a>最后组合起来就可以了</h2>
       
     </div>

@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/arduino/" style="font-size: 13.33px;">arduino</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a>
+						<a href="/tags/arduino/" style="font-size: 13.33px;">arduino</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
 					</div>
 				</section>
 				
@@ -205,6 +205,71 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-linux终端颜色修改" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/25/linux终端颜色修改/" class="article-date">
+  	<time datetime="2016-05-25T11:33:58.000Z" itemprop="datePublished">2016-05-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/25/linux终端颜色修改/">linux终端颜色修改</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试"><a href="#今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试" class="headerlink" title="今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试"></a>今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试</h1><h2 id="echo-e-处理特殊字符"><a href="#echo-e-处理特殊字符" class="headerlink" title="echo -e 处理特殊字符"></a>echo -e 处理特殊字符</h2><p>改终端颜色格式：echo -e “\033[前景色;背景色;光标m” </p>
+<h2 id="前景-背景-颜色"><a href="#前景-背景-颜色" class="headerlink" title="前景      背景       颜色"></a>前景      背景       颜色</h2><p>30          40          黑色<br>31          41          红色<br>32          42          绿色<br>33          43          黄色<br>34          44          蓝色<br>35          45          紫红色<br>36          46          青蓝色<br>37          47          白色</p>
+<h2 id="代码-意义"><a href="#代码-意义" class="headerlink" title="代码       意义"></a>代码       意义</h2><p>0            OFF<br>1            高亮显示<br>4            下划线<br>5            闪烁<br>7            反白显示<br>8            不可见<br>\007         发蜂鸣生beep</p>
+<h1 id="做个简单的“红绿灯”"><a href="#做个简单的“红绿灯”" class="headerlink" title="做个简单的“红绿灯”"></a>做个简单的“红绿灯”</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span></span><br><span class="line"><span class="comment"># 死循环</span></span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[31;40;8m &lt;###我是灯###&gt;"</span></span><br><span class="line">	<span class="comment"># “\033”引导非常规字符序列，前景色红色，背景色黑色 “&lt;###我是灯###&gt;”用于显示观察的字符</span></span><br><span class="line">	sleep 1</span><br><span class="line">	<span class="comment"># 睡一秒</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\007"</span></span><br><span class="line">	<span class="comment"># 响一声，远程连接的得把声音打开</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[33;40;8m &lt;###我是灯###&gt;"</span></span><br><span class="line">	sleep 1</span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\007"</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[32;40;8m &lt;###我是灯###&gt;"</span></span><br><span class="line">	sleep 1</span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\007"</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h1 id="Ctrl-c结束，怎么改回来呢"><a href="#Ctrl-c结束，怎么改回来呢" class="headerlink" title="Ctrl+c结束，怎么改回来呢"></a>Ctrl+c结束，怎么改回来呢</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[0m"</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/终端/">终端</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/linux/">linux</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -754,71 +819,6 @@
       
         <p class="article-more-link">
           <a  href="/2016/05/09/给atmega328p烧写bootloader/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-在Centos7中安装Mariadb" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/08/在Centos7中安装Mariadb/" class="article-date">
-  	<time datetime="2016-05-08T14:22:48.000Z" itemprop="datePublished">2016-05-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/08/在Centos7中安装Mariadb/">在Centos7中安装Mariadb</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="首先配置yum源"><a href="#首先配置yum源" class="headerlink" title="首先配置yum源"></a>首先配置yum源</h1><h3 id="在-etc-yum-repos-d-下新建MariaDB-repo"><a href="#在-etc-yum-repos-d-下新建MariaDB-repo" class="headerlink" title="在/etc/yum.repos.d/下新建MariaDB.repo"></a>在/etc/yum.repos.d/下新建MariaDB.repo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/yum.repos.d/MariaBD.repo</span><br></pre></td></tr></table></figure>
-<h3 id="加入以下内容。"><a href="#加入以下内容。" class="headerlink" title="加入以下内容。"></a>加入以下内容。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[mariadb]</span><br><span class="line">name = MariaDB</span><br><span class="line">baseurl = http://yum.mariadb.org/10.2.0/centos7-amd64/</span><br><span class="line">gpgkey=httPS://yum.mariadb.org/RPM-GPG-KEY-MariaDB</span><br><span class="line">gpgcheck=1</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mariadb/">mariadb</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/linux/">linux</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/08/在Centos7中安装Mariadb/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

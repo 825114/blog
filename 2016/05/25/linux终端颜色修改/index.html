@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://enjoythe.party/2016/05/25/linux终端颜色修改/index.html">
 <meta property="og:site_name" content="迷路的虾米">
 <meta property="og:description" content="今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试echo -e 处理特殊字符改终端颜色格式：echo -e “\033[前景色;背景色;光标m”">
-<meta property="og:updated_time" content="2016-05-25T12:29:01.084Z">
+<meta property="og:updated_time" content="2016-05-25T12:30:38.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux终端颜色修改">
 <meta name="twitter:description" content="今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试echo -e 处理特殊字符改终端颜色格式：echo -e “\033[前景色;背景色;光标m”">
@@ -246,9 +246,59 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试"><a href="#今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试" class="headerlink" title="今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试"></a>今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试</h1><h2 id="echo-e-处理特殊字符"><a href="#echo-e-处理特殊字符" class="headerlink" title="echo -e 处理特殊字符"></a>echo -e 处理特殊字符</h2><p>改终端颜色格式：echo -e “\033[前景色;背景色;光标m”<br><a id="more"></a><br>| 前景 | 背景 | 颜色 |</p>
-<p>| 30 | 40 | 黑色 |<br>| 31 | 41 | 红色 |<br>| 32 | 42 | 绿色 |<br>| 33 | 43 | 黄色 |<br>| 34 | 44 | 蓝色 |<br>| 35 | 45 | 紫红色 |<br>| 36 | 46 | 青蓝色 |<br>| 37 | 47 | 白色 |</p>
-<table>
+        <h1 id="今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试"><a href="#今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试" class="headerlink" title="今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试"></a>今天在群里看到有一个问怎么实现红绿灯的，然后我就试了试</h1><h2 id="echo-e-处理特殊字符"><a href="#echo-e-处理特殊字符" class="headerlink" title="echo -e 处理特殊字符"></a>echo -e 处理特殊字符</h2><p>改终端颜色格式：echo -e “\033[前景色;背景色;光标m”<br><a id="more"></a></p>
+<h1 id="颜色对应的数值"><a href="#颜色对应的数值" class="headerlink" title="颜色对应的数值"></a>颜色对应的数值</h1><table>
+<thead>
+<tr>
+<th>前景</th>
+<th>背景</th>
+<th>颜色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td>40</td>
+<td>黑色</td>
+</tr>
+<tr>
+<td>31</td>
+<td>41</td>
+<td>红色</td>
+</tr>
+<tr>
+<td>32</td>
+<td>42</td>
+<td>绿色</td>
+</tr>
+<tr>
+<td>33</td>
+<td>43</td>
+<td>黄色</td>
+</tr>
+<tr>
+<td>34</td>
+<td>44</td>
+<td>蓝色</td>
+</tr>
+<tr>
+<td>35</td>
+<td>45</td>
+<td>紫红色</td>
+</tr>
+<tr>
+<td>36</td>
+<td>46</td>
+<td>青蓝色</td>
+</tr>
+<tr>
+<td>37</td>
+<td>47</td>
+<td>白色</td>
+</tr>
+</tbody>
+</table>
+<h1 id="光标对应的数值"><a href="#光标对应的数值" class="headerlink" title="光标对应的数值"></a>光标对应的数值</h1><table>
 <thead>
 <tr>
 <th>代码</th>
@@ -282,7 +332,7 @@
 </tr>
 </tbody>
 </table>
-<p>\007         发蜂鸣生beep</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>\007         发蜂鸣生beep</p>
 <h1 id="做个简单的“红绿灯”"><a href="#做个简单的“红绿灯”" class="headerlink" title="做个简单的“红绿灯”"></a>做个简单的“红绿灯”</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span></span><br><span class="line"><span class="comment"># 死循环</span></span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[31;40;8m &lt;###我是灯###&gt;"</span></span><br><span class="line">	<span class="comment"># “\033”引导非常规字符序列，前景色红色，背景色黑色 “&lt;###我是灯###&gt;”用于显示观察的字符</span></span><br><span class="line">	sleep 1</span><br><span class="line">	<span class="comment"># 睡一秒</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\007"</span></span><br><span class="line">	<span class="comment"># 响一声，远程连接的得把声音打开</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[33;40;8m &lt;###我是灯###&gt;"</span></span><br><span class="line">	sleep 1</span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\007"</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[32;40;8m &lt;###我是灯###&gt;"</span></span><br><span class="line">	sleep 1</span><br><span class="line">	<span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\007"</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 <h1 id="Ctrl-c结束，怎么改回来呢"><a href="#Ctrl-c结束，怎么改回来呢" class="headerlink" title="Ctrl+c结束，怎么改回来呢"></a>Ctrl+c结束，怎么改回来呢</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[0m"</span></span><br></pre></td></tr></table></figure>
 

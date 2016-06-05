@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://enjoythe.party/2016/06/05/centos7%E5%AE%89%E8%A3%85jdk1-8/</loc>
-    <lastmod>2016-06-05T08:09:51.593Z</lastmod>
+    <loc>http://enjoythe.party/2016/06/05/VMware%E4%B8%8BCentos7%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%A1%AC%E7%9B%98/</loc>
+    <lastmod>2016-06-05T09:02:09.663Z</lastmod>
     <data>
         <display>
-        <title>centos7安装jdk1.8</title>
-        <pubTime>2016-06-04T16:13:33.000Z</pubTime>
+        <title>VMware下Centos7添加新硬盘</title>
+        <pubTime>2016-06-05T07:52:01.000Z</pubTime>
         
-        <tag>jdk</tag>
+        <tag>fdisk</tag>
          
          
            
@@ -24,14 +24,14 @@
 
     
   <url>
-    <loc>http://enjoythe.party/2016/06/05/VMware%E4%B8%8BCentos7%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%A1%AC%E7%9B%98/</loc>
-    <lastmod>2016-06-05T07:54:21.983Z</lastmod>
+    <loc>http://enjoythe.party/2016/06/05/centos7%E5%AE%89%E8%A3%85jdk1-8/</loc>
+    <lastmod>2016-06-05T08:09:51.593Z</lastmod>
     <data>
         <display>
-        <title>VMware下Centos7添加新硬盘</title>
-        <pubTime>2016-06-05T07:52:01.000Z</pubTime>
+        <title>centos7安装jdk1.8</title>
+        <pubTime>2016-06-04T16:13:33.000Z</pubTime>
         
-        <tag>fdisk</tag>
+        <tag>jdk</tag>
          
          
            

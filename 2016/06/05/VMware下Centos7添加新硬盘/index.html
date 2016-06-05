@@ -4,23 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>grub2的vga和单用户模式问题 | 迷路的虾米</title>
+  <title>VMware下Centos7添加新硬盘 | 迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="想尝试一下忘记root密码进入单用户模式下修改root密码reboot,之后在grub界面按eGRUB2配置文件”grub.cfg”详解(GRUB2实战手册)">
+  <meta name="description" content="123456789[root@localhost ~]# df -h文件系统                 容量  已用  可用 已用% 挂载点/dev/mapper/centos-root  8.5G  843M  7.7G   10% /devtmpfs                 211M     0  211M    0% /devtmpfs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="grub2的vga和单用户模式问题">
-<meta property="og:url" content="http://enjoythe.party/2016/05/13/grub2的vga和单用户模式问题/index.html">
+<meta property="og:title" content="VMware下Centos7添加新硬盘">
+<meta property="og:url" content="http://enjoythe.party/2016/06/05/VMware下Centos7添加新硬盘/index.html">
 <meta property="og:site_name" content="迷路的虾米">
-<meta property="og:description" content="想尝试一下忘记root密码进入单用户模式下修改root密码reboot,之后在grub界面按eGRUB2配置文件”grub.cfg”详解(GRUB2实战手册)">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\1.jpg">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\2.jpg">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\4.jpg">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\3.jpg">
-<meta property="og:updated_time" content="2016-06-02T07:24:36.940Z">
+<meta property="og:description" content="123456789[root@localhost ~]# df -h文件系统                 容量  已用  可用 已用% 挂载点/dev/mapper/centos-root  8.5G  843M  7.7G   10% /devtmpfs                 211M     0  211M    0% /devtmpfs">
+<meta property="og:updated_time" content="2016-06-05T07:54:21.983Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="grub2的vga和单用户模式问题">
-<meta name="twitter:description" content="想尝试一下忘记root密码进入单用户模式下修改root密码reboot,之后在grub界面按eGRUB2配置文件”grub.cfg”详解(GRUB2实战手册)">
-<meta name="twitter:image" content="http://enjoythe.party/\image\linux\grub\1.jpg">
+<meta name="twitter:title" content="VMware下Centos7添加新硬盘">
+<meta name="twitter:description" content="123456789[root@localhost ~]# df -h文件系统                 容量  已用  可用 已用% 挂载点/dev/mapper/centos-root  8.5G  843M  7.7G   10% /devtmpfs                 211M     0  211M    0% /devtmpfs">
   
     <link rel="alternative" href="/atom.xml" title="迷路的虾米" type="application/atom+xml">
   
@@ -210,11 +205,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="centos-grub2的vga和单用户模式问题" class="article article-type-centos" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-VMware下Centos7添加新硬盘" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/13/grub2的vga和单用户模式问题/" class="article-date">
-  	<time datetime="2016-05-13T13:33:23.000Z" itemprop="datePublished">2016-05-13</time>
+      <a href="/2016/06/05/VMware下Centos7添加新硬盘/" class="article-date">
+  	<time datetime="2016-06-05T07:52:01.000Z" itemprop="datePublished">2016-06-05</time>
 </a>
     </div>
   
@@ -227,7 +222,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      grub2的vga和单用户模式问题
+      VMware下Centos7添加新硬盘
     </h1>
   
 
@@ -236,7 +231,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/question/">question</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fdisk/">fdisk</a></li></ul>
 	</div>
 
         
@@ -251,12 +246,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="想尝试一下忘记root密码进入单用户模式下修改root密码"><a href="#想尝试一下忘记root密码进入单用户模式下修改root密码" class="headerlink" title="想尝试一下忘记root密码进入单用户模式下修改root密码"></a>想尝试一下忘记root密码进入单用户模式下修改root密码</h1><h1 id="reboot-之后在grub界面按e"><a href="#reboot-之后在grub界面按e" class="headerlink" title="reboot,之后在grub界面按e"></a>reboot,之后在grub界面按e</h1><p><a href="http://www.jinbuguo.com/linux/grub.cfg.html" target="_blank" rel="external">GRUB2配置文件”grub.cfg”详解(GRUB2实战手册)</a><br><a id="more"></a></p>
-<h2 id="grub界面图"><a href="#grub界面图" class="headerlink" title="grub界面图"></a>grub界面图</h2><p><img src="\image\linux\grub\1.jpg" alt="grub界面图"></p>
-<h2 id="在此界面按上下键选自上下，按e键编辑"><a href="#在此界面按上下键选自上下，按e键编辑" class="headerlink" title="在此界面按上下键选自上下，按e键编辑"></a>在此界面按上下键选自上下，按e键编辑</h2><h2 id="编辑界面"><a href="#编辑界面" class="headerlink" title="编辑界面"></a>编辑界面</h2><p><img src="\image\linux\grub\2.jpg" alt="grub界面图"></p>
-<h2 id="在linux16-那行最后面加上single可以进如单用户模式"><a href="#在linux16-那行最后面加上single可以进如单用户模式" class="headerlink" title="在linux16:**..那行最后面加上single可以进如单用户模式"></a>在linux16:<em>**</em>..那行最后面加上single可以进如单用户模式</h2><h2 id="Tips-有可能进去后会有这样的错"><a href="#Tips-有可能进去后会有这样的错" class="headerlink" title="Tips:有可能进去后会有这样的错"></a>Tips:有可能进去后会有这样的错</h2><p><img src="\image\linux\grub\4.jpg" alt="grub界面图"></p>
-<h2 id="可以直接grub那后面不加single-加init-bin-bash"><a href="#可以直接grub那后面不加single-加init-bin-bash" class="headerlink" title="可以直接grub那后面不加single 加init=/bin/bash"></a>可以直接grub那后面不加single 加init=/bin/bash</h2><p><img src="\image\linux\grub\3.jpg" alt="grub界面图"></p>
-<h2 id="然后passwd-root"><a href="#然后passwd-root" class="headerlink" title="然后passwd root"></a>然后passwd root</h2><h2 id="linux16支持vga调整界面分辨率-vga-ask之后会有提示"><a href="#linux16支持vga调整界面分辨率-vga-ask之后会有提示" class="headerlink" title="linux16支持vga调整界面分辨率 vga=ask之后会有提示"></a>linux16支持vga调整界面分辨率 vga=ask之后会有提示</h2><h1 id="我用的hyper-v装的centos7-minimal……"><a href="#我用的hyper-v装的centos7-minimal……" class="headerlink" title="我用的hyper-v装的centos7-minimal……"></a>我用的hyper-v装的centos7-minimal……</h1><h1 id="这两个问题我还没有解决，直接进bash乱码修改密码不管用，vga没效果"><a href="#这两个问题我还没有解决，直接进bash乱码修改密码不管用，vga没效果" class="headerlink" title="这两个问题我还没有解决，直接进bash乱码修改密码不管用，vga没效果"></a>这两个问题我还没有解决，直接进bash乱码修改密码不管用，vga没效果</h1><p>– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
+        <a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># df -h</span></span><br><span class="line">文件系统                 容量  已用  可用 已用% 挂载点</span><br><span class="line">/dev/mapper/centos-root  8.5G  843M  7.7G   10% /</span><br><span class="line">devtmpfs                 211M     0  211M    0% /dev</span><br><span class="line">tmpfs                    221M     0  221M    0% /dev/shm</span><br><span class="line">tmpfs                    221M  4.6M  217M    3% /run</span><br><span class="line">tmpfs                    221M     0  221M    0% /sys/fs/cgroup</span><br><span class="line">/dev/sda1                497M  123M  375M   25% /boot</span><br><span class="line">tmpfs                     45M     0   45M    0% /run/user/0</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>–<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
 
       
     </div>
@@ -266,18 +264,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/14/word恢复未保存文件和解决插入公式不能用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          word恢复未保存文件和解决插入公式不能用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/13/学习笔记-DDOS脚本攻击/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">学习笔记-DDOS脚本攻击</div>
+    <a href="/2016/06/05/centos7安装jdk1-8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">centos7安装jdk1.8</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -312,7 +301,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="grub2的vga和单用户模式问题" data-title="grub2的vga和单用户模式问题" data-url="http://enjoythe.party/2016/05/13/grub2的vga和单用户模式问题/"></div>
+	<div class="ds-thread" data-thread-key="VMware下Centos7添加新硬盘" data-title="VMware下Centos7添加新硬盘" data-url="http://enjoythe.party/2016/06/05/VMware下Centos7添加新硬盘/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

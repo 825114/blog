@@ -6,17 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>centos上安装配置vsftpd匿名用户登录 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装vsftpd1yum install -y vsftpd">
+  <meta name="description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
+安装vsftpd1yum install -y vsftpd">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos上安装配置vsftpd匿名用户登录">
 <meta property="og:url" content="http://enjoythe.party/2016/05/13/centos上安装配置vsftpd/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="安装vsftpd1yum install -y vsftpd">
+<meta property="og:description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
+安装vsftpd1yum install -y vsftpd">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\ftp\1.jpg">
-<meta property="og:updated_time" content="2016-06-02T07:24:59.573Z">
+<meta property="og:updated_time" content="2016-06-06T12:18:30.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos上安装配置vsftpd匿名用户登录">
-<meta name="twitter:description" content="安装vsftpd1yum install -y vsftpd">
+<meta name="twitter:description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
+安装vsftpd1yum install -y vsftpd">
 <meta name="twitter:image" content="http://enjoythe.party/\image\linux\ftp\1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
@@ -248,7 +251,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="安装vsftpd"><a href="#安装vsftpd" class="headerlink" title="安装vsftpd"></a>安装vsftpd</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
+        <p>· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
+<h1 id="安装vsftpd"><a href="#安装vsftpd" class="headerlink" title="安装vsftpd"></a>安装vsftpd</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h1 id="关闭selinux-清空iptables"><a href="#关闭selinux-清空iptables" class="headerlink" title="关闭selinux,清空iptables"></a>关闭selinux,清空iptables</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#临时关闭selinux</span></span><br><span class="line">setenforce 0</span><br><span class="line"><span class="comment">#编辑配置文件，需重启</span></span><br><span class="line">vi /etc/selinux/config</span><br><span class="line">SELINUX=<span class="built_in">disable</span><span class="comment">#关闭selinux</span></span><br><span class="line">SELINUX=enforce<span class="comment">#启用</span></span><br></pre></td></tr></table></figure>
 <h1 id="切换到vsftpd目录"><a href="#切换到vsftpd目录" class="headerlink" title="切换到vsftpd目录"></a>切换到vsftpd目录</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/vsftpd/</span><br><span class="line">ll</span><br><span class="line">total 20</span><br><span class="line"><span class="comment">#配置不能登陆ftp的用户，一行一个账号</span></span><br><span class="line">-rw------- 1 root root  125 Mar 31 23:12 ftpusers </span><br><span class="line"><span class="comment">#与vsftpd.conf中的userlist_enable=&#123;YES|NO&#125;和userlist_deny=&#123;YES|NO&#125;有关,</span></span><br><span class="line"><span class="comment">#通过配置那两个参数yes or no 确认user_list里的用户能否登录</span></span><br><span class="line">-rw------- 1 root root  361 Mar 31 23:12 user_list </span><br><span class="line"><span class="comment">#这是vsftpd的详细配置文件</span></span><br><span class="line">-rw------- 1 root root 5030 Mar 31 23:12 vsftpd.conf</span><br><span class="line">-rwxr--r-- 1 root root  338 Mar 31 23:12 vsftpd_conf_migrate.sh</span><br></pre></td></tr></table></figure>

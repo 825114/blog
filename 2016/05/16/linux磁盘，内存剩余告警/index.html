@@ -6,20 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>学习笔记-监控磁盘，内存剩余，mail发送警告 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件先把根分区的弄出来">
+  <meta name="description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
+一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件先把根分区的弄出来">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习笔记-监控磁盘，内存剩余，mail发送警告">
 <meta property="og:url" content="http://enjoythe.party/2016/05/16/linux磁盘，内存剩余告警/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件先把根分区的弄出来">
+<meta property="og:description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
+一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件先把根分区的弄出来">
 <meta property="og:image" content="http://enjoythe.party/image/linux/mointer/1.png">
 <meta property="og:image" content="http://enjoythe.party/image/linux/mointer/2.png">
 <meta property="og:image" content="http://enjoythe.party/image/linux/mointer/4.png">
 <meta property="og:image" content="http://enjoythe.party/image/linux/mointer/3.png">
-<meta property="og:updated_time" content="2016-06-02T07:25:38.585Z">
+<meta property="og:updated_time" content="2016-06-06T12:19:06.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记-监控磁盘，内存剩余，mail发送警告">
-<meta name="twitter:description" content="一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件先把根分区的弄出来">
+<meta name="twitter:description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
+一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件先把根分区的弄出来">
 <meta name="twitter:image" content="http://enjoythe.party/image/linux/mointer/1.png">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
@@ -251,7 +254,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="一道题：如果根分区剩余空间小于20-。内存已用空间大于80-，向xxxx-qq-com发送邮件"><a href="#一道题：如果根分区剩余空间小于20-。内存已用空间大于80-，向xxxx-qq-com发送邮件" class="headerlink" title="一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件"></a>一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件</h1><h2 id="先把根分区的弄出来"><a href="#先把根分区的弄出来" class="headerlink" title="先把根分区的弄出来"></a>先把根分区的弄出来</h2><a id="more"></a>
+        <p>· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
+<h1 id="一道题：如果根分区剩余空间小于20-。内存已用空间大于80-，向xxxx-qq-com发送邮件"><a href="#一道题：如果根分区剩余空间小于20-。内存已用空间大于80-，向xxxx-qq-com发送邮件" class="headerlink" title="一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件"></a>一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件</h1><h2 id="先把根分区的弄出来"><a href="#先把根分区的弄出来" class="headerlink" title="先把根分区的弄出来"></a>先把根分区的弄出来</h2><a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -m</span><br></pre></td></tr></table></figure>
 <p><img src="/image/linux/mointer/1.png" alt="df-m"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -m|grep /dev/xvda1|awk <span class="string">'&#123;print $5&#125;'</span>|cut <span class="_">-d</span> % <span class="_">-f</span> 1</span><br></pre></td></tr></table></figure></p>
 <p><img src="/image/linux/mointer/2.png" alt="df-GREP"></p>

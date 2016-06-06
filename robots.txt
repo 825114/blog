@@ -1,6 +1,5 @@
 User-agent: *
-Allow: /
-Allow: /archies/
+Allow: *
 
 Disallow: /fonts/
 Disallow: /vendors/

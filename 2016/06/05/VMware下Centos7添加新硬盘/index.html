@@ -6,25 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>VMware下Centos7添加新硬盘 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
-学习fdisk管理linux磁盘首先，先实验挂载一块新硬盘">
+  <meta name="description" content="学习fdisk管理linux磁盘首先，先实验挂载一块新硬盘">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VMware下Centos7添加新硬盘">
 <meta property="og:url" content="http://enjoythe.party/2016/06/05/VMware下Centos7添加新硬盘/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
-学习fdisk管理linux磁盘首先，先实验挂载一块新硬盘">
+<meta property="og:description" content="学习fdisk管理linux磁盘首先，先实验挂载一块新硬盘">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\disk\1.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\disk\2.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\disk\3.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\disk\4.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\disk\5.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\disk\6.png">
-<meta property="og:updated_time" content="2016-06-06T12:19:47.091Z">
+<meta property="og:updated_time" content="2016-06-07T05:38:05.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VMware下Centos7添加新硬盘">
-<meta name="twitter:description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
-学习fdisk管理linux磁盘首先，先实验挂载一块新硬盘">
+<meta name="twitter:description" content="学习fdisk管理linux磁盘首先，先实验挂载一块新硬盘">
 <meta name="twitter:image" content="http://enjoythe.party/\image\linux\disk\1.png">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
@@ -129,7 +126,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
+						<a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
 					</div>
 				</section>
 				
@@ -256,8 +253,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
-<h1 id="学习fdisk管理linux磁盘"><a href="#学习fdisk管理linux磁盘" class="headerlink" title="学习fdisk管理linux磁盘"></a>学习fdisk管理linux磁盘</h1><p>首先，先实验挂载一块新硬盘<br><a id="more"></a></p>
+        <h1 id="学习fdisk管理linux磁盘"><a href="#学习fdisk管理linux磁盘" class="headerlink" title="学习fdisk管理linux磁盘"></a>学习fdisk管理linux磁盘</h1><p>首先，先实验挂载一块新硬盘<br><a id="more"></a></p>
 <h2 id="1-查看原磁盘状况"><a href="#1-查看原磁盘状况" class="headerlink" title="1. 查看原磁盘状况"></a>1. 查看原磁盘状况</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#原磁盘挂载及使用状况</span></span><br><span class="line">[root@localhost ~]<span class="comment"># df -h</span></span><br><span class="line">文件系统                 容量  已用  可用 已用% 挂载点</span><br><span class="line">/dev/mapper/centos-root  8.5G  843M  7.7G   10% /</span><br><span class="line">devtmpfs                 211M     0  211M    0% /dev</span><br><span class="line">tmpfs                    221M     0  221M    0% /dev/shm</span><br><span class="line">tmpfs                    221M  4.6M  217M    3% /run</span><br><span class="line">tmpfs                    221M     0  221M    0% /sys/fs/cgroup</span><br><span class="line">/dev/sda1                497M  123M  375M   25% /boot</span><br><span class="line">tmpfs                     45M     0   45M    0% /run/user/0</span><br><span class="line"><span class="comment">#查看分区状况，只有一块硬盘</span></span><br><span class="line">[root@localhost ~]<span class="comment"># fdisk -l</span></span><br><span class="line"><span class="comment">#/dev/sda这是原来的硬盘</span></span><br><span class="line">磁盘 /dev/sda：10.7 GB, 10737418240 字节，20971520 个扇区</span><br><span class="line">Units = 扇区 of 1 * 512 = 512 bytes</span><br><span class="line">扇区大小(逻辑/物理)：512 字节 / 512 字节</span><br><span class="line">I/O 大小(最小/最佳)：512 字节 / 512 字节</span><br><span class="line">磁盘标签类型：dos</span><br><span class="line">磁盘标识符：0x0003ef46</span><br><span class="line"></span><br><span class="line">   设备 Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/sda1   *        2048     1026047      512000   83  Linux</span><br><span class="line">/dev/sda2         1026048    20971519     9972736   8e  Linux LVM</span><br><span class="line"><span class="comment">#hd：IDE硬盘。如果是SCSI硬盘，则为sd。</span></span><br><span class="line"><span class="comment">#a:： 第一块硬盘。如果是第二块硬盘，则为b，依此类推c,d……</span></span><br><span class="line"><span class="comment">#1： 主分区。其中1，2，3，4都是主分区，从第5开始为逻辑分区，最大到16</span></span><br></pre></td></tr></table></figure>
 <h2 id="2-虚拟机加硬盘"><a href="#2-虚拟机加硬盘" class="headerlink" title="2. 虚拟机加硬盘"></a>2. 虚拟机加硬盘</h2><h3 id="2-1-进入虚拟机的设置添加硬盘"><a href="#2-1-进入虚拟机的设置添加硬盘" class="headerlink" title="2.1 进入虚拟机的设置添加硬盘"></a>2.1 进入虚拟机的设置添加硬盘</h3><p><img src="\image\linux\disk\1.png" alt="设置添加硬盘"></p>
 <h3 id="2-2-选择硬盘的类型"><a href="#2-2-选择硬盘的类型" class="headerlink" title="2.2 选择硬盘的类型"></a>2.2 选择硬盘的类型</h3><p><img src="\image\linux\disk\2.png" alt="选择添加硬盘"></p>

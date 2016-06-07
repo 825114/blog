@@ -4,23 +4,26 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>学习笔记-监控磁盘，内存剩余，mail发送警告 | linux|Arduino|IT|迷路的虾米</title>
+  <title>Centos-minimal在虚拟机里配置ip地址 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件1.1 先把根分区的弄出来">
+  <meta name="description" content="Centos-minimal在虚拟机里配置ip地址，开始是桥接模式，虚拟机和笔记本在同一局域网内，相当于两台独立的主机，想上外网还得设置别的，所以换成了VMnet8(nat)。NAT是网络地址转换">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习笔记-监控磁盘，内存剩余，mail发送警告">
-<meta property="og:url" content="http://enjoythe.party/2016/05/16/linux磁盘，内存剩余告警/index.html">
+<meta property="og:title" content="Centos-minimal在虚拟机里配置ip地址">
+<meta property="og:url" content="http://enjoythe.party/2016/06/07/Centos-minimal在虚拟机里配置ip地址/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="1. 一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件1.1 先把根分区的弄出来">
-<meta property="og:image" content="http://enjoythe.party/image/linux/mointer/1.png">
-<meta property="og:image" content="http://enjoythe.party/image/linux/mointer/2.png">
-<meta property="og:image" content="http://enjoythe.party/image/linux/mointer/4.png">
-<meta property="og:image" content="http://enjoythe.party/image/linux/mointer/3.png">
-<meta property="og:updated_time" content="2016-06-07T05:34:39.461Z">
+<meta property="og:description" content="Centos-minimal在虚拟机里配置ip地址，开始是桥接模式，虚拟机和笔记本在同一局域网内，相当于两台独立的主机，想上外网还得设置别的，所以换成了VMnet8(nat)。NAT是网络地址转换">
+<meta property="og:image" content="http://enjoythe.party/image/linux/ip/1.png">
+<meta property="og:image" content="http://enjoythe.party/image/linux/ip/2.png">
+<meta property="og:image" content="http://enjoythe.party/image/linux/ip/3.png">
+<meta property="og:image" content="http://enjoythe.party/image/linux/ip/5.png">
+<meta property="og:image" content="http://enjoythe.party/image/linux/ip/6.png">
+<meta property="og:image" content="http://enjoythe.party/image/linux/ip/7.png">
+<meta property="og:image" content="http://enjoythe.party/image/linux/ip/8.png">
+<meta property="og:updated_time" content="2016-06-07T06:35:01.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习笔记-监控磁盘，内存剩余，mail发送警告">
-<meta name="twitter:description" content="1. 一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件1.1 先把根分区的弄出来">
-<meta name="twitter:image" content="http://enjoythe.party/image/linux/mointer/1.png">
+<meta name="twitter:title" content="Centos-minimal在虚拟机里配置ip地址">
+<meta name="twitter:description" content="Centos-minimal在虚拟机里配置ip地址，开始是桥接模式，虚拟机和笔记本在同一局域网内，相当于两台独立的主机，想上外网还得设置别的，所以换成了VMnet8(nat)。NAT是网络地址转换">
+<meta name="twitter:image" content="http://enjoythe.party/image/linux/ip/1.png">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -210,11 +213,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-linux磁盘，内存剩余告警" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Centos-minimal在虚拟机里配置ip地址" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/16/linux磁盘，内存剩余告警/" class="article-date">
-  	<time datetime="2016-05-16T11:08:11.000Z" itemprop="datePublished">2016-05-16</time>
+      <a href="/2016/06/07/Centos-minimal在虚拟机里配置ip地址/" class="article-date">
+  	<time datetime="2016-06-07T05:27:04.000Z" itemprop="datePublished">2016-06-07</time>
 </a>
     </div>
   
@@ -227,7 +230,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      学习笔记-监控磁盘，内存剩余，mail发送警告
+      Centos-minimal在虚拟机里配置ip地址
     </h1>
   
 
@@ -236,7 +239,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/question/">question</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ip/">ip</a></li></ul>
 	</div>
 
         
@@ -251,16 +254,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-一道题：如果根分区剩余空间小于20-。内存已用空间大于80-，向xxxx-qq-com发送邮件"><a href="#1-一道题：如果根分区剩余空间小于20-。内存已用空间大于80-，向xxxx-qq-com发送邮件" class="headerlink" title="1. 一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件"></a>1. 一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件</h1><h2 id="1-1-先把根分区的弄出来"><a href="#1-1-先把根分区的弄出来" class="headerlink" title="1.1 先把根分区的弄出来"></a>1.1 先把根分区的弄出来</h2><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -m</span><br></pre></td></tr></table></figure>
-<p><img src="/image/linux/mointer/1.png" alt="df-m"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -m|grep /dev/xvda1|awk <span class="string">'&#123;print $5&#125;'</span>|cut <span class="_">-d</span> % <span class="_">-f</span> 1</span><br></pre></td></tr></table></figure></p>
-<p><img src="/image/linux/mointer/2.png" alt="df-GREP"></p>
-<h2 id="1-2-查看内存使用百分比"><a href="#1-2-查看内存使用百分比" class="headerlink" title="1.2 查看内存使用百分比"></a>1.2 查看内存使用百分比</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">memall=`free -m|grep Mem|awk <span class="string">'&#123;print $2&#125;'</span>`</span><br><span class="line">memused=`free -m|grep Mem|awk <span class="string">'&#123;print $3&#125;'</span>` </span><br><span class="line">awk <span class="string">'BEGIN&#123;printf "%0.2f%\n",('</span><span class="variable">$memused</span><span class="string">'/'</span><span class="variable">$memall</span><span class="string">')*100&#125;'</span></span><br></pre></td></tr></table></figure>
-<p><img src="/image/linux/mointer/4.png" alt="FREE"></p>
-<h2 id="1-3-发警告邮件"><a href="#1-3-发警告邮件" class="headerlink" title="1.3 发警告邮件"></a>1.3 发警告邮件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"memory is used over 80%,please check it"</span>|mail <span class="_">-s</span> <span class="string">"server warning memory"</span> 102xxxxx@qq.com</span><br></pre></td></tr></table></figure>
-<p><img src="/image/linux/mointer/3.png" alt="FREE"></p>
-<h2 id="1-4-最后组合起来就可以了"><a href="#1-4-最后组合起来就可以了" class="headerlink" title="1.4 最后组合起来就可以了"></a>1.4 最后组合起来就可以了</h2><p>– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
-
+        <h1 id="Centos-minimal在虚拟机里配置ip地址，开始是桥接模式，虚拟机和笔记本在同一局域网内，"><a href="#Centos-minimal在虚拟机里配置ip地址，开始是桥接模式，虚拟机和笔记本在同一局域网内，" class="headerlink" title="Centos-minimal在虚拟机里配置ip地址，开始是桥接模式，虚拟机和笔记本在同一局域网内，"></a>Centos-minimal在虚拟机里配置ip地址，开始是桥接模式，虚拟机和笔记本在同一局域网内，</h1><h1 id="相当于两台独立的主机，想上外网还得设置别的，所以换成了VMnet8-nat-。"><a href="#相当于两台独立的主机，想上外网还得设置别的，所以换成了VMnet8-nat-。" class="headerlink" title="相当于两台独立的主机，想上外网还得设置别的，所以换成了VMnet8(nat)。"></a>相当于两台独立的主机，想上外网还得设置别的，所以换成了VMnet8(nat)。</h1><h1 id="NAT是网络地址转换"><a href="#NAT是网络地址转换" class="headerlink" title="NAT是网络地址转换"></a>NAT是网络地址转换</h1><a id="more"></a>
+<p>环境说明：<br>    虚拟机:VMware 12<br>    系统：Centos7 minimal 64位<br>    笔记本ip:10.1.147.2<br>    虚拟机ip：192.168.211.131</p>
+<h1 id="1-虚拟机网卡设置"><a href="#1-虚拟机网卡设置" class="headerlink" title="1. 虚拟机网卡设置"></a>1. 虚拟机网卡设置</h1><h2 id="1-1-打开虚拟网络编辑器"><a href="#1-1-打开虚拟网络编辑器" class="headerlink" title="1.1 打开虚拟网络编辑器"></a>1.1 打开虚拟网络编辑器</h2><p><img src="/image/linux/ip/1.png" alt="打开虚拟网络编辑器"></p>
+<h2 id="1-2-点更改设置"><a href="#1-2-点更改设置" class="headerlink" title="1.2 点更改设置"></a>1.2 点更改设置</h2><p>4是虚拟机vmnet8的网段192.168.211.0，5是掩码255.255.255.255<br><img src="/image/linux/ip/2.png" alt="更改设置"></p>
+<h2 id="1-3-查看网关"><a href="#1-3-查看网关" class="headerlink" title="1.3 查看网关"></a>1.3 查看网关</h2><p>点NAT设置<br><img src="/image/linux/ip/3.png" alt="查看网关"></p>
+<h2 id="1-4-网关是192-168-211-2"><a href="#1-4-网关是192-168-211-2" class="headerlink" title="1.4 网关是192.168.211.2"></a>1.4 网关是192.168.211.2</h2><p>![网关(/image/linux/ip/4.png)</p>
+<h2 id="1-5-查看DHCP分配的IP地址"><a href="#1-5-查看DHCP分配的IP地址" class="headerlink" title="1.5 查看DHCP分配的IP地址"></a>1.5 查看DHCP分配的IP地址</h2><p>分配的是192.168.211.150到192.168.211.254<br><img src="/image/linux/ip/5.png" alt="查看DHCP"></p>
+<h1 id="2-设置ip地址"><a href="#2-设置ip地址" class="headerlink" title="2.设置ip地址"></a>2.设置ip地址</h1><p>ip地址获取方式有DHCP,静态，先来看看DHCP的</p>
+<h2 id="2-1-DHCP方式获取ip"><a href="#2-1-DHCP方式获取ip" class="headerlink" title="2.1 DHCP方式获取ip"></a>2.1 DHCP方式获取ip</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scriptt/ifcg-eno16777736</span><br></pre></td></tr></table></figure>
+<p>注意两个地方1和2,1是设置静态static或DHCP;2原来是no改为yes<br><img src="/image/linux/ip/6.png" alt="DHCP"><br>测试一下通不通，10.1.254.10和10.1.147.10都是局域网的主机<br><img src="/image/linux/ip/7.png" alt="DHCP测试"><br>用ip router和ip add 看下路由和ip<br>dhcp的路由有到网关的路由，分配的IP地址是192.168.211.150<br><img src="/image/linux/ip/8.png" alt="看下分配的ip"></p>
+<h2 id="2-2-static方式获取ip"><a href="#2-2-static方式获取ip" class="headerlink" title="2.2 static方式获取ip"></a>2.2 static方式获取ip</h2><p>vi /etc/sysconfig/network-scriptt/ifcg-eno16777736<br>···bash<br>    TYPE=Ethernet<br>    BOOTPROTO=static </p>
+<pre><code>#BOOTPROTO=dhcp
+DEFROUTE=yes
+PEERROUTES=yes
+NAME=eno16777736
+UUID=3246dc60-14a1-4607-86d6-03a21cf097c0
+DEVICE=eno16777736
+ONBOOT=yes
+NETMASK=255.255.255.0
+IPADDR=192.168.211.134
+GATEWAY=192.168.211.2
+DNS1=192.168.211.2                        
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">···bash</span><br><span class="line">	[root@localhost04 ~]# ip route</span><br><span class="line">	default via 192.168.211.2 dev eno16777736  proto static  metric 100 </span><br><span class="line">	192.168.211.0/24 dev eno16777736  proto kernel  scope link  src 192.168.211.134  metric 100 </span><br><span class="line">	[root@localhost04 ~]# ip addr</span><br><span class="line">	1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN </span><br><span class="line">		link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span><br><span class="line">		inet 127.0.0.1/8 scope host lo</span><br><span class="line">		   valid_lft forever preferred_lft forever</span><br><span class="line">		inet6 ::1/128 scope host </span><br><span class="line">		   valid_lft forever preferred_lft forever</span><br><span class="line">	2: eno16777736: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP qlen 1000</span><br><span class="line">		link/ether 00:0c:29:ca:65:9e brd ff:ff:ff:ff:ff:ff</span><br><span class="line">		inet 192.168.211.134/24 brd 192.168.211.255 scope global eno16777736</span><br><span class="line">		   valid_lft forever preferred_lft forever</span><br><span class="line">		inet6 fe80::20c:29ff:feca:659e/64 scope link </span><br><span class="line">		   valid_lft forever preferred_lft forever</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -269,18 +285,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/25/linux终端颜色修改/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          linux终端颜色修改
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/14/word恢复未保存文件和解决插入公式不能用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">word恢复未保存文件和解决插入公式不能用</div>
+    <a href="/2016/06/06/Centos7实验LVS-NAT-ipvsadm负载均衡/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Centos7实验LVS-NAT+ipvsadm负载均衡</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -315,7 +322,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="linux磁盘，内存剩余告警" data-title="学习笔记-监控磁盘，内存剩余，mail发送警告" data-url="http://enjoythe.party/2016/05/16/linux磁盘，内存剩余告警/"></div>
+	<div class="ds-thread" data-thread-key="Centos-minimal在虚拟机里配置ip地址" data-title="Centos-minimal在虚拟机里配置ip地址" data-url="http://enjoythe.party/2016/06/07/Centos-minimal在虚拟机里配置ip地址/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

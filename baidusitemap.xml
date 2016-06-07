@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://enjoythe.party/2016/06/06/Centos7%E5%AE%9E%E9%AA%8CLVS-NAT-ipvsadm%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</loc>
-    <lastmod>2016-06-06T13:25:37.538Z</lastmod>
+    <loc>http://enjoythe.party/2016/06/07/Centos-minimal%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8C%E9%85%8D%E7%BD%AEip%E5%9C%B0%E5%9D%80/</loc>
+    <lastmod>2016-06-07T06:35:01.668Z</lastmod>
     <data>
         <display>
-        <title>Centos7实验LVS-NAT+ipvsadm负载均衡</title>
-        <pubTime>2016-06-06T12:15:09.000Z</pubTime>
+        <title>Centos-minimal在虚拟机里配置ip地址</title>
+        <pubTime>2016-06-07T05:27:04.000Z</pubTime>
         
-        <tag>jdk</tag>
+        <tag>ip</tag>
          
          
            
@@ -24,15 +24,20 @@
 
     
   <url>
-    <loc>http://enjoythe.party/2016/06/05/centos7%E5%AE%89%E8%A3%85jdk1-8/</loc>
-    <lastmod>2016-06-06T12:48:52.440Z</lastmod>
+    <loc>http://enjoythe.party/2016/06/06/Centos7%E5%AE%9E%E9%AA%8CLVS-NAT-ipvsadm%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</loc>
+    <lastmod>2016-06-07T05:50:34.112Z</lastmod>
     <data>
         <display>
-        <title>centos7安装jdk1.8</title>
-        <pubTime>2016-06-04T16:13:33.000Z</pubTime>
+        <title>Centos7实验LVS-NAT+ipvsadm负载均衡</title>
+        <pubTime>2016-06-06T12:15:09.000Z</pubTime>
         
+        <tag>LVS</tag>
+         
          
            
+             
+              <breadCrumb title="linux" url="http://enjoythe.party/categories/linux/"/>
+          
         </display>
     </data>
     </url>
@@ -40,7 +45,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/08/%E5%9C%A8Centos7%E4%B8%AD%E5%AE%89%E8%A3%85Mariadb/</loc>
-    <lastmod>2016-06-06T12:20:32.987Z</lastmod>
+    <lastmod>2016-06-07T05:38:41.689Z</lastmod>
     <data>
         <display>
         <title>在Centos7中安装Mariadb</title>
@@ -62,7 +67,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/13/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-DDOS%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB/</loc>
-    <lastmod>2016-06-06T12:20:26.587Z</lastmod>
+    <lastmod>2016-06-07T05:38:34.234Z</lastmod>
     <data>
         <display>
         <title>学习笔记-DDOS脚本攻击</title>
@@ -84,7 +89,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/09/%E7%BB%99atmega328p%E7%83%A7%E5%86%99bootloader/</loc>
-    <lastmod>2016-06-06T12:20:18.970Z</lastmod>
+    <lastmod>2016-06-07T05:38:28.806Z</lastmod>
     <data>
         <display>
         <title>使用arduino给atmega328p烧写bootloader</title>
@@ -104,7 +109,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/08/%E5%A4%9A%E8%AF%B4%E7%9A%84shortname%E6%98%AF%E4%BB%80%E4%B9%88/</loc>
-    <lastmod>2016-06-06T12:20:13.798Z</lastmod>
+    <lastmod>2016-06-07T05:38:23.511Z</lastmod>
     <data>
         <display>
         <title>多说的shortname是什么</title>
@@ -126,7 +131,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/06/05/%E9%98%BF%E9%87%8C%E4%BA%91Centos7%E5%AE%89%E8%A3%85docker/</loc>
-    <lastmod>2016-06-06T12:20:08.391Z</lastmod>
+    <lastmod>2016-06-07T05:38:17.692Z</lastmod>
     <data>
         <display>
         <title>阿里云Centos7安装docker</title>
@@ -146,7 +151,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/14/word%E6%81%A2%E5%A4%8D%E6%9C%AA%E4%BF%9D%E5%AD%98%E6%96%87%E4%BB%B6%E5%92%8C%E8%A7%A3%E5%86%B3%E6%8F%92%E5%85%A5%E5%85%AC%E5%BC%8F%E4%B8%8D%E8%83%BD%E7%94%A8/</loc>
-    <lastmod>2016-06-06T12:20:02.402Z</lastmod>
+    <lastmod>2016-06-07T05:38:12.323Z</lastmod>
     <data>
         <display>
         <title>word恢复未保存文件和解决插入公式不能用</title>
@@ -168,7 +173,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/06/05/VMware%E4%B8%8BCentos7%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%A1%AC%E7%9B%98/</loc>
-    <lastmod>2016-06-06T12:19:47.091Z</lastmod>
+    <lastmod>2016-06-07T05:38:05.399Z</lastmod>
     <data>
         <display>
         <title>VMware下Centos7添加新硬盘</title>
@@ -188,7 +193,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/12/uniq%E5%8F%96%E5%8D%95%E4%B8%80%EF%BC%8Csed%E6%9B%BF%E6%8D%A2%EF%BC%8C-r-n%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2016-06-06T12:19:40.425Z</lastmod>
+    <lastmod>2016-06-07T05:37:59.239Z</lastmod>
     <data>
         <display>
         <title>uniq取单一，sed替换，
@@ -211,7 +216,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/10/Python%E7%9A%84pyserial%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2016-06-06T12:19:34.660Z</lastmod>
+    <lastmod>2016-06-07T05:37:53.709Z</lastmod>
     <data>
         <display>
         <title>Python的pyserial使用</title>
@@ -233,7 +238,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/26/Python%E7%9A%84pip%E5%AE%89%E8%A3%85Django/</loc>
-    <lastmod>2016-06-06T12:19:25.943Z</lastmod>
+    <lastmod>2016-06-07T05:37:17.182Z</lastmod>
     <data>
         <display>
         <title>Python的pip安装Django</title>
@@ -253,7 +258,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/29/PCB%E5%8A%A0%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9B%BE%E7%89%87/</loc>
-    <lastmod>2016-06-06T12:19:19.517Z</lastmod>
+    <lastmod>2016-06-07T05:36:45.457Z</lastmod>
     <data>
         <display>
         <title>PCB加二维码图片</title>
@@ -273,7 +278,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/25/linux%E7%BB%88%E7%AB%AF%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B9/</loc>
-    <lastmod>2016-06-06T12:19:12.348Z</lastmod>
+    <lastmod>2016-06-07T05:35:18.169Z</lastmod>
     <data>
         <display>
         <title>linux终端颜色修改</title>
@@ -293,7 +298,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/16/linux%E7%A3%81%E7%9B%98%EF%BC%8C%E5%86%85%E5%AD%98%E5%89%A9%E4%BD%99%E5%91%8A%E8%AD%A6/</loc>
-    <lastmod>2016-06-06T12:19:06.266Z</lastmod>
+    <lastmod>2016-06-07T05:34:39.461Z</lastmod>
     <data>
         <display>
         <title>学习笔记-监控磁盘，内存剩余，mail发送警告</title>
@@ -313,7 +318,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/13/grub2%E7%9A%84vga%E5%92%8C%E5%8D%95%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2016-06-06T12:18:56.722Z</lastmod>
+    <lastmod>2016-06-07T05:34:15.033Z</lastmod>
     <data>
         <display>
         <title>grub2的vga和单用户模式问题</title>
@@ -335,7 +340,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/08/github%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2016-06-06T12:18:49.362Z</lastmod>
+    <lastmod>2016-06-07T05:34:06.630Z</lastmod>
     <data>
         <display>
         <title>github使用hexo搭建静态博客总结</title>
@@ -355,7 +360,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/08/github%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86/</loc>
-    <lastmod>2016-06-06T12:18:39.904Z</lastmod>
+    <lastmod>2016-06-07T05:34:01.048Z</lastmod>
     <data>
         <display>
         <title>github密钥登陆</title>
@@ -377,10 +382,10 @@
     
   <url>
     <loc>http://enjoythe.party/2016/05/13/centos%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEvsftpd/</loc>
-    <lastmod>2016-06-06T12:18:30.962Z</lastmod>
+    <lastmod>2016-06-07T05:33:21.203Z</lastmod>
     <data>
         <display>
-        <title>centos上安装配置vsftpd匿名用户登录</title>
+        <title>centos7上安装配置vsftpd匿名用户登录</title>
         <pubTime>2016-05-13T05:47:25.000Z</pubTime>
         
         <tag>linux</tag>
@@ -398,8 +403,23 @@
 
     
   <url>
+    <loc>http://enjoythe.party/2016/06/05/centos7%E5%AE%89%E8%A3%85jdk1-8/</loc>
+    <lastmod>2016-06-07T05:31:59.163Z</lastmod>
+    <data>
+        <display>
+        <title>centos7安装jdk1.8</title>
+        <pubTime>2016-06-04T16:13:33.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://enjoythe.party/2016/05/11/Centos7-2-minimal%E7%9A%84yum%E5%AE%89%E8%A3%85%E6%9B%B4%E6%94%B9yum%E6%BA%90/</loc>
-    <lastmod>2016-06-06T12:18:09.030Z</lastmod>
+    <lastmod>2016-06-07T05:31:41.603Z</lastmod>
     <data>
         <display>
         <title>Centos7.2-minimal的yum安装更改yum源</title>
@@ -421,7 +441,7 @@
     
   <url>
     <loc>http://enjoythe.party/2016/06/02/Arduino%E5%B0%86%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%88%B0EEPROM/</loc>
-    <lastmod>2016-06-06T12:18:03.517Z</lastmod>
+    <lastmod>2016-06-07T05:30:17.292Z</lastmod>
     <data>
         <display>
         <title>Arduino将数据存储到EEPROM</title>

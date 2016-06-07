@@ -6,21 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Centos7实验LVS-NAT+ipvsadm负载均衡 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
-#实验在虚拟机环境下配置LVS-NAT+ipvsadm负载均衡">
+  <meta name="description" content="#实验在虚拟机环境下配置LVS-NAT+ipvsadm负载均衡">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Centos7实验LVS-NAT+ipvsadm负载均衡">
 <meta property="og:url" content="http://enjoythe.party/2016/06/06/Centos7实验LVS-NAT-ipvsadm负载均衡/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
-#实验在虚拟机环境下配置LVS-NAT+ipvsadm负载均衡">
+<meta property="og:description" content="#实验在虚拟机环境下配置LVS-NAT+ipvsadm负载均衡">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\ipvsadm\5.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\ipvsadm\6.png">
-<meta property="og:updated_time" content="2016-06-06T13:25:37.538Z">
+<meta property="og:updated_time" content="2016-06-07T05:50:34.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Centos7实验LVS-NAT+ipvsadm负载均衡">
-<meta name="twitter:description" content="· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米http://enjoythe.party
-#实验在虚拟机环境下配置LVS-NAT+ipvsadm负载均衡">
+<meta name="twitter:description" content="#实验在虚拟机环境下配置LVS-NAT+ipvsadm负载均衡">
 <meta name="twitter:image" content="http://enjoythe.party/\image\linux\ipvsadm\5.png">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
@@ -125,7 +122,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
+						<a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
 					</div>
 				</section>
 				
@@ -237,7 +234,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdk/">jdk</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LVS/">LVS</a></li></ul>
 	</div>
 
         
@@ -252,8 +249,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>· linux|Arduino|python|迷路的虾米– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
-<p>#实验在虚拟机环境下配置LVS-NAT+ipvsadm负载均衡<br><a id="more"></a></p>
+        <p>#实验在虚拟机环境下配置LVS-NAT+ipvsadm负载均衡<br><a id="more"></a></p>
 <h1 id="1-实验环境说明"><a href="#1-实验环境说明" class="headerlink" title="1.实验环境说明"></a>1.实验环境说明</h1><h2 id="1-1-实验拓扑"><a href="#1-1-实验拓扑" class="headerlink" title="1.1 实验拓扑"></a>1.1 实验拓扑</h2><p><img src="\image\linux\ipvsadm\5.png" alt="lvm拓扑"></p>
 <h2 id="1-2-ip地址设置说明"><a href="#1-2-ip地址设置说明" class="headerlink" title="1.2 ip地址设置说明"></a>1.2 ip地址设置说明</h2><h3 id="拓扑中的主机是要安装配置ipvsadm的，httpd1-2是两台apache主机"><a href="#拓扑中的主机是要安装配置ipvsadm的，httpd1-2是两台apache主机" class="headerlink" title="* 拓扑中的主机是要安装配置ipvsadm的，httpd1,2是两台apache主机"></a>* 拓扑中的主机是要安装配置ipvsadm的，httpd1,2是两台apache主机</h3><h3 id="三台主机都在一个网段192-168-211-0，虚拟机连接的是vmnet8-nat"><a href="#三台主机都在一个网段192-168-211-0，虚拟机连接的是vmnet8-nat" class="headerlink" title="* 三台主机都在一个网段192.168.211.0，虚拟机连接的是vmnet8(nat)"></a>* 三台主机都在一个网段192.168.211.0，虚拟机连接的是vmnet8(nat)</h3><h3 id="主机ip-192-168-211-131"><a href="#主机ip-192-168-211-131" class="headerlink" title="* 主机ip:192.168.211.131"></a>* 主机ip:192.168.211.131</h3><h3 id="httpd1主机ip-192-168-211-132"><a href="#httpd1主机ip-192-168-211-132" class="headerlink" title="* httpd1主机ip:192.168.211.132"></a>* httpd1主机ip:192.168.211.132</h3><h3 id="httpd2主机ip-192-168-211-133"><a href="#httpd2主机ip-192-168-211-133" class="headerlink" title="* httpd2主机ip:192.168.211.133"></a>* httpd2主机ip:192.168.211.133</h3><h1 id="2-安装ipvsadm，设置ipv4转发"><a href="#2-安装ipvsadm，设置ipv4转发" class="headerlink" title="2. 安装ipvsadm，设置ipv4转发"></a>2. 安装ipvsadm，设置ipv4转发</h1><h2 id="2-1-安装ipvsadm"><a href="#2-1-安装ipvsadm" class="headerlink" title="2.1 安装ipvsadm"></a>2.1 安装ipvsadm</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install ipvsadm -y</span><br></pre></td></tr></table></figure>
 <h2 id="2-2-设置ipv4转发"><a href="#2-2-设置ipv4转发" class="headerlink" title="2.2 设置ipv4转发"></a>2.2 设置ipv4转发</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl -w net.ipv4.ip_forward=1</span><br></pre></td></tr></table></figure>
@@ -273,6 +269,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/06/07/Centos-minimal在虚拟机里配置ip地址/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Centos-minimal在虚拟机里配置ip地址
+        
+      </div>
+    </a>
   
   
     <a href="/2016/06/05/阿里云Centos7安装docker/" id="article-nav-older" class="article-nav-link-wrap">

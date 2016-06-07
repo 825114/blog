@@ -4,23 +4,17 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>学习笔记-监控磁盘，内存剩余，mail发送警告 | linux|Arduino|IT|迷路的虾米</title>
+  <title>Tag: ip | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件1.1 先把根分区的弄出来">
-<meta property="og:type" content="article">
-<meta property="og:title" content="学习笔记-监控磁盘，内存剩余，mail发送警告">
-<meta property="og:url" content="http://enjoythe.party/2016/05/16/linux磁盘，内存剩余告警/index.html">
+  <meta name="description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="linux|Arduino|IT|迷路的虾米">
+<meta property="og:url" content="http://enjoythe.party/tags/ip/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="1. 一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件1.1 先把根分区的弄出来">
-<meta property="og:image" content="http://enjoythe.party/image/linux/mointer/1.png">
-<meta property="og:image" content="http://enjoythe.party/image/linux/mointer/2.png">
-<meta property="og:image" content="http://enjoythe.party/image/linux/mointer/4.png">
-<meta property="og:image" content="http://enjoythe.party/image/linux/mointer/3.png">
-<meta property="og:updated_time" content="2016-06-07T05:34:39.461Z">
+<meta property="og:description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习笔记-监控磁盘，内存剩余，mail发送警告">
-<meta name="twitter:description" content="1. 一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件1.1 先把根分区的弄出来">
-<meta name="twitter:image" content="http://enjoythe.party/image/linux/mointer/1.png">
+<meta name="twitter:title" content="linux|Arduino|IT|迷路的虾米">
+<meta name="twitter:description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -210,129 +204,57 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-linux磁盘，内存剩余告警" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2016/05/16/linux磁盘，内存剩余告警/" class="article-date">
-  	<time datetime="2016-05-16T11:08:11.000Z" itemprop="datePublished">2016-05-16</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/06/07/Centos-minimal在虚拟机里配置ip地址/" class="archive-article-date">
+  	<time datetime="2016-06-07T05:27:04.000Z" itemprop="datePublished">Jun 7</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      学习笔记-监控磁盘，内存剩余，mail发送警告
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/06/07/Centos-minimal在虚拟机里配置ip地址/">Centos-minimal在虚拟机里配置ip地址</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/question/">question</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ip/">ip</a></li></ul>
 	</div>
 
-        
+          
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/linux/">linux</a>
 	</div>
 
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-一道题：如果根分区剩余空间小于20-。内存已用空间大于80-，向xxxx-qq-com发送邮件"><a href="#1-一道题：如果根分区剩余空间小于20-。内存已用空间大于80-，向xxxx-qq-com发送邮件" class="headerlink" title="1. 一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件"></a>1. 一道题：如果根分区剩余空间小于20%。内存已用空间大于80%，向xxxx@qq.com发送邮件</h1><h2 id="1-1-先把根分区的弄出来"><a href="#1-1-先把根分区的弄出来" class="headerlink" title="1.1 先把根分区的弄出来"></a>1.1 先把根分区的弄出来</h2><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -m</span><br></pre></td></tr></table></figure>
-<p><img src="/image/linux/mointer/1.png" alt="df-m"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -m|grep /dev/xvda1|awk <span class="string">'&#123;print $5&#125;'</span>|cut <span class="_">-d</span> % <span class="_">-f</span> 1</span><br></pre></td></tr></table></figure></p>
-<p><img src="/image/linux/mointer/2.png" alt="df-GREP"></p>
-<h2 id="1-2-查看内存使用百分比"><a href="#1-2-查看内存使用百分比" class="headerlink" title="1.2 查看内存使用百分比"></a>1.2 查看内存使用百分比</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">memall=`free -m|grep Mem|awk <span class="string">'&#123;print $2&#125;'</span>`</span><br><span class="line">memused=`free -m|grep Mem|awk <span class="string">'&#123;print $3&#125;'</span>` </span><br><span class="line">awk <span class="string">'BEGIN&#123;printf "%0.2f%\n",('</span><span class="variable">$memused</span><span class="string">'/'</span><span class="variable">$memall</span><span class="string">')*100&#125;'</span></span><br></pre></td></tr></table></figure>
-<p><img src="/image/linux/mointer/4.png" alt="FREE"></p>
-<h2 id="1-3-发警告邮件"><a href="#1-3-发警告邮件" class="headerlink" title="1.3 发警告邮件"></a>1.3 发警告邮件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"memory is used over 80%,please check it"</span>|mail <span class="_">-s</span> <span class="string">"server warning memory"</span> 102xxxxx@qq.com</span><br></pre></td></tr></table></figure>
-<p><img src="/image/linux/mointer/3.png" alt="FREE"></p>
-<h2 id="1-4-最后组合起来就可以了"><a href="#1-4-最后组合起来就可以了" class="headerlink" title="1.4 最后组合起来就可以了"></a>1.4 最后组合起来就可以了</h2><p>– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
-
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/05/25/linux终端颜色修改/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          linux终端颜色修改
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/05/14/word恢复未保存文件和解决插入公式不能用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">word恢复未保存文件和解决插入公式不能用</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-<div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">Share to: &nbsp; </span>
-		<a class="jiathis_button_facebook"></a> 
-    <a class="jiathis_button_twitter"></a>
-    <a class="jiathis_button_plus"></a> 
-    <a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-
-
-
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="linux磁盘，内存剩余告警" data-title="学习笔记-监控磁盘，内存剩余，mail发送警告" data-url="http://enjoythe.party/2016/05/16/linux磁盘，内存剩余告警/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"enjoytheparty"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
+    
 
 
 </div>
@@ -359,9 +281,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false
 	}

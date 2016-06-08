@@ -18,9 +18,9 @@
 上下键是选择，按e就进入编辑">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\grub\1.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\grub\2.png">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\2.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\grub\7.png">
-<meta property="og:updated_time" content="2016-06-08T10:57:18.389Z">
+<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\8.png">
+<meta property="og:updated_time" content="2016-06-08T11:00:18.558Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redhat7-and-Centos7修改root密码">
 <meta name="twitter:description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。
@@ -264,9 +264,10 @@
 <h1 id="2-编辑"><a href="#2-编辑" class="headerlink" title="2.编辑"></a>2.编辑</h1><pre><code>编辑linux16哪行，在后面加上rd.break,然后按Ctrl+x启动
 </code></pre><p><img src="\image\linux\grub\2.png" alt="编辑GRUB"></p>
 <h1 id="3-进入紧急模式"><a href="#3-进入紧急模式" class="headerlink" title="3.进入紧急模式"></a>3.进入紧急模式</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#改根目录为/sysroot/</span></span><br><span class="line">chroot /sysroot/</span><br><span class="line"><span class="comment">#重新挂载根目录为读写模式</span></span><br><span class="line">mount -o remount,rw /</span><br><span class="line"><span class="comment">#设置密码</span></span><br><span class="line">passwd root</span><br><span class="line">- <span class="built_in">echo</span> passwd|passwd -stdin root可能用不了</span><br><span class="line">- 在grub编辑前两行进紧急模式时可能会乱码，因为那个是UTF-8的</span><br><span class="line">- 输两遍密码就可以了</span><br><span class="line"></span><br><span class="line"><span class="comment">#建.autorelabel文件</span></span><br><span class="line">touch .autorelabel</span><br><span class="line"><span class="comment">#退出</span></span><br><span class="line"><span class="built_in">exit</span> 或按Ctrl+d</span><br><span class="line"><span class="comment">#重启</span></span><br><span class="line">reboot</span><br><span class="line"><span class="comment">#或/sbin/reboot;/bin/shutdown -r now;init 6;exec /sbin/reboot</span></span><br></pre></td></tr></table></figure>
-<p><img src="\image\linux\grub\2.png" alt="进入紧急模式"></p>
-<h1 id="4-重启第一次"><a href="#4-重启第一次" class="headerlink" title="4.重启第一次"></a>4.重启第一次</h1><p><img src="\image\linux\grub\7.png" alt="重启"></p>
-<h1 id="5-重启第二次，这次就能登陆了"><a href="#5-重启第二次，这次就能登陆了" class="headerlink" title="5.重启第二次，这次就能登陆了"></a>5.重启第二次，这次就能登陆了</h1>
+<p><img src="\image\linux\grub\7.png" alt="进入紧急模式"></p>
+<h1 id="4-重启第一次"><a href="#4-重启第一次" class="headerlink" title="4.重启第一次"></a>4.重启第一次</h1><p><img src="\image\linux\grub\8.png" alt="重启"></p>
+<h1 id="5-重启第二次，这次就能登陆了"><a href="#5-重启第二次，这次就能登陆了" class="headerlink" title="5.重启第二次，这次就能登陆了"></a>5.重启第二次，这次就能登陆了</h1><p>– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
+
       
     </div>
     

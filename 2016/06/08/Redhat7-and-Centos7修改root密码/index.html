@@ -4,18 +4,29 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>github密钥登陆 | linux|Arduino|IT|迷路的虾米</title>
+  <title>Redhat7-and-Centos7修改root密码 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 如何设置github的SSH密钥首先确保安装好ssh,使用以下命令生成keygen1$ ssh-keygen -t rsa -C “你的邮箱”">
+  <meta name="description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。
+1.重启进Grub重启到这个界面，我这有三行，我用yum update升级过所以多出来第一行，我编辑的是第三行那个
+上下键是选择，按e就进入编辑">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github密钥登陆">
-<meta property="og:url" content="http://enjoythe.party/2016/05/08/github密钥登陆/index.html">
+<meta property="og:title" content="Redhat7-and-Centos7修改root密码">
+<meta property="og:url" content="http://enjoythe.party/2016/06/08/Redhat7-and-Centos7修改root密码/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="1. 如何设置github的SSH密钥首先确保安装好ssh,使用以下命令生成keygen1$ ssh-keygen -t rsa -C “你的邮箱”">
-<meta property="og:updated_time" content="2016-06-07T05:34:01.048Z">
+<meta property="og:description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。
+1.重启进Grub重启到这个界面，我这有三行，我用yum update升级过所以多出来第一行，我编辑的是第三行那个
+上下键是选择，按e就进入编辑">
+<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\1.png">
+<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\2.png">
+<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\2.png">
+<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\7.png">
+<meta property="og:updated_time" content="2016-06-08T10:57:18.389Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="github密钥登陆">
-<meta name="twitter:description" content="1. 如何设置github的SSH密钥首先确保安装好ssh,使用以下命令生成keygen1$ ssh-keygen -t rsa -C “你的邮箱”">
+<meta name="twitter:title" content="Redhat7-and-Centos7修改root密码">
+<meta name="twitter:description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。
+1.重启进Grub重启到这个界面，我这有三行，我用yum update升级过所以多出来第一行，我编辑的是第三行那个
+上下键是选择，按e就进入编辑">
+<meta name="twitter:image" content="http://enjoythe.party/\image\linux\grub\1.png">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -206,11 +217,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-github密钥登陆" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Redhat7-and-Centos7修改root密码" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/08/github密钥登陆/" class="article-date">
-  	<time datetime="2016-05-08T04:12:43.000Z" itemprop="datePublished">2016-05-08</time>
+      <a href="/2016/06/08/Redhat7-and-Centos7修改root密码/" class="article-date">
+  	<time datetime="2016-06-08T10:27:58.000Z" itemprop="datePublished">2016-06-08</time>
 </a>
     </div>
   
@@ -223,7 +234,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      github密钥登陆
+      Redhat7-and-Centos7修改root密码
     </h1>
   
 
@@ -232,12 +243,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh/">ssh</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/passwd/">passwd</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/github/">github</a>
+	<a class="article-category-link" href="/categories/linux/">linux</a>
 	</div>
 
 
@@ -247,11 +258,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-如何设置github的SSH密钥"><a href="#1-如何设置github的SSH密钥" class="headerlink" title="1. 如何设置github的SSH密钥"></a>1. 如何设置github的SSH密钥</h1><h3 id="首先确保安装好ssh-使用以下命令生成keygen"><a href="#首先确保安装好ssh-使用以下命令生成keygen" class="headerlink" title="首先确保安装好ssh,使用以下命令生成keygen"></a>首先确保安装好ssh,使用以下命令生成keygen</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C “你的邮箱”</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="直接按回车，不用输入任何东西"><a href="#直接按回车，不用输入任何东西" class="headerlink" title="直接按回车，不用输入任何东西"></a>直接按回车，不用输入任何东西</h3><h3 id="在-ssh-目录下会生成id-rsa和id-rsa-pub"><a href="#在-ssh-目录下会生成id-rsa和id-rsa-pub" class="headerlink" title="在 ~/.ssh/目录下会生成id_rsa和id_rsa.pub"></a>在 ~/.ssh/目录下会生成id_rsa和id_rsa.pub</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">cat -n id_rsa.pub</span><br></pre></td></tr></table></figure>
-<h3 id="复制id-rsa-pub文件里的内容"><a href="#复制id-rsa-pub文件里的内容" class="headerlink" title="复制id_rsa.pub文件里的内容"></a>复制id_rsa.pub文件里的内容</h3><h3 id="点击你在github上右上角，有个下箭头，里面有settings-点进去"><a href="#点击你在github上右上角，有个下箭头，里面有settings-点进去" class="headerlink" title="点击你在github上右上角，有个下箭头，里面有settings,点进去"></a>点击你在github上右上角，有个下箭头，里面有settings,点进去</h3><h3 id="左侧有SSH-and-GPG-keys，点进去"><a href="#左侧有SSH-and-GPG-keys，点进去" class="headerlink" title="左侧有SSH and GPG keys，点进去"></a>左侧有SSH and GPG keys，点进去</h3><h3 id="点击New-SSH-key-新建一个SSH-Key"><a href="#点击New-SSH-key-新建一个SSH-Key" class="headerlink" title="点击New SSH key 新建一个SSH Key"></a>点击New SSH key 新建一个SSH Key</h3><h3 id="把你复制的is-rsa-pub文件里的内容粘贴上，写上title（标题），点ADD-SSH-key保存就可以了"><a href="#把你复制的is-rsa-pub文件里的内容粘贴上，写上title（标题），点ADD-SSH-key保存就可以了" class="headerlink" title="把你复制的is_rsa.pub文件里的内容粘贴上，写上title（标题），点ADD SSH key保存就可以了"></a>把你复制的is_rsa.pub文件里的内容粘贴上，写上title（标题），点ADD SSH key保存就可以了</h3><p>– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
-
+        <p>Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break<br>或init=/sysroot/sbin/sh就能进紧急模式修改密码了。<br>Centos6一般在后面加single就能进单用户模式修改密码。</p>
+<h1 id="1-重启进Grub"><a href="#1-重启进Grub" class="headerlink" title="1.重启进Grub"></a>1.重启进Grub</h1><pre><code>重启到这个界面，我这有三行，我用yum update升级过所以多出来第一行，我编辑的是第三行那个
+</code></pre><p>上下键是选择，按e就进入编辑了<br><img src="\image\linux\grub\1.png" alt="Centos7GRUB"></p>
+<h1 id="2-编辑"><a href="#2-编辑" class="headerlink" title="2.编辑"></a>2.编辑</h1><pre><code>编辑linux16哪行，在后面加上rd.break,然后按Ctrl+x启动
+</code></pre><p><img src="\image\linux\grub\2.png" alt="编辑GRUB"></p>
+<h1 id="3-进入紧急模式"><a href="#3-进入紧急模式" class="headerlink" title="3.进入紧急模式"></a>3.进入紧急模式</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#改根目录为/sysroot/</span></span><br><span class="line">chroot /sysroot/</span><br><span class="line"><span class="comment">#重新挂载根目录为读写模式</span></span><br><span class="line">mount -o remount,rw /</span><br><span class="line"><span class="comment">#设置密码</span></span><br><span class="line">passwd root</span><br><span class="line">- <span class="built_in">echo</span> passwd|passwd -stdin root可能用不了</span><br><span class="line">- 在grub编辑前两行进紧急模式时可能会乱码，因为那个是UTF-8的</span><br><span class="line">- 输两遍密码就可以了</span><br><span class="line"></span><br><span class="line"><span class="comment">#建.autorelabel文件</span></span><br><span class="line">touch .autorelabel</span><br><span class="line"><span class="comment">#退出</span></span><br><span class="line"><span class="built_in">exit</span> 或按Ctrl+d</span><br><span class="line"><span class="comment">#重启</span></span><br><span class="line">reboot</span><br><span class="line"><span class="comment">#或/sbin/reboot;/bin/shutdown -r now;init 6;exec /sbin/reboot</span></span><br></pre></td></tr></table></figure>
+<p><img src="\image\linux\grub\2.png" alt="进入紧急模式"></p>
+<h1 id="4-重启第一次"><a href="#4-重启第一次" class="headerlink" title="4.重启第一次"></a>4.重启第一次</h1><p><img src="\image\linux\grub\7.png" alt="重启"></p>
+<h1 id="5-重启第二次，这次就能登陆了"><a href="#5-重启第二次，这次就能登陆了" class="headerlink" title="5.重启第二次，这次就能登陆了"></a>5.重启第二次，这次就能登陆了</h1>
       
     </div>
     
@@ -260,18 +275,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/08/github使用hexo搭建静态博客总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          github使用hexo搭建静态博客总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/08/多说的shortname是什么/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">多说的shortname是什么</div>
+    <a href="/2016/06/07/Centos7配置ip地址/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Centos7配置ip地址</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -306,7 +312,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="github密钥登陆" data-title="github密钥登陆" data-url="http://enjoythe.party/2016/05/08/github密钥登陆/"></div>
+	<div class="ds-thread" data-thread-key="Redhat7-and-Centos7修改root密码" data-title="Redhat7-and-Centos7修改root密码" data-url="http://enjoythe.party/2016/06/08/Redhat7-and-Centos7修改root密码/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

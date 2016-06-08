@@ -6,26 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Redhat7-and-Centos7修改root密码 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。
-1.重启进Grub重启到这个界面，我这有三行，我用yum update升级过所以多出来第一行，我编辑的是第三行那个
-上下键是选择，按e就进入编辑">
+  <meta name="description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redhat7-and-Centos7修改root密码">
 <meta property="og:url" content="http://enjoythe.party/2016/06/08/Redhat7-and-Centos7修改root密码/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。
-1.重启进Grub重启到这个界面，我这有三行，我用yum update升级过所以多出来第一行，我编辑的是第三行那个
-上下键是选择，按e就进入编辑">
+<meta property="og:description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\grub\1.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\grub\2.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\grub\7.png">
 <meta property="og:image" content="http://enjoythe.party/\image\linux\grub\8.png">
-<meta property="og:updated_time" content="2016-06-08T11:00:18.558Z">
+<meta property="og:updated_time" content="2016-06-08T11:06:39.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redhat7-and-Centos7修改root密码">
-<meta name="twitter:description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。
-1.重启进Grub重启到这个界面，我这有三行，我用yum update升级过所以多出来第一行，我编辑的是第三行那个
-上下键是选择，按e就进入编辑">
+<meta name="twitter:description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。">
 <meta name="twitter:image" content="http://enjoythe.party/\image\linux\grub\1.png">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
@@ -258,7 +252,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break<br>或init=/sysroot/sbin/sh就能进紧急模式修改密码了。<br>Centos6一般在后面加single就能进单用户模式修改密码。</p>
+        <p>Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break<br>或init=/sysroot/sbin/sh就能进紧急模式修改密码了。<br>Centos6一般在后面加single就能进单用户模式修改密码。<br><a id="more"></a></p>
 <h1 id="1-重启进Grub"><a href="#1-重启进Grub" class="headerlink" title="1.重启进Grub"></a>1.重启进Grub</h1><pre><code>重启到这个界面，我这有三行，我用yum update升级过所以多出来第一行，我编辑的是第三行那个
 </code></pre><p>上下键是选择，按e就进入编辑了<br><img src="\image\linux\grub\1.png" alt="Centos7GRUB"></p>
 <h1 id="2-编辑"><a href="#2-编辑" class="headerlink" title="2.编辑"></a>2.编辑</h1><pre><code>编辑linux16哪行，在后面加上rd.break,然后按Ctrl+x启动

@@ -32,7 +32,7 @@ FXOS8700CQ加速度传感器和磁力计
 <meta property="og:image" content="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133846u4ggufxeoewefii4.png">
 <meta property="og:image" content="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133843k7v52qvxt2wlwo02.jpg">
 <meta property="og:image" content="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133846s0120bq8iqqxazvv.jpg">
-<meta property="og:updated_time" content="2016-08-10T04:48:58.430Z">
+<meta property="og:updated_time" content="2016-08-10T04:52:18.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NXP开发板K64F之初识">
 <meta name="twitter:description" content="K64F开发板功能：
@@ -307,37 +307,6 @@ FXOS8700CQ加速度传感器和磁力计
 </blockquote>
 <p>点importprogram导入工程，然后点Compile编译，将编译好的bin文件复制到Mbed盘下</p>
 <p><img src="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133846u4ggufxeoewefii4.png" alt="1"></p>
-<p>本帖最后由 samplecode 于 2016-7-13 19:20 编辑</p>
-<p>1.esp8266-12e制作nodemcu   </p>
-<p>在小车收到之前把买的esp8266烧成了nodemcu,学习下lua.<br>1.1电路图</p>
-<p>我用的usb转串口上的电源供的电。<br>1.2烧写用的软件及资料<br>链接：<a href="http://pan.baidu.com/s/1qYN8HnY" target="_blank" rel="external">http://pan.baidu.com/s/1qYN8HnY</a> 密码：iby1</p>
-<p>烧写固件用的是nodemcu-flasher-master这个。按着箭头方向找到那个文件，系统是32位的进对应的win32.</p>
-<p>烧写前先将gpio0和gnd连上</p>
-<p>软件打开后的如上图，连好焊好的硬件，点Flash，读取到MAC就开始烧写了，然后esp8266上的灯就一直闪，烧完就不闪了。<br>不点config貌似是从网上下固件，最新的固件没下载下载，只有一个旧的nodemcu_integer_0.9.6-dev_20150704.bin</p>
-<p>点config加载一下固件</p>
-<p>再点flash</p>
-<p>进度条走完也就烧完了</p>
-<p>1.3nodemcu的编程环境ESPlorer<br>打开esplorer</p>
-<p>1）打开串口，设置好波特率<br>2）回车换行符<br>3）lua编程区，可以载入文件，保存文件，编写程序。<br>4）程序运行窗口<br>。。。</p>
-<p>对应的引脚，API说明文档都放到网盘里了。</p>
-<p>1.4nodemcu-WiFi控制方式1：简单的httpserver<br>原帖地址 <a href="http://blog.csdn.net/dingzz/article/details/46876503" target="_blank" rel="external">http://blog.csdn.net/dingzz/article/details/46876503</a><br>wifi.setmode(wifi.STATION)<br>wifi.sta.config(“wifissid”,”password”)<br>print(wifi.sta.getip())<br>srv=net.createServer(net.TCP)<br>srv:listen(80,function(conn)<br>    conn:on(“receive”, function(client,request)<br>        local buf = “”;<br>        local <em>, </em>, method, path, vars = string.find(request, “([A-Z]+) (.+)?(.+) HTTP”);<br>        if(method == nil)then<br>            <em>, </em>, method, path = string.find(request, “([A-Z]+) (.+) HTTP”);<br>        end<br>        local _GET = {}<br>        if (vars ~= nil)then<br>            for k, v in string.gmatch(vars, “(%w+)=(%w+)&amp;*”) do<br>                _GET[k] = v<br>            end<br>        end<br>        buf = buf..”</p><h1> ESP8266 Web Server</h1>“;<br>        buf = buf..”<p>turn around <a href="\"?pin=left\""><button>left</button></a> <a href="\"?pin=right\""><button>right</button></a></p>“;<br>        buf = buf..”<p>go go go! <a href="\"?pin=go\""><button>go</button></a> <a href="\"?pin=back\""><button>back</button></a></p>“;<br>        local _on,_off = “”,””<br>        if(_GET.pin == “left”)then<br>             – uart.write(0,”left\n”)<br>              print(“left\n”)<br>        elseif(_GET.pin == “right”)then<br>              –uart.write(0,”right\n”)<br>              print(“right\n”)<br>        elseif(_GET.pin == “go”)then<br>             – uart.write(0,”go\n”)<br>              print(“go\n”)<br>        elseif(_GET.pin == “back”)then<br>              –uart.write(0,”back\n”)<br>              print(“back\n”)<br>        end<br>        client:send(buf);<br>        client:close();<br>        collectgarbage();<br>    end)<br>end)<br>复制代码<p></p>
-<p>打开网页</p>
-<p>串口收到的数据</p>
-<p>使用nodemcu搭建简单的<br>1.5nodemcu-WiFi控制方式2：使用贝壳物联<br>原文地址<a href="http://www.bigiot.net/help/20.html" target="_blank" rel="external">http://www.bigiot.net/help/20.html</a></p>
-<p>将init.lua中的wifi的ssid和密码换成你的，将kaiguan.lua中的设备id,key,接口id换成你的<br>简单测试结果<br>手机app端控制</p>
-<p>控制led亮</p>
-<p>串口收到的信息</p>
-<p>2.供电，驱动<br>2.1驱动</p>
-<p>驱动用的这个，芯片给磨了，不知是什么型号，他说是l298n。。。逻辑真值表：电机A:当IN1为高电平IN2为低电平的时候正转（看电机的连线，正反自己调）</p>
-<p>2.2使用arduino uno简单测试驱动<br>int in1 = 8;<br>int in2 = 9;<br>void runAz(); //电机A正转<br>void runAf(); //电机A反转<br>void runAs(); //电机A停止</p>
-<p>void setup() {<br>  pinMode(in1,OUTPUT);<br>  pinMode(in2,OUTPUT);<br>}</p>
-<p>void loop() {<br>  runAz();<br>  delay(3000);<br>  runAs();<br>  delay(1000);<br>  runAf();<br>  delay(3000);<br>  runAs();<br>}<br>void runAz(){<br>  digitalWrite(in1,HIGH);<br>  digitalWrite(in2,LOW);<br>}<br>void runAf(){<br>  digitalWrite(in2,HIGH);<br>  digitalWrite(in1,LOW);<br>}<br>void runAs(){<br>  digitalWrite(in1,HIGH);<br>  digitalWrite(in2,HIGH);<br>}<br>复制代码</p>
-<p>3.使用mbed简单调试<br>3.1更新mbed的固件<br>ARMmbed的网址<a href="https://developer.mbed.org/platforms/FRDM-K64F/" target="_blank" rel="external">https://developer.mbed.org/platforms/FRDM-K64F/</a><br>更新mbed固件教程的网址<a href="https://developer.mbed.org/handbook/Firmware-FRDM-K64F" target="_blank" rel="external">https://developer.mbed.org/handbook/Firmware-FRDM-K64F</a><br>1）首先按住板子上的复位键，然后micro usb线连到opensda那个口就可以进到bootloader模式<br>2）下载固件<a href="https://developer.mbed.org/media" target="_blank" rel="external">https://developer.mbed.org/media</a> … 128_k64f_0x5000.bin<br>3）将下载好的固件拖拽到bootloader盘下。<br>3.2 k64f在mbed上的引脚名称<br>对应引脚名称<a href="https://developer.mbed.org/teams/Freescale/wiki/frdm-k64f-pinnames" target="_blank" rel="external">https://developer.mbed.org/teams/Freescale/wiki/frdm-k64f-pinnames</a><br>k64f板的部分引脚是和Arduino兼容的，mbed在线开发环境的使用的语法和arduino差不多</p>
-<p>LED (RGB) //灯在mbed里调用时的名称。LED_RED或LED1<br>LED_RED = PTB22<br>LED_GREEN = PTE26<br>LED_BLUE = PTB21<br>mbed original LED naming<br>LED1 = LED_RED<br>LED2 = LED_GREEN<br>LED3 = LED_BLUE<br>LED4 = LED_RED<br>Push buttons //按键<br>SW2 = PTC6<br>SW3 = PTA4<br>USB Pins //usb的串口<br>USBTX = PTB17<br>USBRX = PTB16<br>Arduino Headers //与arduino兼容的引脚名称<br>D0 = PTC16<br>D1 = PTC17<br>D2 = PTB9<br>D3 = PTA1<br>D4 = PTB23<br>D5 = PTA2<br>D6 = PTC2<br>D7 = PTC3<br>D8 = PTA0<br>D9 = PTC4<br>D10 = PTD0<br>D11 = PTD2<br>D12 = PTD3<br>D13 = PTD1<br>D14 = PTE25<br>D15 = PTE24<br>A0 = PTB2<br>A1 = PTB3<br>A2 = PTB10<br>A3 = PTB11<br>A4 = PTC10<br>A5 = PTC11<br>I2C pins<br>I2C_SCL = D15<br>I2C_SDA = D14<br>DAC0_OUT = 0xFEFE /<em> DAC does not have Pin Name in RM </em>/</p>
-<p>3.3试试超声波传感器hc-sr04<br>mbed还有很多传感器的例程<a href="https://developer.mbed.org/components/cat/sensors/" target="_blank" rel="external">https://developer.mbed.org/components/cat/sensors/</a><br>点传感器图片进去导入工程，试一下能不能用，不能用再改。</p>
-<p>hc-sr04数据手册地址<a href="http://www.micropik.com/PDF/HCSR04.pdf" target="_blank" rel="external">http://www.micropik.com/PDF/HCSR04.pdf</a><br>参数：<br>Working Voltage    DC 5 V<br>  Working Current    15mA<br>Working Frequency    40Hz<br>Max Range    最大 4m<br>Min Range    最小 2cm<br>MeasuringAngle    15 degree<br>Trigger Input Signal    10uS TTL pulse  靠10us高电平触发<br>Echo Output Signal    Input TTL lever signal and the range in proportion<br>Dimension    45<em>20</em>15mm</p>
-<p>Test distance （距离）= (high level time（echo高电平时间）×velocity of sound (声速340M/S) / 2<br>时序图：</p>
-<p>程序及库所在页面<a href="https://developer.mbed.org/components/HC-SR04/" target="_blank" rel="external">https://developer.mbed.org/components/HC-SR04/</a><br>点importprogram导入工程，然后点Compile编译，将编译好的bin文件复制到Mbed盘下</p>
 <p>实测图片<br><img src="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133843k7v52qvxt2wlwo02.jpg" alt="11"><br><img src="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133846s0120bq8iqqxazvv.jpg" alt="12"></p>
 
       

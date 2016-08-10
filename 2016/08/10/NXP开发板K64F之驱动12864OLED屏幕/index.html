@@ -4,47 +4,47 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>NXP开发板K64F之初识 | linux|Arduino|IT|迷路的虾米</title>
+  <title>NXP开发板K64F之驱动12864OLED屏幕 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="K64F开发板功能：
+  <meta name="description" content="K64F驱动SSD1306芯片的4线SPI接口OLED屏，屏幕接口定义如下：
 
-MK64FN1M0VLL12 MCU (120 MHz，1 MB闪存，256 KB RAM，低功耗，无晶振USB和100引脚薄型四方扁平封装(LQFP))
-两用USB接口，带Micro-B USB接头
-RGB LED
-FXOS8700CQ加速度传感器和磁力计
-两个用户按钮
-灵活的供电选项 - OpenSDAv2 USB、Kinetis K64 USB和外部电源
-可通过兼容A">
+VCC 电源正
+GND 电源地
+D0 时钟sck
+D1 数据mosi(master output slave input)
+RES 复位
+DC 数据/命令选择
+CS 片选
+SSD1306库[使用库](https://developer.mbed.org/users/sampleCode/code/frdm_k64f_o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NXP开发板K64F之初识">
-<meta property="og:url" content="http://enjoythe.party/2016/08/10/NXP开发板K64F之初识/index.html">
+<meta property="og:title" content="NXP开发板K64F之驱动12864OLED屏幕">
+<meta property="og:url" content="http://enjoythe.party/2016/08/10/NXP开发板K64F之驱动12864OLED屏幕/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="K64F开发板功能：
+<meta property="og:description" content="K64F驱动SSD1306芯片的4线SPI接口OLED屏，屏幕接口定义如下：
 
-MK64FN1M0VLL12 MCU (120 MHz，1 MB闪存，256 KB RAM，低功耗，无晶振USB和100引脚薄型四方扁平封装(LQFP))
-两用USB接口，带Micro-B USB接头
-RGB LED
-FXOS8700CQ加速度传感器和磁力计
-两个用户按钮
-灵活的供电选项 - OpenSDAv2 USB、Kinetis K64 USB和外部电源
-可通过兼容A">
-<meta property="og:image" content="http://cache.nxp.com/files/graphic/block_diagram/31958-FRDM-K64F_BD.jpg">
-<meta property="og:image" content="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133846u4ggufxeoewefii4.png">
-<meta property="og:image" content="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133843k7v52qvxt2wlwo02.jpg">
-<meta property="og:image" content="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133846s0120bq8iqqxazvv.jpg">
-<meta property="og:updated_time" content="2016-08-10T04:52:18.892Z">
+VCC 电源正
+GND 电源地
+D0 时钟sck
+D1 数据mosi(master output slave input)
+RES 复位
+DC 数据/命令选择
+CS 片选
+SSD1306库[使用库](https://developer.mbed.org/users/sampleCode/code/frdm_k64f_o">
+<meta property="og:image" content="https://img.alicdn.com/imgextra/i4/2207691322/TB2vpSRbFXXXXbqXpXXXXXXXXXX_!!2207691322.jpg_430x430q90.jpg">
+<meta property="og:updated_time" content="2016-08-10T05:26:18.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NXP开发板K64F之初识">
-<meta name="twitter:description" content="K64F开发板功能：
+<meta name="twitter:title" content="NXP开发板K64F之驱动12864OLED屏幕">
+<meta name="twitter:description" content="K64F驱动SSD1306芯片的4线SPI接口OLED屏，屏幕接口定义如下：
 
-MK64FN1M0VLL12 MCU (120 MHz，1 MB闪存，256 KB RAM，低功耗，无晶振USB和100引脚薄型四方扁平封装(LQFP))
-两用USB接口，带Micro-B USB接头
-RGB LED
-FXOS8700CQ加速度传感器和磁力计
-两个用户按钮
-灵活的供电选项 - OpenSDAv2 USB、Kinetis K64 USB和外部电源
-可通过兼容A">
-<meta name="twitter:image" content="http://cache.nxp.com/files/graphic/block_diagram/31958-FRDM-K64F_BD.jpg">
+VCC 电源正
+GND 电源地
+D0 时钟sck
+D1 数据mosi(master output slave input)
+RES 复位
+DC 数据/命令选择
+CS 片选
+SSD1306库[使用库](https://developer.mbed.org/users/sampleCode/code/frdm_k64f_o">
+<meta name="twitter:image" content="https://img.alicdn.com/imgextra/i4/2207691322/TB2vpSRbFXXXXbqXpXXXXXXXXXX_!!2207691322.jpg_430x430q90.jpg">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -235,11 +235,11 @@ FXOS8700CQ加速度传感器和磁力计
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-NXP开发板K64F之初识" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-NXP开发板K64F之驱动12864OLED屏幕" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/10/NXP开发板K64F之初识/" class="article-date">
-  	<time datetime="2016-08-10T03:23:58.000Z" itemprop="datePublished">2016-08-10</time>
+      <a href="/2016/08/10/NXP开发板K64F之驱动12864OLED屏幕/" class="article-date">
+  	<time datetime="2016-08-10T04:54:37.000Z" itemprop="datePublished">2016-08-10</time>
 </a>
     </div>
   
@@ -252,7 +252,7 @@ FXOS8700CQ加速度传感器和磁力计
         
   
     <h1 class="article-title" itemprop="name">
-      NXP开发板K64F之初识
+      NXP开发板K64F之驱动12864OLED屏幕
     </h1>
   
 
@@ -276,39 +276,20 @@ FXOS8700CQ加速度传感器和磁力计
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>K64F开发板功能：</p>
+        <p>K64F驱动SSD1306芯片的4线SPI接口OLED屏，屏幕接口定义如下：</p>
 <ul>
-<li>MK64FN1M0VLL12 MCU (120 MHz，1 MB闪存，256 KB RAM，低功耗，无晶振USB和100引脚薄型四方扁平封装(LQFP))</li>
-<li>两用USB接口，带Micro-B USB接头</li>
-<li>RGB LED</li>
-<li>FXOS8700CQ加速度传感器和磁力计</li>
-<li>两个用户按钮</li>
-<li>灵活的供电选项 - OpenSDAv2 USB、Kinetis K64 USB和外部电源</li>
-<li>可通过兼容Arduino™ R3的I/O接头轻松访问MCU输入/输出<a id="more"></a></li>
-<li>可编程OpenSDAv2调试电路，支持CMSIS-DAP接口软件，提供以下功能：</li>
-<li>大容量存储设备(MSD)闪存编程接口</li>
-<li>CMSIS-DAP调试接口可通过免驱动的USB HID连接提供运行控制调试功能，兼容IDE工具</li>
-<li>虚拟串行端口</li>
-<li>开源CMSIS-DAP软件项目</li>
-<li>以太网</li>
-<li>SDHC<br><a href="http://www.nxp.com/zh-Hans/products/software-and-tools/hardware-development-tools/freedom-development-boards/freedom-development-platform-for-kinetis-k64-k63-and-k24-mcus:FRDM-K64F?lang_cd=zh-Hans" target="_blank" rel="external">官方介绍</a><br><img src="http://cache.nxp.com/files/graphic/block_diagram/31958-FRDM-K64F_BD.jpg" alt="图片"></li>
-</ul>
-<h1 id="1-使用mbed简单调试"><a href="#1-使用mbed简单调试" class="headerlink" title="1.使用mbed简单调试"></a>1.使用mbed简单调试</h1><h2 id="1-1更新mbed的固件"><a href="#1-1更新mbed的固件" class="headerlink" title="1.1更新mbed的固件"></a>1.1更新mbed的固件</h2><blockquote>
-<p>ARMmbed的网址<a href="https://developer.mbed.org/platforms/FRDM-K64F/" target="_blank" rel="external">https://developer.mbed.org/platforms/FRDM-K64F/</a><br>更新mbed固件教程<a href="https://developer.mbed.org/handbook/Firmware-FRDM-K64F" target="_blank" rel="external">https://developer.mbed.org/handbook/Firmware-FRDM-K64F</a><br>对应引脚名称<a href="https://developer.mbed.org/teams/Freescale/wiki/frdm-k64f-pinnames" target="_blank" rel="external">https://developer.mbed.org/teams/Freescale/wiki/frdm-k64f-pinnames</a></p>
-<ul>
-<li>1）首先按住板子上的复位键，然后micro usb线连到opensda那个口就可以进到bootloader模式</li>
-<li>2）下载固件<a href="https://developer.mbed.org/media" target="_blank" rel="external">https://developer.mbed.org/media</a> … 128_k64f_0x5000.bin</li>
-<li>3）将下载好的固件拖拽到bootloader盘下。</li>
-</ul>
+<li>VCC 电源正</li>
+<li>GND 电源地</li>
+<li>D0 时钟sck</li>
+<li>D1 数据mosi(master output slave input)</li>
+<li>RES 复位</li>
+<li>DC 数据/命令选择</li>
+<li>CS 片选<br><img src="https://img.alicdn.com/imgextra/i4/2207691322/TB2vpSRbFXXXXbqXpXXXXXXXXXX_!!2207691322.jpg_430x430q90.jpg" alt="oled"><blockquote>
+<p><a href="https://developer.mbed.org/users/nkhorman/code/Adafruit_GFX/" target="_blank" rel="external">SSD1306库</a><br>[使用库](<a href="https://developer.mbed.org/users/sampleCode/code/frdm_k64f_oled_spi/file/63facd5c734a/mbed-src/main.cpp）" target="_blank" rel="external">https://developer.mbed.org/users/sampleCode/code/frdm_k64f_oled_spi/file/63facd5c734a/mbed-src/main.cpp）</a></p>
 </blockquote>
-<h2 id="1-2试试超声波传感器hc-sr04"><a href="#1-2试试超声波传感器hc-sr04" class="headerlink" title="1.2试试超声波传感器hc-sr04"></a>1.2试试超声波传感器hc-sr04</h2><blockquote>
-<p>mbed还有很多传感器的例程<a href="https://developer.mbed.org/components/cat/sensors/" target="_blank" rel="external">https://developer.mbed.org/components/cat/sensors/</a><br>-sr04数据手册地址<a href="http://www.micropik.com/PDF/HCSR04.pdf" target="_blank" rel="external">http://www.micropik.com/PDF/HCSR04.pdf</a><br>点传感器图片进去导入工程，试一下能不能用，不能用再改。</p>
-<p>程序及库所在页面<a href="https://developer.mbed.org/components/HC-SR04/" target="_blank" rel="external">https://developer.mbed.org/components/HC-SR04/</a></p>
-</blockquote>
-<p>点importprogram导入工程，然后点Compile编译，将编译好的bin文件复制到Mbed盘下</p>
-<p><img src="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133846u4ggufxeoewefii4.png" alt="1"></p>
-<p>实测图片<br><img src="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133843k7v52qvxt2wlwo02.jpg" alt="11"><br><img src="http://www.nxpic.org/module/forum/data/attachment/forum/201607/09/133846s0120bq8iqqxazvv.jpg" alt="12"></p>
-
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> k64F -- OLED</span><br><span class="line"> D11 mosi/D0</span><br><span class="line"> D13 sck/D1</span><br><span class="line"> D5 CS</span><br><span class="line"> D6 DC</span><br><span class="line"> D7 RST</span><br><span class="line"> */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"mbed.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"Adafruit_SSD1306.h"</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function">DigitalOut <span class="title">myled</span><span class="params">(LED2)</span></span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// an SPI sub-class that provides a constructed default</span></span><br><span class="line"><span class="keyword">class</span> SPIPreInit : <span class="keyword">public</span> SPI</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    SPIPreInit(PinName mosi, PinName miso, PinName clk) : SPI(mosi,miso,clk)</span><br><span class="line">    &#123;</span><br><span class="line">        format(<span class="number">8</span>,<span class="number">3</span>);</span><br><span class="line">        frequency(<span class="number">2000000</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function">SPIPreInit <span class="title">mySpi</span><span class="params">(D11,NC,D13)</span></span>;</span><br><span class="line"><span class="function">Adafruit_SSD1306_Spi <span class="title">myOled</span><span class="params">(mySpi,D6,D7,D5,<span class="number">64</span>,<span class="number">128</span>)</span></span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;  </span><br><span class="line">    <span class="keyword">uint16_t</span> x=<span class="number">0</span>;</span><br><span class="line">    myOled.clearDisplay();</span><br><span class="line">    myOled.<span class="built_in">printf</span>(<span class="string">"%ux%u OLED Display\r\n"</span>, myOled.width(), myOled.height());</span><br><span class="line">    myOled.setTextCursor(<span class="number">0</span>,<span class="number">17</span>);</span><br><span class="line">    myOled.<span class="built_in">printf</span>(<span class="string">"blog:enjoythe.party\r\n"</span>);</span><br><span class="line">    myOled.<span class="built_in">printf</span>(<span class="string">"qq:1028917076\r\n"</span>);</span><br><span class="line">    myOled.<span class="built_in">printf</span>(<span class="string">"phone:1709005xxxxx\r\n"</span>);</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        myled = !myled;</span><br><span class="line">        myOled.<span class="built_in">printf</span>(<span class="string">"%u\r "</span>,x);</span><br><span class="line">        myOled.display();</span><br><span class="line">        x++;</span><br><span class="line">        wait(<span class="number">1.0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -317,18 +298,9 @@ FXOS8700CQ加速度传感器和磁力计
     
 <nav id="article-nav">
   
-    <a href="/2016/08/10/NXP开发板K64F之驱动12864OLED屏幕/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          NXP开发板K64F之驱动12864OLED屏幕
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/07/21/ESP8266烧录成NodeMCU或MicroPython/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ESP8266烧录成NodeMCU或MicroPython</div>
+    <a href="/2016/08/10/NXP开发板K64F之初识/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">NXP开发板K64F之初识</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -363,7 +335,7 @@ FXOS8700CQ加速度传感器和磁力计
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="NXP开发板K64F之初识" data-title="NXP开发板K64F之初识" data-url="http://enjoythe.party/2016/08/10/NXP开发板K64F之初识/"></div>
+	<div class="ds-thread" data-thread-key="NXP开发板K64F之驱动12864OLED屏幕" data-title="NXP开发板K64F之驱动12864OLED屏幕" data-url="http://enjoythe.party/2016/08/10/NXP开发板K64F之驱动12864OLED屏幕/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

@@ -4,6 +4,101 @@
 
     
   <url>
+    <loc>http://enjoythe.party/2016/07/21/ESP8266%E7%83%A7%E5%BD%95%E6%88%90NodeMCU%E6%88%96MicroPython/</loc>
+    <lastmod>2016-08-10T04:25:20.866Z</lastmod>
+    <data>
+        <display>
+        <title>ESP8266烧录成NodeMCU或MicroPython</title>
+        <pubTime>2016-07-21T01:29:11.000Z</pubTime>
+        
+        <tag>esp8266</tag>
+         
+         
+           
+             
+              <breadCrumb title="wifi" url="http://enjoythe.party/categories/wifi/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://enjoythe.party/2016/08/10/NXP%E5%BC%80%E5%8F%91%E6%9D%BFK64F%E4%B9%8B%E5%88%9D%E8%AF%86/</loc>
+    <lastmod>2016-08-10T03:28:18.758Z</lastmod>
+    <data>
+        <display>
+        <title>NXP开发板K64F之初识</title>
+        <pubTime>2016-08-10T03:23:58.000Z</pubTime>
+        
+        <tag>K64F</tag>
+         
+         
+           
+             
+              <breadCrumb title="NXP" url="http://enjoythe.party/categories/NXP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://enjoythe.party/2016/06/02/Arduino%E5%B0%86%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%88%B0EEPROM/</loc>
+    <lastmod>2016-08-10T03:26:29.892Z</lastmod>
+    <data>
+        <display>
+        <title>Arduino将数据存储到EEPROM</title>
+        <pubTime>2016-06-02T07:27:00.000Z</pubTime>
+        
+        <tag>eeprom</tag>
+         
+         
+           
+             
+              <breadCrumb title="arduino" url="http://enjoythe.party/categories/arduino/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://enjoythe.party/2016/06/26/%E7%96%AF%E7%8B%82%E7%9A%84%E5%9B%9B%E9%A9%B1%E8%BD%A6-kl64/</loc>
+    <lastmod>2016-06-26T12:42:54.460Z</lastmod>
+    <data>
+        <display>
+        <title>[疯狂的四驱车]kl64</title>
+        <pubTime>2016-06-26T12:42:53.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://enjoythe.party/2016/06/15/rsync-inoitfy%E5%AE%9E%E7%8E%B0%E5%AE%9E%E6%97%B6%E5%90%8C%E6%AD%A5%E5%A4%87%E4%BB%BD/</loc>
+    <lastmod>2016-06-15T12:38:31.586Z</lastmod>
+    <data>
+        <display>
+        <title>rsync+inoitfy实现实时同步备份</title>
+        <pubTime>2016-06-15T11:14:04.000Z</pubTime>
+        
+        <tag>rsync</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://enjoythe.party/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://enjoythe.party/2016/06/09/Centos7-Docker%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2016-06-09T16:25:29.164Z</lastmod>
     <data>
@@ -473,26 +568,6 @@
            
              
               <breadCrumb title="linux" url="http://enjoythe.party/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://enjoythe.party/2016/06/02/Arduino%E5%B0%86%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%88%B0EEPROM/</loc>
-    <lastmod>2016-06-07T05:30:17.292Z</lastmod>
-    <data>
-        <display>
-        <title>Arduino将数据存储到EEPROM</title>
-        <pubTime>2016-06-02T07:27:00.000Z</pubTime>
-        
-        <tag>eeprom</tag>
-         
-         
-           
-             
-              <breadCrumb title="arduino" url="http://enjoythe.party/categories/arduino/"/>
           
         </display>
     </data>

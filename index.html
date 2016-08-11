@@ -119,7 +119,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/K64F/" style="font-size: 15px;">K64F</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 12.5px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 12.5px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 12.5px;">python</a> <a href="/tags/question/" style="font-size: 17.5px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
+						<a href="/tags/K64F/" style="font-size: 16.67px;">K64F</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 13.33px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
 					</div>
 				</section>
 				
@@ -206,6 +206,85 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-NXP开发板K64F之串口实验" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/11/NXP开发板K64F之串口实验/" class="article-date">
+  	<time datetime="2016-08-11T07:13:19.000Z" itemprop="datePublished">2016-08-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/11/NXP开发板K64F之串口实验/">NXP开发板K64F之串口实验</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>FRDM-K64F 板有五组串口，这5组串口在 FRDM-K64F 板上使用的分配如下：</p>
+<ul>
+<li>UART0_RX        PTB16   OpenSDAv2 (虚拟串口)</li>
+<li><p>UART0_TX        PTB17   OpenSDAv2 (虚拟串口)</p>
+</li>
+<li><p>UART1_RX        PTC3    (D7)</p>
+</li>
+<li><p>UART1_TX        PTC4    (D9)</p>
+</li>
+<li><p>UART2_RX        PTD2    (D11)</p>
+</li>
+<li><p>UART2_TX        PTD3    (D12)</p>
+</li>
+<li><p>UART3_RX        PTC16   (D0) RX</p>
+</li>
+<li>UART3_TX        PTC17   (D1) TX
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/K64F/">K64F</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/NXP/">NXP</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/08/11/NXP开发板K64F之串口实验/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-NXP开发板K64F之驱动12864OLED屏幕" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -779,70 +858,6 @@
       
         <p class="article-more-link">
           <a  href="/2016/06/06/Centos7实验LVS-NAT-ipvsadm负载均衡/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-阿里云Centos7安装docker" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/05/阿里云Centos7安装docker/" class="article-date">
-  	<time datetime="2016-06-05T09:55:08.000Z" itemprop="datePublished">2016-06-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/05/阿里云Centos7安装docker/">阿里云Centos7安装docker</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="刚学会怎么装Docker"><a href="#刚学会怎么装Docker" class="headerlink" title="刚学会怎么装Docker"></a>刚学会怎么装Docker</h1><h2 id="1-做实验，首先yum-y-update"><a href="#1-做实验，首先yum-y-update" class="headerlink" title="1. 做实验，首先yum -y update"></a>1. 做实验，首先yum -y update</h2><h3 id="update-upgrade区别"><a href="#update-upgrade区别" class="headerlink" title="update upgrade区别"></a>update upgrade区别</h3><p> yum -y update 升级所有包，改变软件设置和系统设置,系统版本内核都升级<br> yum -y upgrade 升级所有包，不改变软件设置和系统设置，系统版本升级，内核不改变<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/linux/">linux</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/06/05/阿里云Centos7安装docker/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

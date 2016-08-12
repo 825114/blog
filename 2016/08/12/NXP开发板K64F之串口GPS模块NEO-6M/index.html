@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>NXP开发板K64F之串口GPS模块NEO-6M | linux|Arduino|IT|迷路的虾米</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="使用FRDM-K64F开发板驱动NEO-6M串口GPS模块串口连接TX，RX到开发板上,接好VCC,GND通过解析GPGGA数据得到时间，经纬度，海拔等。。。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NXP开发板K64F之串口GPS模块NEO-6M">
+<meta property="og:url" content="http://enjoythe.party/2016/08/12/NXP开发板K64F之串口GPS模块NEO-6M/index.html">
+<meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
+<meta property="og:description" content="使用FRDM-K64F开发板驱动NEO-6M串口GPS模块串口连接TX，RX到开发板上,接好VCC,GND通过解析GPGGA数据得到时间，经纬度，海拔等。。。">
+<meta property="og:image" content="https://gd1.alicdn.com/bao/uploaded/i1/TB1aFFmJpXXXXbkXVXXXXXXXXXX_!!0-item_pic.jpg">
+<meta property="og:updated_time" content="2016-08-12T08:53:56.935Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NXP开发板K64F之串口GPS模块NEO-6M">
+<meta name="twitter:description" content="使用FRDM-K64F开发板驱动NEO-6M串口GPS模块串口连接TX，RX到开发板上,接好VCC,GND通过解析GPGGA数据得到时间，经纬度，海拔等。。。">
+<meta name="twitter:image" content="https://gd1.alicdn.com/bao/uploaded/i1/TB1aFFmJpXXXXbkXVXXXXXXXXXX_!!0-item_pic.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
+  
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/head.gif" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">TK</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">TK的Blog,锅碗瓢盆，柴米油盐酱醋茶。</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单.menu</li>
+						<li>标签.tags</li>
+						
+						<li>友链.link</li>
+						
+						
+						<li>关于.about</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页|Home</a></li>
+				        
+							<li><a href="/archives">所有文章|ALL</a></li>
+				        
+							<li><a href="/categories/arduino">单片机|Arduino</a></li>
+				        
+							<li><a href="/categories/linux">系统|Linux</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/825114" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1946201701" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tiankun@bulid.top" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/K64F/" style="font-size: 17.5px;">K64F</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 12.5px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 12.5px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 12.5px;">python</a> <a href="/tags/question/" style="font-size: 15px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.ziqiangxuetang.com/">自强学堂</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://pypi.python.org/pypi">python模块库</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://cdimage.ubuntu.com/">ubunt image</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.alloyteam.com/">腾讯前端</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://wsgzao.github.io/">hellodog</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">TK</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/head.gif" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">TK</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">TK的Blog,锅碗瓢盆，柴米油盐酱醋茶。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页|Home</a></li>
+		        
+					<li><a href="/archives">所有文章|ALL</a></li>
+		        
+					<li><a href="/categories/arduino">单片机|Arduino</a></li>
+		        
+					<li><a href="/categories/linux">系统|Linux</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/825114" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1946201701" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tiankun@bulid.top" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-NXP开发板K64F之串口GPS模块NEO-6M" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/12/NXP开发板K64F之串口GPS模块NEO-6M/" class="article-date">
+  	<time datetime="2016-08-12T08:21:56.000Z" itemprop="datePublished">2016-08-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      NXP开发板K64F之串口GPS模块NEO-6M
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/K64F/">K64F</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/NXP/">NXP</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用FRDM-K64F开发板驱动NEO-6M串口GPS模块<br>串口连接TX，RX到开发板上,接好VCC,GND<br>通过解析GPGGA数据得到时间，经纬度，海拔等。。。<br><a id="more"></a></p>
+<h1 id="1-模块的靓照"><a href="#1-模块的靓照" class="headerlink" title="1.模块的靓照"></a>1.模块的靓照</h1><p><img src="https://gd1.alicdn.com/bao/uploaded/i1/TB1aFFmJpXXXXbkXVXXXXXXXXXX_!!0-item_pic.jpg" alt="gps模块"></p>
+<p>串口发送了GPGGA,GPRMC等数据。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$GPGGA,<span class="number">072044.00</span>,<span class="number">3235.85092</span>,N,<span class="number">15311.20879</span>,E,<span class="number">1</span>,<span class="number">06</span>,<span class="number">1.42</span>,<span class="number">49.0</span>,M,<span class="number">-9.0</span>,M,,*<span class="number">79</span></span><br><span class="line">$GPGSA,A,<span class="number">3</span>,<span class="number">19</span>,<span class="number">06</span>,<span class="number">17</span>,<span class="number">02</span>,<span class="number">23</span>,<span class="number">28</span>,,,,,,,<span class="number">2.18</span>,<span class="number">1.42</span>,<span class="number">1.65</span>*<span class="number">0</span>D</span><br><span class="line">$GPGSV,<span class="number">3</span>,<span class="number">1</span>,<span class="number">11</span>,<span class="number">02</span>,<span class="number">34</span>,<span class="number">273</span>,<span class="number">20</span>,<span class="number">03</span>,<span class="number">20</span>,<span class="number">044</span>,<span class="number">16</span>,<span class="number">05</span>,<span class="number">01</span>,<span class="number">214</span>,,<span class="number">06</span>,<span class="number">68</span>,<span class="number">317</span>,<span class="number">29</span>*<span class="number">79</span></span><br><span class="line">$GPGSV,<span class="number">3</span>,<span class="number">2</span>,<span class="number">11</span>,<span class="number">09</span>,<span class="number">22</span>,<span class="number">113</span>,<span class="number">16</span>,<span class="number">12</span>,<span class="number">25</span>,<span class="number">314</span>,<span class="number">20</span>,<span class="number">17</span>,<span class="number">63</span>,<span class="number">106</span>,<span class="number">22</span>,<span class="number">19</span>,<span class="number">80</span>,<span class="number">038</span>,<span class="number">18</span>*<span class="number">73</span></span><br><span class="line">$GPGSV,<span class="number">3</span>,<span class="number">3</span>,<span class="number">11</span>,<span class="number">22</span>,<span class="number">01</span>,<span class="number">042</span>,,<span class="number">23</span>,<span class="number">22</span>,<span class="number">083</span>,<span class="number">27</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">175</span>,<span class="number">16</span>*<span class="number">4</span>B</span><br><span class="line">$GPGLL,<span class="number">3235.85092</span>,N,<span class="number">15311.20879</span>,E,<span class="number">072044.00</span>,A,A*<span class="number">64</span></span><br><span class="line">$GPRMC,<span class="number">072045.00</span>,A,<span class="number">3235.85108</span>,N,<span class="number">15311.20888</span>,E,<span class="number">0.375</span>,,<span class="number">120816</span>,,,A*<span class="number">7</span>D</span><br><span class="line">$GPVTG,,T,,M,<span class="number">0.375</span>,N,<span class="number">0.695</span>,K,A*<span class="number">28</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="2-GPGGA语句解析"><a href="#2-GPGGA语句解析" class="headerlink" title="2.GPGGA语句解析"></a>2.GPGGA语句解析</h1><h2 id="GPGGA，GPS固定数据输出语句-GPGGA-，这是一帧GPS定位的主要数据，也是使用最广的数据。"><a href="#GPGGA，GPS固定数据输出语句-GPGGA-，这是一帧GPS定位的主要数据，也是使用最广的数据。" class="headerlink" title="GPGGA，GPS固定数据输出语句($GPGGA)，这是一帧GPS定位的主要数据，也是使用最广的数据。"></a>GPGGA，GPS固定数据输出语句($GPGGA)，这是一帧GPS定位的主要数据，也是使用最广的数据。</h2><p>$GPGGA 语句包括17个字段：语句标识头，世界时间，纬度，纬度半球，经度，经度半球，定位质量指示，使用卫星数量，水平精确度，海拔高度，高度单位，大地水准面高度，高度单位，差分GPS数据期限，差分参考基站标号，校验和结束标记(用回车符<cr>和换行符<lf>)，分别用14个逗号进行分隔。该数据帧的结构及各字段释义如下：<br>$GPGGA,<1>,<2>,<3>,<4>,<5>,<6>,<7>,<8>,<9>,M,<10>,M,<11>,<12>*xx<cr><lf><br>$GPGGA：起始引导符及语句格式说明(本句为GPS定位数据)；</lf></cr></12></11></10></9></8></7></6></5></4></3></2></1></lf></cr></p>
+<ul>
+<li><1> UTC时间，格式为hhmmss.sss；</1></li>
+<li><2> 纬度，格式为ddmm.mmmm(第一位是零也将传送)；</2></li>
+<li><3> 纬度半球，N或S(北纬或南纬)</3></li>
+<li><4> 经度，格式为dddmm.mmmm(第一位零也将传送)；</4></li>
+<li><5> 经度半球，E或W(东经或西经)</5></li>
+<li><6> GPS状态， 0初始化， 1单点定位， 2码差分， 3无效PPS， 4固定解， 5浮点解， 6正在估算 7，人工输入固定值， 8模拟模式， 9WAAS查分</6></li>
+<li><7> 使用卫星数量，从00到12(第一个零也将传送)</7></li>
+<li><8> 水平精度因子，0.5到99.9</8></li>
+<li><9> 天线离海平面的高度，-9999.9到9999.9米</9></li>
+<li>M 指单位米</li>
+<li><10> 大地水准面高度，-9999.9到9999.9米</10></li>
+<li>M 指单位米</li>
+<li><11> 差分GPS数据期限(RTCM SC-104)，最后设立RTCM传送的秒数量，如不是差分定位则为空</11></li>
+<li><12> 差分参考基站标号，从0000到1023(首位0也将传送)。</12></li>
+<li><ul>
+<li>语句结束标志符</li>
+</ul>
+</li>
+<li>xx 从$开始到*之间的所有ASCII码的异或校验和</li>
+<li><cr> 回车</cr></li>
+<li><lf> 换行</lf></li>
+</ul>
+<h1 id="3-GPS库"><a href="#3-GPS库" class="headerlink" title="3.GPS库"></a>3.GPS库</h1><p><a href="https://developer.mbed.org/users/sampleCode/code/NEO-6m-GPS/" target="_blank" rel="external">库的地址</a><br><a href="https://developer.mbed.org/users/sampleCode/code/frdm_k64f_serialgps/" target="_blank" rel="external">使用库的地址</a></p>
+<p>部分代码<br>主程序；main.cpp<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Example showing how to hook up to different GPS modules (GlobalSat neo-6m)*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"mbed.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"GPS.h"</span></span></span><br><span class="line"><span class="comment">//create usb serial</span></span><br><span class="line"><span class="function">Serial <span class="title">pc</span><span class="params">(USBTX, USBRX)</span></span>;</span><br><span class="line"><span class="comment">//creat gps serial baud is 9600</span></span><br><span class="line"><span class="function">GPS <span class="title">gpsAda</span><span class="params">(PTC15, PTC14, <span class="number">9600</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(gpsAda.sample())&#123;</span><br><span class="line">          pc.<span class="built_in">printf</span>(<span class="string">"%f\t%c\t%f\t%c\t%f\t%f\t%f\n\r"</span>,gpsAda.longitude, gpsAda.ns,gpsAda.latitude,gpsAda.ew, gpsAda.alt, gpsAda.geoid, gpsAda.time);</span><br><span class="line">          <span class="comment">//print beijing time</span></span><br><span class="line">		  pc.<span class="built_in">printf</span>(<span class="string">"%d:%d:%d"</span>,gpsAda.hour,gpsAda.minute,gpsAda.seconed);</span><br><span class="line">        &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>GPS库的sample()方法<br>···<br>int GPS::sample()<br>{</p>
+<pre><code>int lock;
+
+while(1) {
+    //调用函数读取一行数据
+    getline();
+    //用sscanf()检查是不是GPGGA数据
+    // Check if it is a GPGGA msg (matches both locked and non-locked msg)
+    if(sscanf(msg, &quot;GPGGA,%f,%f,%c,%f,%c,%d,%d,%f,%f,%c,%f&quot;, &amp;time, &amp;latitude, &amp;ns, &amp;longitude, &amp;ew, &amp;lock, &amp;sats, &amp;hdop, &amp;alt, &amp;unit, &amp;geoid) &gt;= 1) {
+        //看看有没有找到卫星
+        if(!lock) {
+            time = 0.0;
+            longitude = 0.0;
+            latitude = 0.0;
+            sats = 0;
+            hdop = 0.0;
+            alt = 0.0;
+            geoid = 0.0;
+            return 0;
+        } else {
+            //GPGGA format according http://aprs.gids.nl/nmea/#gga
+            // time (float), lat (f), (N/S) (c), long (f), (E/W) (c), fix (d), sats (d),
+            // hdop (float), altitude (float), M, geoid (float), M, , ,
+            //GPGGA,092010.000,5210.9546,N,00008.8913,E,1,07,1.3,9.7,M,47.0,M,,0000*5D
+            //转换为北京时间，原来的是UTC时间，utc+8就是北京时间,%取余运算
+            //format utc time to beijing time,add 8 time zone
+            time = time + 80000.00f;
+            hour = int(time) / 10000; 
+            minute = (int(time) % 10000) / 100;
+            seconed = int(time) % 100;
+
+            return 1;
+        }
+    }
+}
+</code></pre><p>}</p>
+<p>···</p>
+<p>串口输出结果</p>
+<p>···<br>15311.202148    N    3235.849365    E    52.099998    -9.000000    162005.000000<br>16:20:5<br>15311.202148    N    3235.849121    E    51.500000    -9.000000    162006.000000<br>16:20:6<br>15311.202148    N    3235.849121    E    50.299999    -9.000000    162007.000000<br>16:20:7<br>15311.202148    N    3235.848877    E    49.200001    -9.000000    162008.000000<br>16:20:8<br>15311.202148    N    3235.848633    E    48.599998    -9.000000    162009.000000<br>16:20:9<br>15311.203125    N    3235.848633    E    47.900002    -9.000000    162010.000000<br>16:20:10<br>···</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/11/NXP开发板K64F之串口实验/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">NXP开发板K64F之串口实验</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="NXP开发板K64F之串口GPS模块NEO-6M" data-title="NXP开发板K64F之串口GPS模块NEO-6M" data-url="http://enjoythe.party/2016/08/12/NXP开发板K64F之串口GPS模块NEO-6M/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"enjoytheparty"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 TK
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

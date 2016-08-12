@@ -4,23 +4,17 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>grub2的vga和单用户模式问题 | linux|Arduino|IT|迷路的虾米</title>
+  <title>Archives | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="想尝试一下忘记root密码进入单用户模式下修改root密码reboot,之后在grub界面按eGRUB2配置文件”grub.cfg”详解(GRUB2实战手册)">
-<meta property="og:type" content="article">
-<meta property="og:title" content="grub2的vga和单用户模式问题">
-<meta property="og:url" content="http://enjoythe.party/2016/05/13/grub2的vga和单用户模式问题/index.html">
+  <meta name="description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="linux|Arduino|IT|迷路的虾米">
+<meta property="og:url" content="http://enjoythe.party/archives/page/4/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="想尝试一下忘记root密码进入单用户模式下修改root密码reboot,之后在grub界面按eGRUB2配置文件”grub.cfg”详解(GRUB2实战手册)">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\1.jpg">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\2.jpg">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\4.jpg">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\3.jpg">
-<meta property="og:updated_time" content="2016-06-07T05:34:15.033Z">
+<meta property="og:description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="grub2的vga和单用户模式问题">
-<meta name="twitter:description" content="想尝试一下忘记root密码进入单用户模式下修改root密码reboot,之后在grub界面按eGRUB2配置文件”grub.cfg”详解(GRUB2实战手册)">
-<meta name="twitter:image" content="http://enjoythe.party/\image\linux\grub\1.jpg">
+<meta name="twitter:title" content="linux|Arduino|IT|迷路的虾米">
+<meta name="twitter:description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -211,126 +205,61 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="centos-grub2的vga和单用户模式问题" class="article article-type-centos" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2016/05/13/grub2的vga和单用户模式问题/" class="article-date">
-  	<time datetime="2016-05-13T13:33:23.000Z" itemprop="datePublished">2016-05-13</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/05/08/多说的shortname是什么/" class="archive-article-date">
+  	<time datetime="2016-05-08T02:07:59.000Z" itemprop="datePublished">May 8</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      grub2的vga和单用户模式问题
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/05/08/多说的shortname是什么/">多说的shortname是什么</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/question/">question</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客搭建/">博客搭建</a></li></ul>
 	</div>
 
-        
+          
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/linux/">linux</a>
+	<a class="article-category-link" href="/categories/HEXO/">HEXO</a>
 	</div>
 
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="想尝试一下忘记root密码进入单用户模式下修改root密码"><a href="#想尝试一下忘记root密码进入单用户模式下修改root密码" class="headerlink" title="想尝试一下忘记root密码进入单用户模式下修改root密码"></a>想尝试一下忘记root密码进入单用户模式下修改root密码</h1><h1 id="reboot-之后在grub界面按e"><a href="#reboot-之后在grub界面按e" class="headerlink" title="reboot,之后在grub界面按e"></a>reboot,之后在grub界面按e</h1><p><a href="http://www.jinbuguo.com/linux/grub.cfg.html" target="_blank" rel="external">GRUB2配置文件”grub.cfg”详解(GRUB2实战手册)</a><br><a id="more"></a></p>
-<h2 id="grub界面图"><a href="#grub界面图" class="headerlink" title="grub界面图"></a>grub界面图</h2><p><img src="\image\linux\grub\1.jpg" alt="grub界面图"></p>
-<h2 id="在此界面按上下键选自上下，按e键编辑"><a href="#在此界面按上下键选自上下，按e键编辑" class="headerlink" title="在此界面按上下键选自上下，按e键编辑"></a>在此界面按上下键选自上下，按e键编辑</h2><h2 id="编辑界面"><a href="#编辑界面" class="headerlink" title="编辑界面"></a>编辑界面</h2><p><img src="\image\linux\grub\2.jpg" alt="grub界面图"></p>
-<h2 id="在linux16-那行最后面加上single可以进如单用户模式"><a href="#在linux16-那行最后面加上single可以进如单用户模式" class="headerlink" title="在linux16:**..那行最后面加上single可以进如单用户模式"></a>在linux16:<em>**</em>..那行最后面加上single可以进如单用户模式</h2><h2 id="Tips-有可能进去后会有这样的错"><a href="#Tips-有可能进去后会有这样的错" class="headerlink" title="Tips:有可能进去后会有这样的错"></a>Tips:有可能进去后会有这样的错</h2><p><img src="\image\linux\grub\4.jpg" alt="grub界面图"></p>
-<h2 id="可以直接grub那后面不加single-加init-bin-bash"><a href="#可以直接grub那后面不加single-加init-bin-bash" class="headerlink" title="可以直接grub那后面不加single 加init=/bin/bash"></a>可以直接grub那后面不加single 加init=/bin/bash</h2><p><img src="\image\linux\grub\3.jpg" alt="grub界面图"></p>
-<h2 id="然后passwd-root"><a href="#然后passwd-root" class="headerlink" title="然后passwd root"></a>然后passwd root</h2><h2 id="linux16支持vga调整界面分辨率-vga-ask之后会有提示"><a href="#linux16支持vga调整界面分辨率-vga-ask之后会有提示" class="headerlink" title="linux16支持vga调整界面分辨率 vga=ask之后会有提示"></a>linux16支持vga调整界面分辨率 vga=ask之后会有提示</h2><h1 id="我用的hyper-v装的centos7-minimal……"><a href="#我用的hyper-v装的centos7-minimal……" class="headerlink" title="我用的hyper-v装的centos7-minimal……"></a>我用的hyper-v装的centos7-minimal……</h1><h1 id="这两个问题我还没有解决，直接进bash乱码修改密码不管用，vga没效果"><a href="#这两个问题我还没有解决，直接进bash乱码修改密码不管用，vga没效果" class="headerlink" title="这两个问题我还没有解决，直接进bash乱码修改密码不管用，vga没效果"></a>这两个问题我还没有解决，直接进bash乱码修改密码不管用，vga没效果</h1><p>– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
-
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/05/14/word恢复未保存文件和解决插入公式不能用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          word恢复未保存文件和解决插入公式不能用
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/05/13/学习笔记-DDOS脚本攻击/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">学习笔记-DDOS脚本攻击</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-<div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">Share to: &nbsp; </span>
-		<a class="jiathis_button_facebook"></a> 
-    <a class="jiathis_button_twitter"></a>
-    <a class="jiathis_button_plus"></a> 
-    <a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-
-
-
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="grub2的vga和单用户模式问题" data-title="grub2的vga和单用户模式问题" data-url="http://enjoythe.party/2016/05/13/grub2的vga和单用户模式问题/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"enjoytheparty"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
+  
 
 
 </div>
@@ -357,8 +286,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
 <meta property="og:description" content="使用FRDM-K64F开发板驱动NEO-6M串口GPS模块串口连接TX，RX到开发板上,接好VCC,GND通过解析GPGGA数据得到时间，经纬度，海拔等。。。">
 <meta property="og:image" content="https://gd1.alicdn.com/bao/uploaded/i1/TB1aFFmJpXXXXbkXVXXXXXXXXXX_!!0-item_pic.jpg">
-<meta property="og:updated_time" content="2016-08-12T08:53:56.935Z">
+<meta property="og:updated_time" content="2016-08-12T08:55:58.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NXP开发板K64F之串口GPS模块NEO-6M">
 <meta name="twitter:description" content="使用FRDM-K64F开发板驱动NEO-6M串口GPS模块串口连接TX，RX到开发板上,接好VCC,GND通过解析GPGGA数据得到时间，经纬度，海拔等。。。">
@@ -268,10 +268,7 @@
 <li>M 指单位米</li>
 <li><11> 差分GPS数据期限(RTCM SC-104)，最后设立RTCM传送的秒数量，如不是差分定位则为空</11></li>
 <li><12> 差分参考基站标号，从0000到1023(首位0也将传送)。</12></li>
-<li><ul>
-<li>语句结束标志符</li>
-</ul>
-</li>
+<li>*语句结束标志符</li>
 <li>xx 从$开始到*之间的所有ASCII码的异或校验和</li>
 <li><cr> 回车</cr></li>
 <li><lf> 换行</lf></li>
@@ -316,7 +313,7 @@ while(1) {
 </code></pre><p>}</p>
 <p>···</p>
 <p>串口输出结果</p>
-<p>···<br>15311.202148    N    3235.849365    E    52.099998    -9.000000    162005.000000<br>16:20:5<br>15311.202148    N    3235.849121    E    51.500000    -9.000000    162006.000000<br>16:20:6<br>15311.202148    N    3235.849121    E    50.299999    -9.000000    162007.000000<br>16:20:7<br>15311.202148    N    3235.848877    E    49.200001    -9.000000    162008.000000<br>16:20:8<br>15311.202148    N    3235.848633    E    48.599998    -9.000000    162009.000000<br>16:20:9<br>15311.203125    N    3235.848633    E    47.900002    -9.000000    162010.000000<br>16:20:10<br>···</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">15311.202148	N	3235.849365	E	52.099998	-9.000000	162005.000000</span><br><span class="line">16:20:5</span><br><span class="line">15311.202148	N	3235.849121	E	51.500000	-9.000000	162006.000000</span><br><span class="line">16:20:6</span><br><span class="line">15311.202148	N	3235.849121	E	50.299999	-9.000000	162007.000000</span><br><span class="line">16:20:7</span><br><span class="line">15311.202148	N	3235.848877	E	49.200001	-9.000000	162008.000000</span><br><span class="line">16:20:8</span><br><span class="line">15311.202148	N	3235.848633	E	48.599998	-9.000000	162009.000000</span><br><span class="line">16:20:9</span><br><span class="line">15311.203125	N	3235.848633	E	47.900002	-9.000000	162010.000000</span><br><span class="line">16:20:10</span><br></pre></td></tr></table></figure>
 
       
     </div>

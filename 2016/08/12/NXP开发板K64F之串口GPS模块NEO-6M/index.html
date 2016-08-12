@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
 <meta property="og:description" content="使用FRDM-K64F开发板驱动NEO-6M串口GPS模块串口连接TX，RX到开发板上,接好VCC,GND通过解析GPGGA数据得到时间，经纬度，海拔等。。。">
 <meta property="og:image" content="https://gd1.alicdn.com/bao/uploaded/i1/TB1aFFmJpXXXXbkXVXXXXXXXXXX_!!0-item_pic.jpg">
-<meta property="og:updated_time" content="2016-08-12T08:55:58.130Z">
+<meta property="og:updated_time" content="2016-08-12T09:05:34.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NXP开发板K64F之串口GPS模块NEO-6M">
 <meta name="twitter:description" content="使用FRDM-K64F开发板驱动NEO-6M串口GPS模块串口连接TX，RX到开发板上,接好VCC,GND通过解析GPGGA数据得到时间，经纬度，海拔等。。。">
@@ -275,43 +275,7 @@
 </ul>
 <h1 id="3-GPS库"><a href="#3-GPS库" class="headerlink" title="3.GPS库"></a>3.GPS库</h1><p><a href="https://developer.mbed.org/users/sampleCode/code/NEO-6m-GPS/" target="_blank" rel="external">库的地址</a><br><a href="https://developer.mbed.org/users/sampleCode/code/frdm_k64f_serialgps/" target="_blank" rel="external">使用库的地址</a></p>
 <p>部分代码<br>主程序；main.cpp<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Example showing how to hook up to different GPS modules (GlobalSat neo-6m)*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"mbed.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"GPS.h"</span></span></span><br><span class="line"><span class="comment">//create usb serial</span></span><br><span class="line"><span class="function">Serial <span class="title">pc</span><span class="params">(USBTX, USBRX)</span></span>;</span><br><span class="line"><span class="comment">//creat gps serial baud is 9600</span></span><br><span class="line"><span class="function">GPS <span class="title">gpsAda</span><span class="params">(PTC15, PTC14, <span class="number">9600</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(gpsAda.sample())&#123;</span><br><span class="line">          pc.<span class="built_in">printf</span>(<span class="string">"%f\t%c\t%f\t%c\t%f\t%f\t%f\n\r"</span>,gpsAda.longitude, gpsAda.ns,gpsAda.latitude,gpsAda.ew, gpsAda.alt, gpsAda.geoid, gpsAda.time);</span><br><span class="line">          <span class="comment">//print beijing time</span></span><br><span class="line">		  pc.<span class="built_in">printf</span>(<span class="string">"%d:%d:%d"</span>,gpsAda.hour,gpsAda.minute,gpsAda.seconed);</span><br><span class="line">        &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>GPS库的sample()方法<br>···<br>int GPS::sample()<br>{</p>
-<pre><code>int lock;
-
-while(1) {
-    //调用函数读取一行数据
-    getline();
-    //用sscanf()检查是不是GPGGA数据
-    // Check if it is a GPGGA msg (matches both locked and non-locked msg)
-    if(sscanf(msg, &quot;GPGGA,%f,%f,%c,%f,%c,%d,%d,%f,%f,%c,%f&quot;, &amp;time, &amp;latitude, &amp;ns, &amp;longitude, &amp;ew, &amp;lock, &amp;sats, &amp;hdop, &amp;alt, &amp;unit, &amp;geoid) &gt;= 1) {
-        //看看有没有找到卫星
-        if(!lock) {
-            time = 0.0;
-            longitude = 0.0;
-            latitude = 0.0;
-            sats = 0;
-            hdop = 0.0;
-            alt = 0.0;
-            geoid = 0.0;
-            return 0;
-        } else {
-            //GPGGA format according http://aprs.gids.nl/nmea/#gga
-            // time (float), lat (f), (N/S) (c), long (f), (E/W) (c), fix (d), sats (d),
-            // hdop (float), altitude (float), M, geoid (float), M, , ,
-            //GPGGA,092010.000,5210.9546,N,00008.8913,E,1,07,1.3,9.7,M,47.0,M,,0000*5D
-            //转换为北京时间，原来的是UTC时间，utc+8就是北京时间,%取余运算
-            //format utc time to beijing time,add 8 time zone
-            time = time + 80000.00f;
-            hour = int(time) / 10000; 
-            minute = (int(time) % 10000) / 100;
-            seconed = int(time) % 100;
-
-            return 1;
-        }
-    }
-}
-</code></pre><p>}</p>
-<p>···</p>
+<p>GPS库的sample()方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">int GPS::sample()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    int lock;</span><br><span class="line"></span><br><span class="line">    while(1) &#123;</span><br><span class="line">		//调用函数读取一行数据</span><br><span class="line">        getline();</span><br><span class="line">		//用sscanf()检查是不是GPGGA数据</span><br><span class="line">        // Check if it is a GPGGA msg (matches both locked and non-locked msg)</span><br><span class="line">        if(sscanf(msg, &quot;GPGGA,%f,%f,%c,%f,%c,%d,%d,%f,%f,%c,%f&quot;, &amp;time, &amp;latitude, &amp;ns, &amp;longitude, &amp;ew, &amp;lock, &amp;sats, &amp;hdop, &amp;alt, &amp;unit, &amp;geoid) &gt;= 1) &#123;</span><br><span class="line">            //看看有没有找到卫星</span><br><span class="line">			if(!lock) &#123;</span><br><span class="line">                time = 0.0;</span><br><span class="line">                longitude = 0.0;</span><br><span class="line">                latitude = 0.0;</span><br><span class="line">                sats = 0;</span><br><span class="line">                hdop = 0.0;</span><br><span class="line">                alt = 0.0;</span><br><span class="line">                geoid = 0.0;</span><br><span class="line">                return 0;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                //GPGGA format according http://aprs.gids.nl/nmea/#gga</span><br><span class="line">                // time (float), lat (f), (N/S) (c), long (f), (E/W) (c), fix (d), sats (d),</span><br><span class="line">                // hdop (float), altitude (float), M, geoid (float), M, , ,</span><br><span class="line">                //GPGGA,092010.000,5210.9546,N,00008.8913,E,1,07,1.3,9.7,M,47.0,M,,0000*5D</span><br><span class="line">				//转换为北京时间，原来的是UTC时间，utc+8就是北京时间,%取余运算</span><br><span class="line">                //format utc time to beijing time,add 8 time zone</span><br><span class="line">                time = time + 80000.00f;</span><br><span class="line">                hour = int(time) / 10000; </span><br><span class="line">                minute = (int(time) % 10000) / 100;</span><br><span class="line">                seconed = int(time) % 100;</span><br><span class="line">            </span><br><span class="line">                return 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>串口输出结果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">15311.202148	N	3235.849365	E	52.099998	-9.000000	162005.000000</span><br><span class="line">16:20:5</span><br><span class="line">15311.202148	N	3235.849121	E	51.500000	-9.000000	162006.000000</span><br><span class="line">16:20:6</span><br><span class="line">15311.202148	N	3235.849121	E	50.299999	-9.000000	162007.000000</span><br><span class="line">16:20:7</span><br><span class="line">15311.202148	N	3235.848877	E	49.200001	-9.000000	162008.000000</span><br><span class="line">16:20:8</span><br><span class="line">15311.202148	N	3235.848633	E	48.599998	-9.000000	162009.000000</span><br><span class="line">16:20:9</span><br><span class="line">15311.203125	N	3235.848633	E	47.900002	-9.000000	162010.000000</span><br><span class="line">16:20:10</span><br></pre></td></tr></table></figure>
 
@@ -338,7 +302,7 @@ while(1) {
 <div class="share_jia">
 	<!-- JiaThis Button BEGIN -->
 	<div class="jiathis_style">
-		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<span class="jiathis_txt">分享到: &nbsp; </span>
 		<a class="jiathis_button_facebook"></a> 
     <a class="jiathis_button_twitter"></a>
     <a class="jiathis_button_plus"></a> 

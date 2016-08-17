@@ -4,23 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Redhat7-and-Centos7修改root密码 | linux|Arduino|IT|迷路的虾米</title>
+  <title>[KDS-IDE]NXP开发板K64F之点亮LED | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。">
+  <meta name="description" content="使用飞思卡尔官方的开发环境KDS编写简单的LED点亮测试，学习KSDK的GPIO驱动。K64F快速入门首先安装好mbed驱动，可以参考这个开发板初识更新mbed固件下载KSDK下载对应版本的KDS IDE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redhat7-and-Centos7修改root密码">
-<meta property="og:url" content="http://enjoythe.party/2016/06/08/Redhat7-and-Centos7修改root密码/index.html">
+<meta property="og:title" content="[KDS-IDE]NXP开发板K64F之点亮LED">
+<meta property="og:url" content="http://enjoythe.party/2016/08/17/KDS-IDE-NXP开发板K64F之点亮LED/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\1.png">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\2.png">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\7.png">
-<meta property="og:image" content="http://enjoythe.party/\image\linux\grub\8.png">
-<meta property="og:updated_time" content="2016-06-08T11:06:39.249Z">
+<meta property="og:description" content="使用飞思卡尔官方的开发环境KDS编写简单的LED点亮测试，学习KSDK的GPIO驱动。K64F快速入门首先安装好mbed驱动，可以参考这个开发板初识更新mbed固件下载KSDK下载对应版本的KDS IDE">
+<meta property="og:updated_time" content="2016-08-17T10:54:37.982Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Redhat7-and-Centos7修改root密码">
-<meta name="twitter:description" content="Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break或init=/sysroot/sbin/sh就能进紧急模式修改密码了。Centos6一般在后面加single就能进单用户模式修改密码。">
-<meta name="twitter:image" content="http://enjoythe.party/\image\linux\grub\1.png">
+<meta name="twitter:title" content="[KDS-IDE]NXP开发板K64F之点亮LED">
+<meta name="twitter:description" content="使用飞思卡尔官方的开发环境KDS编写简单的LED点亮测试，学习KSDK的GPIO驱动。K64F快速入门首先安装好mbed驱动，可以参考这个开发板初识更新mbed固件下载KSDK下载对应版本的KDS IDE">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -211,11 +206,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Redhat7-and-Centos7修改root密码" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-KDS-IDE-NXP开发板K64F之点亮LED" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/08/Redhat7-and-Centos7修改root密码/" class="article-date">
-  	<time datetime="2016-06-08T10:27:58.000Z" itemprop="datePublished">2016-06-08</time>
+      <a href="/2016/08/17/KDS-IDE-NXP开发板K64F之点亮LED/" class="article-date">
+  	<time datetime="2016-08-17T07:39:15.000Z" itemprop="datePublished">2016-08-17</time>
 </a>
     </div>
   
@@ -228,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Redhat7-and-Centos7修改root密码
+      [KDS-IDE]NXP开发板K64F之点亮LED
     </h1>
   
 
@@ -237,12 +232,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/passwd/">passwd</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/K64F/">K64F</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/linux/">linux</a>
+	<a class="article-category-link" href="/categories/NXP/">NXP</a>
 	</div>
 
 
@@ -252,15 +247,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Centos7修改root密码和RedHat7是一样的，都是编辑Grub，在linux16哪行的后面加上rd.break<br>或init=/sysroot/sbin/sh就能进紧急模式修改密码了。<br>Centos6一般在后面加single就能进单用户模式修改密码。<br><a id="more"></a></p>
-<h1 id="1-重启进Grub"><a href="#1-重启进Grub" class="headerlink" title="1.重启进Grub"></a>1.重启进Grub</h1><pre><code>重启到这个界面，我这有三行，我用yum update升级过所以多出来第一行，我编辑的是第三行那个
-</code></pre><p>上下键是选择，按e就进入编辑了<br><img src="\image\linux\grub\1.png" alt="Centos7GRUB"></p>
-<h1 id="2-编辑"><a href="#2-编辑" class="headerlink" title="2.编辑"></a>2.编辑</h1><pre><code>编辑linux16哪行，在后面加上rd.break,然后按Ctrl+x启动
-</code></pre><p><img src="\image\linux\grub\2.png" alt="编辑GRUB"></p>
-<h1 id="3-进入紧急模式"><a href="#3-进入紧急模式" class="headerlink" title="3.进入紧急模式"></a>3.进入紧急模式</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#改根目录为/sysroot/</span></span><br><span class="line">chroot /sysroot/</span><br><span class="line"><span class="comment">#重新挂载根目录为读写模式</span></span><br><span class="line">mount -o remount,rw /</span><br><span class="line"><span class="comment">#设置密码</span></span><br><span class="line">passwd root</span><br><span class="line">- <span class="built_in">echo</span> passwd|passwd -stdin root可能用不了</span><br><span class="line">- 在grub编辑前两行进紧急模式时可能会乱码，因为那个是UTF-8的</span><br><span class="line">- 输两遍密码就可以了</span><br><span class="line"></span><br><span class="line"><span class="comment">#建.autorelabel文件</span></span><br><span class="line">touch .autorelabel</span><br><span class="line"><span class="comment">#退出</span></span><br><span class="line"><span class="built_in">exit</span> 或按Ctrl+d</span><br><span class="line"><span class="comment">#重启</span></span><br><span class="line">reboot</span><br><span class="line"><span class="comment">#或/sbin/reboot;/bin/shutdown -r now;init 6;exec /sbin/reboot</span></span><br></pre></td></tr></table></figure>
-<p><img src="\image\linux\grub\7.png" alt="进入紧急模式"></p>
-<h1 id="4-重启第一次"><a href="#4-重启第一次" class="headerlink" title="4.重启第一次"></a>4.重启第一次</h1><p><img src="\image\linux\grub\8.png" alt="重启"></p>
-<h1 id="5-重启第二次，这次就能登陆了"><a href="#5-重启第二次，这次就能登陆了" class="headerlink" title="5.重启第二次，这次就能登陆了"></a>5.重启第二次，这次就能登陆了</h1><p>– 锅碗瓢盆，柴米油盐酱醋茶。迷路的虾米<a href="http://enjoythe.party">http://enjoythe.party</a></p>
+        <p>使用飞思卡尔官方的开发环境KDS编写简单的LED点亮测试，学习KSDK的GPIO驱动。<br><a href="http://www.nxp.com/zh-Hans/products/software-and-tools/hardware-development-tools/freedom-development-boards/freedom-development-platform-for-kinetis-k64-k63-and-k24-mcus:FRDM-K64F?tab=In-Depth_Tab" target="_blank" rel="external">K64F快速入门</a><br>首先安装好mbed驱动，可以参考这个<a href="http://enjoythe.party/2016/08/10/NXP开发板K64F之初识/">开发板初识更新mbed固件</a><br><a href="http://cache.nxp.com/lgfiles/sdk/SDK_2.0_FRDM-K64F.zip" target="_blank" rel="external">下载KSDK</a><br><a href="https://nxp.flexnetoperations.com/control/frse/product?entitlementId=186529687&amp;lineNum=1&amp;authContactId=90180827&amp;authPartyId=88734697" target="_blank" rel="external">下载对应版本的KDS IDE</a><br><a id="more"></a></p>
+<h1 id="1-新建工程"><a href="#1-新建工程" class="headerlink" title="1.新建工程"></a>1.新建工程</h1><ul>
+<li>打开KDS:File&gt;&gt;New&gt;&gt;Kinetis SDK 2.X Project</li>
+<li>填写Project Name:K64F_RGB_LED</li>
+<li>导入KSDK:点击Browse选择你下载好的KSDK的位置</li>
+<li>选好KSDK后，点next,选择对应的板卡FRDM-K64F,</li>
+<li>Select dirvers选择驱动，all dirvers会加上所有的驱动，Minimal set只会加一些常用的GPIO,UART之类的。不知道用啥，选all就好了。</li>
+<li>最后点Finish</li>
+</ul>
+<h1 id="2-目录结构"><a href="#2-目录结构" class="headerlink" title="2.目录结构"></a>2.目录结构</h1><blockquote>
+<p>K64F_RGB_LED<br>boards 是官方写的基于FRDM_K64F板子的一些底层<br>CMSIS 编译下载要用到的一些吧<br>dirvers 官方的底层驱动，GPIO,IIC，SPI,UART之类的<br>source 是用户自己的文件<br>startup<br>utilities 是官方的一些调试文件底层,使用串口PRINTF输出时需要用到</p>
+</blockquote>
+<h1 id="3-看看main函数"><a href="#3-看看main函数" class="headerlink" title="3.看看main函数"></a>3.看看main函数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;board.h&quot; //官方定义的一些LED引脚，函数（如LED_RED_INIT()红灯初始化函数，调用dirver里的fsl_gpioD的一个方法）</span><br><span class="line">#include &quot;pin_mux.h&quot; //初始化板子的硬件，时钟使能，引脚复用。main函数调用的BOARD_InitPins();</span><br><span class="line">#include &quot;clock_config.h&quot; //系统时钟的一些配置</span><br><span class="line">/*</span><br><span class="line"> * Delay();延时函数</span><br><span class="line"> */</span><br><span class="line">void Delay(void)&#123;</span><br><span class="line">	volatile uint32_t i=0;</span><br><span class="line">	for(i;i&lt;2000000;i++)&#123;</span><br><span class="line">		__asm(&quot;NOP&quot;);</span><br><span class="line">		__asm(&quot;NOP&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">/*!</span><br><span class="line"> * @brief Application entry point.</span><br><span class="line"> */</span><br><span class="line">int main(void) &#123;</span><br><span class="line"> /* Init board hardware. */</span><br><span class="line">	BOARD_InitPins();</span><br><span class="line">	BOARD_BootClockRUN();</span><br><span class="line">	BOARD_InitDebugConsole();</span><br><span class="line">	LED_RED_INIT(1);</span><br><span class="line">	LED_BLUE_INIT(1);</span><br><span class="line">	LED_GREEN_INIT(1);</span><br><span class="line">//  LED_RED_ON();</span><br><span class="line">//	LED_RED_TOGGLE();</span><br><span class="line"></span><br><span class="line">	/* Add your code here */</span><br><span class="line">	for (;;) &#123; /* Infinite loop to avoid leaving the main function */</span><br><span class="line">		LED_RED_ON();</span><br><span class="line">		LED_GREEN_OFF();</span><br><span class="line">		LED_BLUE_OFF();</span><br><span class="line">		Delay();</span><br><span class="line">		LED_RED_OFF();</span><br><span class="line">		LED_GREEN_ON();</span><br><span class="line">		LED_BLUE_OFF();</span><br><span class="line">		Delay();</span><br><span class="line">		LED_RED_OFF();</span><br><span class="line">		LED_GREEN_OFF();</span><br><span class="line">		LED_BLUE_ON();</span><br><span class="line">		Delay();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="4-在pin-mux-c的BOARD-InitPins-里面加上"><a href="#4-在pin-mux-c的BOARD-InitPins-里面加上" class="headerlink" title="4.在pin_mux.c的BOARD_InitPins()里面加上"></a>4.在pin_mux.c的BOARD_InitPins()里面加上</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/* Affects PORTB_PCR21 register */</span><br><span class="line">	PORT_SetPinMux(PORTB, 21u, kPORT_MuxAsGpio);</span><br><span class="line">	/* Ungate the port clock */</span><br><span class="line">	CLOCK_EnableClock(kCLOCK_PortE);</span><br><span class="line">	/* Affects PORTE_PCR26 register */</span><br><span class="line">	PORT_SetPinMux(PORTE, 26u, kPORT_MuxAsGpio);</span><br></pre></td></tr></table></figure>
+<h1 id="5-eclipse快捷键"><a href="#5-eclipse快捷键" class="headerlink" title="5.eclipse快捷键"></a>5.eclipse快捷键</h1><ul>
+<li>Ctrl+Shift+f    格式化代码</li>
+<li>Ctrl+/ 注释代码</li>
+<li>Alt+/ 补全代码</li>
+</ul>
 
       
     </div>
@@ -270,18 +275,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/06/09/Centos7-Docker使用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Centos7-Docker使用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/06/07/Centos7配置ip地址/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Centos7配置ip地址</div>
+    <a href="/2016/08/12/NXP开发板K64F之串口GPS模块NEO-6M/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">NXP开发板K64F之串口GPS模块NEO-6M</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -316,7 +312,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Redhat7-and-Centos7修改root密码" data-title="Redhat7-and-Centos7修改root密码" data-url="http://enjoythe.party/2016/06/08/Redhat7-and-Centos7修改root密码/"></div>
+	<div class="ds-thread" data-thread-key="KDS-IDE-NXP开发板K64F之点亮LED" data-title="[KDS-IDE]NXP开发板K64F之点亮LED" data-url="http://enjoythe.party/2016/08/17/KDS-IDE-NXP开发板K64F之点亮LED/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

@@ -6,16 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>FRDM-KL25Z收音机制作 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
+  <meta name="description" content="基于mbed环境开发，使用5767收音机模块收音。
+KL25Z的资料【智能生活-KL25Z】helloword！灯灯灯灯！&amp;amp;资料
+MBED环境KL25Z驱动OLED【智能生活】MBED环境KL25Z驱动OLED
+5767收音机，串口调试5767收音机，串口调试
+收音机，按键换台收音机，按键换台">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FRDM-KL25Z收音机制作">
 <meta property="og:url" content="http://enjoythe.party/2016/09/26/FRDM-KL25Z收音机制作/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
-<meta property="og:updated_time" content="2016-09-26T01:25:25.639Z">
+<meta property="og:description" content="基于mbed环境开发，使用5767收音机模块收音。
+KL25Z的资料【智能生活-KL25Z】helloword！灯灯灯灯！&amp;amp;资料
+MBED环境KL25Z驱动OLED【智能生活】MBED环境KL25Z驱动OLED
+5767收音机，串口调试5767收音机，串口调试
+收音机，按键换台收音机，按键换台">
+<meta property="og:updated_time" content="2016-10-05T11:24:07.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FRDM-KL25Z收音机制作">
-<meta name="twitter:description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
+<meta name="twitter:description" content="基于mbed环境开发，使用5767收音机模块收音。
+KL25Z的资料【智能生活-KL25Z】helloword！灯灯灯灯！&amp;amp;资料
+MBED环境KL25Z驱动OLED【智能生活】MBED环境KL25Z驱动OLED
+5767收音机，串口调试5767收音机，串口调试
+收音机，按键换台收音机，按键换台">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -120,7 +132,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/K64F/" style="font-size: 20px;">K64F</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 13.33px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
+						<a href="/tags/GD32/" style="font-size: 10px;">GD32</a> <a href="/tags/K64F/" style="font-size: 20px;">K64F</a> <a href="/tags/KL25Z/" style="font-size: 10px;">KL25Z</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 13.33px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
 					</div>
 				</section>
 				
@@ -231,7 +243,15 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/KL25Z/">KL25Z</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/NXP/">NXP</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -239,7 +259,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>基于mbed环境开发，使用5767收音机模块收音。</p>
+<h1 id="KL25Z的资料"><a href="#KL25Z的资料" class="headerlink" title="KL25Z的资料"></a>KL25Z的资料</h1><p><a href="http://www.nxpic.org/module/forum/forum.php?mod=viewthread&amp;tid=605804&amp;fromuid=3145308" target="_blank" rel="external">【智能生活-KL25Z】helloword！灯灯灯灯！&amp;资料</a></p>
+<h1 id="MBED环境KL25Z驱动OLED"><a href="#MBED环境KL25Z驱动OLED" class="headerlink" title="MBED环境KL25Z驱动OLED"></a>MBED环境KL25Z驱动OLED</h1><p><a href="http://www.nxpic.org/module/forum/forum.php?mod=viewthread&amp;tid=605866&amp;fromuid=3145308" target="_blank" rel="external">【智能生活】MBED环境KL25Z驱动OLED</a></p>
+<h1 id="5767收音机，串口调试"><a href="#5767收音机，串口调试" class="headerlink" title="5767收音机，串口调试"></a>5767收音机，串口调试</h1><p><a href="http://www.nxpic.org/module/forum/forum.php?mod=viewthread&amp;tid=605919&amp;fromuid=3145308" target="_blank" rel="external">5767收音机，串口调试</a></p>
+<h1 id="收音机，按键换台"><a href="#收音机，按键换台" class="headerlink" title="收音机，按键换台"></a>收音机，按键换台</h1><p><a href="http://www.nxpic.org/module/forum/forum.php?mod=viewthread&amp;tid=605931&amp;fromuid=3145308" target="_blank" rel="external">收音机，按键换台</a></p>
+
       
     </div>
     

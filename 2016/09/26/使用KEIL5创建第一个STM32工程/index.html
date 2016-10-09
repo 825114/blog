@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>使用KEIL5创建第一个STM32工程 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
+  <meta name="description">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用KEIL5创建第一个STM32工程">
 <meta property="og:url" content="http://enjoythe.party/2016/09/26/使用KEIL5创建第一个STM32工程/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
-<meta property="og:updated_time" content="2016-09-26T01:31:23.941Z">
+<meta property="og:description">
+<meta property="og:updated_time" content="2016-10-09T09:01:53.586Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用KEIL5创建第一个STM32工程">
-<meta name="twitter:description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
+<meta name="twitter:description">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/GD32/" style="font-size: 10px;">GD32</a> <a href="/tags/K64F/" style="font-size: 20px;">K64F</a> <a href="/tags/KL25Z/" style="font-size: 10px;">KL25Z</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/PM2-5/" style="font-size: 10px;">PM2.5</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 13.33px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
+						<a href="/tags/GD32/" style="font-size: 13.33px;">GD32</a> <a href="/tags/K64F/" style="font-size: 20px;">K64F</a> <a href="/tags/KL25Z/" style="font-size: 10px;">KL25Z</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/PM2-5/" style="font-size: 10px;">PM2.5</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/docker/" style="font-size: 13.33px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
 					</div>
 				</section>
 				
@@ -231,7 +231,15 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GD32/">GD32</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/STM32/">STM32</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -239,7 +247,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <iframe height="450" width="510" src="http://player.youku.com/embed/XMTc1MzYyNjk4MA==" frameborder="0" 'allowfullscreen'=""></iframe>
       
     </div>
     

@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://enjoythe.party/2016/09/26/%E4%BD%BF%E7%94%A8KEIL5%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASTM32%E5%B7%A5%E7%A8%8B/</loc>
+    <lastmod>2016-10-09T09:01:53.586Z</lastmod>
+    <data>
+        <display>
+        <title>使用KEIL5创建第一个STM32工程</title>
+        <pubTime>2016-09-26T01:31:23.000Z</pubTime>
+        
+        <tag>GD32</tag>
+         
+         
+           
+             
+              <breadCrumb title="STM32" url="http://enjoythe.party/categories/STM32/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://enjoythe.party/2016/10/05/%E5%9F%BA%E4%BA%8EAVR%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%84%E4%BE%BF%E6%90%BA%E5%BC%8FPM2-5%E6%A3%80%E6%B5%8B%E4%BB%AA/</loc>
     <lastmod>2016-10-05T11:54:36.958Z</lastmod>
     <data>
@@ -58,21 +78,6 @@
              
               <breadCrumb title="STM32" url="http://enjoythe.party/categories/STM32/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://enjoythe.party/2016/09/26/%E4%BD%BF%E7%94%A8KEIL5%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASTM32%E5%B7%A5%E7%A8%8B/</loc>
-    <lastmod>2016-09-26T01:31:23.941Z</lastmod>
-    <data>
-        <display>
-        <title>使用KEIL5创建第一个STM32工程</title>
-        <pubTime>2016-09-26T01:31:23.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>

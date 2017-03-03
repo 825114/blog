@@ -6,18 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>LPC54608在MDK-Keil5平台下开发环境搭建 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有幸从NXP官网申请到一块LPC54608开发版，这是一块搭载4.3寸电容屏的开发版，上电运行的touchGFX图形界面十分流畅细腻。可以从以下链接查看开发板的详细信息及视频展示。">
+  <meta name="description" content="有幸从NXP官网申请到一块LPC54608开发版，这是一块搭载4.3寸电容屏的开发版，上电运行的touchGFX图形界面十分流畅细腻。可以从以下链接查看开发板的详细信息及视频展示。OM13092: 面向LPC54608的LPCXpresso电路板">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LPC54608在MDK-Keil5平台下开发环境搭建">
 <meta property="og:url" content="http://enjoythe.party/2017/03/03/LPC54608在MDK-Keil5平台下开发环境搭建/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="有幸从NXP官网申请到一块LPC54608开发版，这是一块搭载4.3寸电容屏的开发版，上电运行的touchGFX图形界面十分流畅细腻。可以从以下链接查看开发板的详细信息及视频展示。">
-<meta property="og:image" content="http://www.nxp.com/cn/products/microcontrollers-and-processors/arm-processors/lpc-mcus/lpc54000-series-cortex-m4-mcus/lpcxpresso-development-board-for-lpc5460x-mcus:OM13092#featuresExpand">
-<meta property="og:updated_time" content="2017-03-03T11:55:35.070Z">
+<meta property="og:description" content="有幸从NXP官网申请到一块LPC54608开发版，这是一块搭载4.3寸电容屏的开发版，上电运行的touchGFX图形界面十分流畅细腻。可以从以下链接查看开发板的详细信息及视频展示。OM13092: 面向LPC54608的LPCXpresso电路板">
+<meta property="og:updated_time" content="2017-03-03T12:21:35.832Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LPC54608在MDK-Keil5平台下开发环境搭建">
-<meta name="twitter:description" content="有幸从NXP官网申请到一块LPC54608开发版，这是一块搭载4.3寸电容屏的开发版，上电运行的touchGFX图形界面十分流畅细腻。可以从以下链接查看开发板的详细信息及视频展示。">
-<meta name="twitter:image" content="http://www.nxp.com/cn/products/microcontrollers-and-processors/arm-processors/lpc-mcus/lpc54000-series-cortex-m4-mcus/lpcxpresso-development-board-for-lpc5460x-mcus:OM13092#featuresExpand">
+<meta name="twitter:description" content="有幸从NXP官网申请到一块LPC54608开发版，这是一块搭载4.3寸电容屏的开发版，上电运行的touchGFX图形界面十分流畅细腻。可以从以下链接查看开发板的详细信息及视频展示。OM13092: 面向LPC54608的LPCXpresso电路板">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -249,8 +247,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有幸从NXP官网申请到一块LPC54608开发版，这是一块搭载4.3寸电容屏的开发版，<br>上电运行的touchGFX图形界面十分流畅细腻。可以从以下链接查看开发板的详细信息及视频展示。<br><img src="http://www.nxp.com/cn/products/microcontrollers-and-processors/arm-processors/lpc-mcus/lpc54000-series-cortex-m4-mcus/lpcxpresso-development-board-for-lpc5460x-mcus:OM13092#featuresExpand" alt="OM13092: 面向LPC54608的LPCXpresso电路板"><br><a id="more"></a></p>
-<h1 id="一、开发环境需要的安装包"><a href="#一、开发环境需要的安装包" class="headerlink" title="一、开发环境需要的安装包"></a>一、开发环境需要的安装包</h1>
+        <p>有幸从NXP官网申请到一块LPC54608开发版，这是一块搭载4.3寸电容屏的开发版，<br>上电运行的touchGFX图形界面十分流畅细腻。可以从以下链接查看开发板的详细信息及视频展示。<br><a href="http://www.nxp.com/cn/products/microcontrollers-and-processors/arm-processors/lpc-mcus/lpc54000-series-cortex-m4-mcus/lpcxpresso-development-board-for-lpc5460x-mcus:OM13092#featuresExpand" target="_blank" rel="external">OM13092: 面向LPC54608的LPCXpresso电路板</a><br><a id="more"></a></p>
+<h1 id="一、开发环境需要的安装包"><a href="#一、开发环境需要的安装包" class="headerlink" title="一、开发环境需要的安装包"></a>一、开发环境需要的安装包</h1><pre><code>1.1 首先需要安装驱动，双击[lpc_driver_setup.exe](https://community.nxp.com/servlet/JiveServlet/download/11529-389044-630660-377765/lpc_driver_setup.exe.zip)安装，
+安装完成后，在设备管理器里能看到一个LPC based USB device,如下图：
+![LPC based USB device](\image\nxp\lpc54608\0.png))
+
+1.2 安装[LPCScrypt_installer_1.8.0_723 .exe](http://www.nxp.com/assets/downloads/data/en/software/LPCScrypt_installer_1.8.0_723.exe),这个是用来更新板载下载器固件用的，当板子背面JP1跳线连上后LPC-Link2处于DFU模式，装好LPCScrypt后，在开始菜单》所有程序里面可以找到LPCScrypt文件夹，里面有几个批处理文件。
+在安装LPCScrypt是也会装上VCOM等的驱动。
+![LPC based USB device](\image\nxp\lpc54608\3.png))
+![LPC based USB device](\image\nxp\lpc54608\5.png))
+![LPC based USB device](\image\nxp\lpc54608\2.png))
+![LPC based USB device](\image\nxp\lpc54608\1.png))
+</code></pre>
       
     </div>
     

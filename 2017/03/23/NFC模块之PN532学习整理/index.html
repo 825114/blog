@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://enjoythe.party/2017/03/23/NFC模块之PN532学习整理/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
 <meta property="og:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：? ISO/IEC 14443A/MIFARE Reader/Writer? FeliCa Reader/Writer? ISO/IEC 14443B Reader/Writer? ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
-<meta property="og:updated_time" content="2017-03-23T13:16:10.931Z">
+<meta property="og:updated_time" content="2017-03-23T13:18:12.361Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NFC模块之PN532学习整理">
 <meta name="twitter:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：? ISO/IEC 14443A/MIFARE Reader/Writer? FeliCa Reader/Writer? ISO/IEC 14443B Reader/Writer? ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
@@ -282,7 +282,57 @@
 </tbody>
 </table>
 <h1 id="HSU高速串口"><a href="#HSU高速串口" class="headerlink" title="HSU高速串口"></a>HSU高速串口</h1><p> 串口的默认配置；数据位8位，校验位无，停止位1位，波特率115200<br> RX:–&gt;PIN27<br> TX:–&gt;PIN28</p>
-<h1 id="PN532通讯帧结构"><a href="#PN532通讯帧结构" class="headerlink" title="PN532通讯帧结构"></a>PN532通讯帧结构</h1><p> | 00 | 00FF | LEN | LCS | TFI | PD0 |PD1 | …… | PDn | DCS | 00 |<br> | 帧头 | 开始字节 | 数据长度 | 长度校验 | 帧标识 |<br> |  |  |TFI,PD0..PDn的个数  | LEN + LCS 的补码 | 值为D4时表示帧从MCU发到PN532 | 命令码 | 第一个字节数据 | 第2个数据 | n个 | 奇偶校验 | 帧尾 |<br> |  |  |   | 值为D5时表示帧从PN532发到MCU | 命令编码 | 数据1 | 数据 | 数据 | TFI + PD0 + PD1 + … + PDn + DCS的补码 | 00 |</p>
+<h1 id="PN532通讯帧结构"><a href="#PN532通讯帧结构" class="headerlink" title="PN532通讯帧结构"></a>PN532通讯帧结构</h1><table>
+<thead>
+<tr>
+<th>00</th>
+<th>00FF</th>
+<th>LEN</th>
+<th>LCS</th>
+<th>TFI</th>
+<th>PD0</th>
+<th>PD1</th>
+<th>……</th>
+<th>PDn</th>
+<th>DCS</th>
+<th>00</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>帧头</td>
+<td>开始字节</td>
+<td>数据长度</td>
+<td>长度校验</td>
+<td>帧标识</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>TFI,PD0..PDn的个数</td>
+<td>LEN + LCS 的补码</td>
+<td>值为D4时表示帧从MCU发到PN532</td>
+<td>命令码</td>
+<td>第一个字节数据</td>
+<td>第2个数据</td>
+<td>n个</td>
+<td>奇偶校验</td>
+<td>帧尾</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>值为D5时表示帧从PN532发到MCU</td>
+<td>命令编码</td>
+<td>数据1</td>
+<td>数据</td>
+<td>数据</td>
+<td>TFI + PD0 + PD1 + … + PDn + DCS的补码</td>
+<td>00</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>

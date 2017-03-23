@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://enjoythe.party/2017/03/23/NFC模块之PN532学习整理/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
 <meta property="og:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：• ISO/IEC 14443A/MIFARE Reader/Writer• FeliCa Reader/Writer• ISO/IEC 14443B Reader/Writer• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
-<meta property="og:updated_time" content="2017-03-23T13:00:08.347Z">
+<meta property="og:updated_time" content="2017-03-23T13:02:46.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NFC模块之PN532学习整理">
 <meta name="twitter:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：• ISO/IEC 14443A/MIFARE Reader/Writer• FeliCa Reader/Writer• ISO/IEC 14443B Reader/Writer• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
@@ -251,7 +251,7 @@
 <h1 id="PN532接口支持："><a href="#PN532接口支持：" class="headerlink" title="PN532接口支持："></a>PN532接口支持：</h1><p>. SPI<br>. IIC<br>. HSU(Hight Speed UART) 高速串口</p>
 <h1 id="接口选择控制"><a href="#接口选择控制" class="headerlink" title="接口选择控制"></a>接口选择控制</h1><p>通信接口的切换通过PIN16、17两个引脚控制，如下<br>| 接口 | PIN16 | PIN17 |<br>| ——- | ——- | ——- |<br>| 30 | 40 | 黑色 |<br>| 31 | 41 | 红色 |<br>| 32 | 42 | 绿色 |<br>| interface | PIN16 | PIN17 |<br>| ——- | ——- | ——- |<br>| HSU | 0 | 0 |<br>| I2C | 1 | 0 |<br>| SPI | 0 | 1 |<br>| RFU | 1 | 1 |</p>
 <h1 id="HSU高速串口"><a href="#HSU高速串口" class="headerlink" title="HSU高速串口"></a>HSU高速串口</h1><p> 串口的默认配置；数据位8位，校验位无，停止位1位，波特率115200<br> RX:–&gt;PIN27<br> TX:–&gt;PIN28</p>
-<h1 id="PN532通讯帧结构"><a href="#PN532通讯帧结构" class="headerlink" title="PN532通讯帧结构"></a>PN532通讯帧结构</h1><p>| 00 | 00FF | LEN | LCS | TFI | PD0 |PD1 | …… | PDn | DCS | 00 |<br>|</p>
+<h1 id="PN532通讯帧结构"><a href="#PN532通讯帧结构" class="headerlink" title="PN532通讯帧结构"></a>PN532通讯帧结构</h1><p>| 00 | 00FF | LEN | LCS | TFI | PD0 |PD1 | …… | PDn | DCS | 00 |<br>| 帧头 | 开始字节 |</p>
 
       
     </div>

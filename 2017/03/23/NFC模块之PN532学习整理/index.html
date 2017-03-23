@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: mariadb | linux|Arduino|IT|迷路的虾米</title>
+  <title>NFC模块之PN532学习整理 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:url" content="http://enjoythe.party/tags/mariadb/index.html">
+  <meta name="description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：• ISO/IEC 14443A/MIFARE Reader/Writer• FeliCa Reader/Writer• ISO/IEC 14443B Reader/Writer• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NFC模块之PN532学习整理">
+<meta property="og:url" content="http://enjoythe.party/2017/03/23/NFC模块之PN532学习整理/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
+<meta property="og:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：• ISO/IEC 14443A/MIFARE Reader/Writer• FeliCa Reader/Writer• ISO/IEC 14443B Reader/Writer• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
+<meta property="og:updated_time" content="2017-03-23T12:41:53.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux|Arduino|IT|迷路的虾米">
-<meta name="twitter:description" content="关于编程（java,python,等）,单片机（Arduino）,系统（linux）,开源,学习心得,教程的个人博客。">
+<meta name="twitter:title" content="NFC模块之PN532学习整理">
+<meta name="twitter:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：• ISO/IEC 14443A/MIFARE Reader/Writer• FeliCa Reader/Writer• ISO/IEC 14443B Reader/Writer• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -205,57 +206,114 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-NFC模块之PN532学习整理" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/08/在Centos7中安装Mariadb/" class="archive-article-date">
-  	<time datetime="2016-05-08T14:22:48.000Z" itemprop="datePublished">May 8</time>
+    <div class="article-meta">
+      <a href="/2017/03/23/NFC模块之PN532学习整理/" class="article-date">
+  	<time datetime="2017-03-23T12:25:15.000Z" itemprop="datePublished">2017-03-23</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/08/在Centos7中安装Mariadb/">在Centos7中安装Mariadb</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      NFC模块之PN532学习整理
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mariadb/">mariadb</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PN532/">PN532</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/linux/">linux</a>
+	<a class="article-category-link" href="/categories/NXP/">NXP</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：<br>• ISO/IEC 14443A/MIFARE Reader/Writer<br>• FeliCa Reader/Writer<br>• ISO/IEC 14443B Reader/Writer<br>• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K card<br>emulation mode<br>• FeliCa Card emulation<br>• ISO/IEC 18092, ECMA 340 Peer-to-Peer<br>&lt;–more–&gt;<br>PN532支持2.7V-5.5V供电</p>
+<h1 id="PN532接口支持："><a href="#PN532接口支持：" class="headerlink" title="PN532接口支持："></a>PN532接口支持：</h1><p>. SPI<br>. IIC<br>. HSU(Hight Speed UART) 高速串口</p>
+<h1 id="接口选择控制"><a href="#接口选择控制" class="headerlink" title="接口选择控制"></a>接口选择控制</h1><p>通信接口的切换通过PIN16、17两个引脚控制，如下<br>interface|PIN16|PIN17<br>——|——|——<br>HSU|0|0<br>I2C|1|0<br>SPI|0|1<br>RFU|1|1 </p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/03/LPC54608在MDK-Keil5平台下开发环境搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LPC54608在MDK-Keil5平台下开发环境搭建</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="NFC模块之PN532学习整理" data-title="NFC模块之PN532学习整理" data-url="http://enjoythe.party/2017/03/23/NFC模块之PN532学习整理/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"enjoytheparty"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
 
 
 </div>
@@ -282,9 +340,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}

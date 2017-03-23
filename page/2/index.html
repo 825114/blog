@@ -119,7 +119,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/GD32/" style="font-size: 13.33px;">GD32</a> <a href="/tags/K64F/" style="font-size: 20px;">K64F</a> <a href="/tags/KL25Z/" style="font-size: 10px;">KL25Z</a> <a href="/tags/LPC54608/" style="font-size: 10px;">LPC54608</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/PM2-5/" style="font-size: 10px;">PM2.5</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/docker/" style="font-size: 13.33px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/剁手/" style="font-size: 10px;">剁手</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
+						<a href="/tags/GD32/" style="font-size: 13.33px;">GD32</a> <a href="/tags/K64F/" style="font-size: 20px;">K64F</a> <a href="/tags/KL25Z/" style="font-size: 10px;">KL25Z</a> <a href="/tags/LPC54608/" style="font-size: 10px;">LPC54608</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/PM2-5/" style="font-size: 10px;">PM2.5</a> <a href="/tags/PN532/" style="font-size: 10px;">PN532</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/docker/" style="font-size: 13.33px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/剁手/" style="font-size: 10px;">剁手</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
 					</div>
 				</section>
 				
@@ -206,6 +206,70 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-NXP开发板K64F之串口GPS模块NEO-6M" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/12/NXP开发板K64F之串口GPS模块NEO-6M/" class="article-date">
+  	<time datetime="2016-08-12T08:21:56.000Z" itemprop="datePublished">2016-08-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/12/NXP开发板K64F之串口GPS模块NEO-6M/">NXP开发板K64F之串口GPS模块NEO-6M</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用FRDM-K64F开发板驱动NEO-6M串口GPS模块<br>串口连接TX，RX到开发板上,接好VCC,GND<br>通过解析GPGGA数据得到时间，经纬度，海拔等。。。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/K64F/">K64F</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/NXP/">NXP</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/08/12/NXP开发板K64F之串口GPS模块NEO-6M/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-NXP开发板K64F之串口实验" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -812,73 +876,9 @@
 
 
   
-    <article id="post-Centos7实验LVS-NAT-ipvsadm负载均衡" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/06/Centos7实验LVS-NAT-ipvsadm负载均衡/" class="article-date">
-  	<time datetime="2016-06-06T12:15:09.000Z" itemprop="datePublished">2016-06-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/06/Centos7实验LVS-NAT-ipvsadm负载均衡/">Centos7实验LVS-NAT+ipvsadm负载均衡</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#实验在虚拟机环境下配置LVS-NAT+ipvsadm负载均衡<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LVS/">LVS</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/linux/">linux</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/06/06/Centos7实验LVS-NAT-ipvsadm负载均衡/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 

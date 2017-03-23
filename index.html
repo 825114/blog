@@ -119,7 +119,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/GD32/" style="font-size: 13.33px;">GD32</a> <a href="/tags/K64F/" style="font-size: 20px;">K64F</a> <a href="/tags/KL25Z/" style="font-size: 10px;">KL25Z</a> <a href="/tags/LPC54608/" style="font-size: 10px;">LPC54608</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/PM2-5/" style="font-size: 10px;">PM2.5</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/docker/" style="font-size: 13.33px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/剁手/" style="font-size: 10px;">剁手</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
+						<a href="/tags/GD32/" style="font-size: 13.33px;">GD32</a> <a href="/tags/K64F/" style="font-size: 20px;">K64F</a> <a href="/tags/KL25Z/" style="font-size: 10px;">KL25Z</a> <a href="/tags/LPC54608/" style="font-size: 10px;">LPC54608</a> <a href="/tags/LVS/" style="font-size: 10px;">LVS</a> <a href="/tags/PM2-5/" style="font-size: 10px;">PM2.5</a> <a href="/tags/PN532/" style="font-size: 10px;">PN532</a> <a href="/tags/arduino/" style="font-size: 10px;">arduino</a> <a href="/tags/bootloader/" style="font-size: 10px;">bootloader</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/docker/" style="font-size: 13.33px;">docker</a> <a href="/tags/eeprom/" style="font-size: 10px;">eeprom</a> <a href="/tags/esp8266/" style="font-size: 10px;">esp8266</a> <a href="/tags/fdisk/" style="font-size: 10px;">fdisk</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/logo/" style="font-size: 10px;">logo</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/passwd/" style="font-size: 10px;">passwd</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/question/" style="font-size: 16.67px;">question</a> <a href="/tags/rsync/" style="font-size: 10px;">rsync</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/剁手/" style="font-size: 10px;">剁手</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/终端/" style="font-size: 10px;">终端</a>
 					</div>
 				</section>
 				
@@ -206,6 +206,69 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-NFC模块之PN532学习整理" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/23/NFC模块之PN532学习整理/" class="article-date">
+  	<time datetime="2017-03-23T12:25:15.000Z" itemprop="datePublished">2017-03-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/23/NFC模块之PN532学习整理/">NFC模块之PN532学习整理</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：<br>• ISO/IEC 14443A/MIFARE Reader/Writer<br>• FeliCa Reader/Writer<br>• ISO/IEC 14443B Reader/Writer<br>• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K card<br>emulation mode<br>• FeliCa Card emulation<br>• ISO/IEC 18092, ECMA 340 Peer-to-Peer<br>&lt;–more–&gt;<br>PN532支持2.7V-5.5V供电</p>
+<h1 id="PN532接口支持："><a href="#PN532接口支持：" class="headerlink" title="PN532接口支持："></a>PN532接口支持：</h1><p>. SPI<br>. IIC<br>. HSU(Hight Speed UART) 高速串口</p>
+<h1 id="接口选择控制"><a href="#接口选择控制" class="headerlink" title="接口选择控制"></a>接口选择控制</h1><p>通信接口的切换通过PIN16、17两个引脚控制，如下<br>interface|PIN16|PIN17<br>——|——|——<br>HSU|0|0<br>I2C|1|0<br>SPI|0|1<br>RFU|1|1 </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PN532/">PN532</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/NXP/">NXP</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-LPC54608在MDK-Keil5平台下开发环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -765,73 +828,9 @@
 
 
   
-    <article id="post-NXP开发板K64F之串口GPS模块NEO-6M" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/12/NXP开发板K64F之串口GPS模块NEO-6M/" class="article-date">
-  	<time datetime="2016-08-12T08:21:56.000Z" itemprop="datePublished">2016-08-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/12/NXP开发板K64F之串口GPS模块NEO-6M/">NXP开发板K64F之串口GPS模块NEO-6M</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>使用FRDM-K64F开发板驱动NEO-6M串口GPS模块<br>串口连接TX，RX到开发板上,接好VCC,GND<br>通过解析GPGGA数据得到时间，经纬度，海拔等。。。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/K64F/">K64F</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/NXP/">NXP</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/08/12/NXP开发板K64F之串口GPS模块NEO-6M/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 

@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>NFC模块之PN532学习整理 | linux|Arduino|IT|迷路的虾米</title>
+  <title>NFCģ��֮PN532ѧϰ���� | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：• ISO/IEC 14443A/MIFARE Reader/Writer• FeliCa Reader/Writer• ISO/IEC 14443B Reader/Writer• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
+  <meta name="description" content="PN532��һ����80C51�ںˣ�֧��6�ֲ�ͬ����ģʽ�Ľ���ͨѶ��������֧������ģʽ��? ISO/IEC 14443A/MIFARE Reader/Writer? FeliCa Reader/Writer? ISO/IEC 14443B Reader/Writer? ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NFC模块之PN532学习整理">
+<meta property="og:title" content="NFCģ��֮PN532ѧϰ����">
 <meta property="og:url" content="http://enjoythe.party/2017/03/23/NFC模块之PN532学习整理/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：• ISO/IEC 14443A/MIFARE Reader/Writer• FeliCa Reader/Writer• ISO/IEC 14443B Reader/Writer• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
-<meta property="og:updated_time" content="2017-03-23T13:02:46.743Z">
+<meta property="og:description" content="PN532��һ����80C51�ںˣ�֧��6�ֲ�ͬ����ģʽ�Ľ���ͨѶ��������֧������ģʽ��? ISO/IEC 14443A/MIFARE Reader/Writer? FeliCa Reader/Writer? ISO/IEC 14443B Reader/Writer? ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or">
+<meta property="og:updated_time" content="2017-03-23T13:04:03.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NFC模块之PN532学习整理">
-<meta name="twitter:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：• ISO/IEC 14443A/MIFARE Reader/Writer• FeliCa Reader/Writer• ISO/IEC 14443B Reader/Writer• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
+<meta name="twitter:title" content="NFCģ��֮PN532ѧϰ����">
+<meta name="twitter:description" content="PN532��һ����80C51�ںˣ�֧��6�ֲ�ͬ����ģʽ�Ľ���ͨѶ��������֧������ģʽ��? ISO/IEC 14443A/MIFARE Reader/Writer? FeliCa Reader/Writer? ISO/IEC 14443B Reader/Writer? ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      NFC模块之PN532学习整理
+      NFCģ��֮PN532ѧϰ����
     </h1>
   
 
@@ -247,11 +247,67 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：<br>• ISO/IEC 14443A/MIFARE Reader/Writer<br>• FeliCa Reader/Writer<br>• ISO/IEC 14443B Reader/Writer<br>• ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K card<br>emulation mode<br>• FeliCa Card emulation<br>• ISO/IEC 18092, ECMA 340 Peer-to-Peer<br><a id="more"></a><br>PN532支持2.7V-5.5V供电</p>
-<h1 id="PN532接口支持："><a href="#PN532接口支持：" class="headerlink" title="PN532接口支持："></a>PN532接口支持：</h1><p>. SPI<br>. IIC<br>. HSU(Hight Speed UART) 高速串口</p>
-<h1 id="接口选择控制"><a href="#接口选择控制" class="headerlink" title="接口选择控制"></a>接口选择控制</h1><p>通信接口的切换通过PIN16、17两个引脚控制，如下<br>| 接口 | PIN16 | PIN17 |<br>| ——- | ——- | ——- |<br>| 30 | 40 | 黑色 |<br>| 31 | 41 | 红色 |<br>| 32 | 42 | 绿色 |<br>| interface | PIN16 | PIN17 |<br>| ——- | ——- | ——- |<br>| HSU | 0 | 0 |<br>| I2C | 1 | 0 |<br>| SPI | 0 | 1 |<br>| RFU | 1 | 1 |</p>
-<h1 id="HSU高速串口"><a href="#HSU高速串口" class="headerlink" title="HSU高速串口"></a>HSU高速串口</h1><p> 串口的默认配置；数据位8位，校验位无，停止位1位，波特率115200<br> RX:–&gt;PIN27<br> TX:–&gt;PIN28</p>
-<h1 id="PN532通讯帧结构"><a href="#PN532通讯帧结构" class="headerlink" title="PN532通讯帧结构"></a>PN532通讯帧结构</h1><p>| 00 | 00FF | LEN | LCS | TFI | PD0 |PD1 | …… | PDn | DCS | 00 |<br>| 帧头 | 开始字节 |</p>
+        <p>PN532��һ����80C51�ںˣ�֧��6�ֲ�ͬ����ģʽ�Ľ���ͨѶ��������֧������ģʽ��<br>? ISO/IEC 14443A/MIFARE Reader/Writer<br>? FeliCa Reader/Writer<br>? ISO/IEC 14443B Reader/Writer<br>? ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K card<br>emulation mode<br>? FeliCa Card emulation<br>? ISO/IEC 18092, ECMA 340 Peer-to-Peer<br><a id="more"></a><br>PN532֧��2.7V-5.5V����</p>
+<h1 id="PN532�ӿ�֧�֣�"><a href="#PN532�ӿ�֧�֣�" class="headerlink" title="PN532�ӿ�֧�֣�"></a>PN532�ӿ�֧�֣�</h1><p>. SPI<br>. IIC<br>. HSU(Hight Speed UART) ���ٴ���</p>
+<h1 id="�ӿ�ѡ������"><a href="#�ӿ�ѡ������" class="headerlink" title="�ӿ�ѡ������"></a>�ӿ�ѡ������</h1><p>ͨ�Žӿڵ��л�ͨ��PIN16��17�������ſ��ƣ�����</p>
+<table>
+<thead>
+<tr>
+<th>�ӿ�</th>
+<th>PIN16</th>
+<th>PIN17</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td>40</td>
+<td>��ɫ</td>
+</tr>
+<tr>
+<td>31</td>
+<td>41</td>
+<td>��ɫ</td>
+</tr>
+<tr>
+<td>32</td>
+<td>42</td>
+<td>��ɫ</td>
+</tr>
+<tr>
+<td>interface</td>
+<td>PIN16</td>
+<td>PIN17</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>——-</td>
+<td>——-</td>
+</tr>
+<tr>
+<td>HSU</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RFU</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h1 id="HSU���ٴ���"><a href="#HSU���ٴ���" class="headerlink" title="HSU���ٴ���"></a>HSU���ٴ���</h1><p> ���ڵ�Ĭ�����ã�����λ8λ��У��λ�ޣ�ֹͣλ1λ��������115200<br> RX:–&gt;PIN27<br> TX:–&gt;PIN28</p>
+<h1 id="PN532ͨѶ֡�u"><a href="#PN532ͨѶ֡�u" class="headerlink" title="PN532ͨѶ֡�ṹ"></a>PN532ͨѶ֡�ṹ</h1><p>| 00 | 00FF | LEN | LCS | TFI | PD0 |PD1 | …… | PDn | DCS | 00 |<br>| ֡ͷ | ��ʼ�ֽ� |</p>
 
       
     </div>
@@ -298,7 +354,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="NFC模块之PN532学习整理" data-title="NFC模块之PN532学习整理" data-url="http://enjoythe.party/2017/03/23/NFC模块之PN532学习整理/"></div>
+	<div class="ds-thread" data-thread-key="NFC模块之PN532学习整理" data-title="NFCģ��֮PN532ѧϰ����" data-url="http://enjoythe.party/2017/03/23/NFC模块之PN532学习整理/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

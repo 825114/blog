@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>NFC模块之PN532学习整理 | linux|Arduino|IT|迷路的虾米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：? ISO/IEC 14443A/MIFARE Reader/Writer? FeliCa Reader/Writer? ISO/IEC 14443B Reader/Writer? ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
+  <meta name="description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：. ISO/IEC 14443A/MIFARE Reader/Writer. FeliCa Reader/Writer. ISO/IEC 14443B Reader/Writer. ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NFC模块之PN532学习整理">
 <meta property="og:url" content="http://enjoythe.party/2017/03/23/NFC模块之PN532学习整理/index.html">
 <meta property="og:site_name" content="linux|Arduino|IT|迷路的虾米">
-<meta property="og:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：? ISO/IEC 14443A/MIFARE Reader/Writer? FeliCa Reader/Writer? ISO/IEC 14443B Reader/Writer? ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
-<meta property="og:updated_time" content="2017-03-23T13:18:12.361Z">
+<meta property="og:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：. ISO/IEC 14443A/MIFARE Reader/Writer. FeliCa Reader/Writer. ISO/IEC 14443B Reader/Writer. ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
+<meta property="og:updated_time" content="2017-03-23T13:21:43.323Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NFC模块之PN532学习整理">
-<meta name="twitter:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：? ISO/IEC 14443A/MIFARE Reader/Writer? FeliCa Reader/Writer? ISO/IEC 14443B Reader/Writer? ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
+<meta name="twitter:description" content="PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：. ISO/IEC 14443A/MIFARE Reader/Writer. FeliCa Reader/Writer. ISO/IEC 14443B Reader/Writer. ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K">
   
     <link rel="alternative" href="/atom.xml" title="linux|Arduino|IT|迷路的虾米" type="application/atom+xml">
   
@@ -247,7 +247,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：<br>? ISO/IEC 14443A/MIFARE Reader/Writer<br>? FeliCa Reader/Writer<br>? ISO/IEC 14443B Reader/Writer<br>? ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K card<br>emulation mode<br>? FeliCa Card emulation<br>? ISO/IEC 18092, ECMA 340 Peer-to-Peer<br><a id="more"></a><br>PN532支持2.7V-5.5V供电</p>
+        <p>PN532是一款有80C51内核，支持6种不同操作模式的近场通讯控制器。支持以下模式：<br>. ISO/IEC 14443A/MIFARE Reader/Writer<br>. FeliCa Reader/Writer<br>. ISO/IEC 14443B Reader/Writer<br>. ISO/IEC 14443A/MIFARE Card MIFARE Classic 1K or MIFARE Classic 4K card<br>emulation mode<br>. FeliCa Card emulation<br>. ISO/IEC 18092, ECMA 340 Peer-to-Peer<br><a id="more"></a><br>PN532支持2.7V-5.5V供电</p>
 <h1 id="PN532接口支持："><a href="#PN532接口支持：" class="headerlink" title="PN532接口支持："></a>PN532接口支持：</h1><p>. SPI<br>. IIC<br>. HSU(Hight Speed UART) 高速串口</p>
 <h1 id="接口选择控制"><a href="#接口选择控制" class="headerlink" title="接口选择控制"></a>接口选择控制</h1><p>通信接口的切换通过PIN16、17两个引脚控制，如下</p>
 <table>
@@ -305,6 +305,12 @@
 <td>数据长度</td>
 <td>长度校验</td>
 <td>帧标识</td>
+<td>命令码</td>
+<td>第一个字节数据</td>
+<td>第2个数据</td>
+<td>n个</td>
+<td>奇偶校验</td>
+<td>帧尾</td>
 </tr>
 <tr>
 <td></td>
@@ -312,12 +318,12 @@
 <td>TFI,PD0..PDn的个数</td>
 <td>LEN + LCS 的补码</td>
 <td>值为D4时表示帧从MCU发到PN532</td>
-<td>命令码</td>
-<td>第一个字节数据</td>
-<td>第2个数据</td>
-<td>n个</td>
-<td>奇偶校验</td>
-<td>帧尾</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td></td>
